@@ -10,7 +10,7 @@ import javax.swing.border.EmptyBorder;
 public class VentanaPrincipal extends JFrame {
 
 	private JPanel contentPane;
-
+	//ROJO , QUE SE SIENTE?
 	/**
 	 * Launch the application.
 	 */
