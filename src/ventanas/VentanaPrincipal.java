@@ -6,38 +6,48 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import sun.security.x509.AVA;
+
+import java.awt.GridBagLayout;
+import javax.swing.JButton;
+
+
+
 public class VentanaPrincipal extends JFrame {
 
-	public static int largo = 500;
-	public static int ancho = 500;
+	public int alto=java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
+	public int ancho=java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
 	
 	private JPanel contentPane;
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				try {
+				try {		
 					VentanaPrincipal frame = new VentanaPrincipal();
-					frame.setVisible(true);
+					frame.setSize(frame.ancho,frame.alto-50);
+					frame.setUndecorated(true); //Oculta titulo de ventana y barra de tarea(maximza la pantalla)
+					frame.setExtendedState(MAXIMIZED_BOTH);
+					frame.setVisible(true);			
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
 	}
-
 	/**
 	 * Create the frame.
 	 */
 	public VentanaPrincipal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 500, 500);
+		setBounds(0, 0, ancho, alto);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
 	}
 
 }
