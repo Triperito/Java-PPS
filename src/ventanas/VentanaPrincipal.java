@@ -48,6 +48,10 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds((int) (ancho*0.9), (int) (alto*0.9), (int) (ancho*0.2), (int) (alto*0.15));
+		contentPane.add(btnNewButton);
 	}
 
 }
