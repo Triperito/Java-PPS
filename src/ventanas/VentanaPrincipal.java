@@ -5,20 +5,16 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
 import sun.security.x509.AVA;
-
 import java.awt.GridBagLayout;
 import javax.swing.JButton;
 
-
-
 public class VentanaPrincipal extends JFrame {
 
-	public int alto=java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
-	public int ancho=java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
-	
+	public int alto  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
+	public int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
 	private JPanel contentPane;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -29,15 +25,16 @@ public class VentanaPrincipal extends JFrame {
 				try {		
 					VentanaPrincipal frame = new VentanaPrincipal();
 					frame.setSize(frame.ancho,frame.alto-50);
-					frame.setUndecorated(true); //Oculta titulo de ventana y barra de tarea(maximza la pantalla)
-					frame.setExtendedState(MAXIMIZED_BOTH);
-					frame.setVisible(true);			
+					frame.setUndecorated(true); //OCULTA EL TITULO DE LA VENTANA Y LA BARRA DE TAREAS DE WINDOWS (QUEDA LA PANTALLA LIMPIA)
+					frame.setExtendedState(MAXIMIZED_BOTH); //MAXIMIZA LA PANTALLA
+					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
 	}
+	
 	/**
 	 * Create the frame.
 	 */
@@ -50,8 +47,7 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds((int) (ancho*0.9), (int) (alto*0.9), (int) (ancho*0.2), (int) (alto*0.15));
+		btnNewButton.setBounds((int)(this.ancho*0.03),(int)(this.alto*0.03),(int)(this.ancho*0.21),(int)(this.alto*0.21));
 		contentPane.add(btnNewButton);
 	}
-
 }
