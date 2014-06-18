@@ -47,7 +47,19 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds((int)(this.ancho*0.03),(int)(this.alto*0.03),(int)(this.ancho*0.21),(int)(this.alto*0.21));
+		btnNewButton.setBounds((int)(this.ancho*0.03),(int)(this.alto*0.03),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.setBounds((int)(this.ancho*0.03),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("New button");
+		btnNewButton_2.setBounds((int)(this.ancho*0.787),(int)(this.alto*0.03),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+		contentPane.add(btnNewButton_2);
+		
+		JButton btnNewButton_3 = new JButton("New button");
+		btnNewButton_3.setBounds((int)(this.ancho*0.787),(int)(this.alto*0.744),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+		contentPane.add(btnNewButton_3);
 	}
 }
