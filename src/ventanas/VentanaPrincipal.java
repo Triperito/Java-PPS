@@ -46,19 +46,19 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton BttnPrA = new JButton("Boton A");
-		BttnPrA.setBounds((int)(this.ancho*0.03),(int)(this.alto*0.03),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+		BttnPrA.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(BttnPrA);
 		
 		JButton BttnPrF = new JButton("Boton F");
-		BttnPrF.setBounds((int)(this.ancho*0.787),(int)(this.alto*0.03),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+		BttnPrF.setBounds((int)(this.ancho*0.787),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(BttnPrF);
 		
 		JButton BttnPrK = new JButton("Boton K");
-		BttnPrK.setBounds((int)(this.ancho*0.365),(int)(this.alto*0.365),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+		BttnPrK.setBounds((int)(this.ancho*0.375),(int)(this.alto*0.365),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(BttnPrK);
 		
 		JButton BttnPrO = new JButton("Boton O");
-		BttnPrO.setBounds((int)(this.ancho*0.03),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+		BttnPrO.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(BttnPrO);
 		
 		JButton BttnPrT = new JButton("Boton T");
@@ -66,23 +66,23 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(BttnPrT);
 		
 		JButton BttnPrEspacio = new JButton("Espacio");
-		BttnPrEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.03),(int)(this.ancho*0.4),(int)(this.alto*0.1));
+		BttnPrEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 		contentPane.add(BttnPrEspacio);
 		
 		JButton BttnPrPunto = new JButton("Punto");
-		BttnPrPunto.setBounds((int)(this.ancho*0.03),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+		BttnPrPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnPrPunto);
 		
 		JButton BttnPrBorrar = new JButton("Borrar");
-		BttnPrBorrar.setBounds((int)(this.ancho*0.827),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+		BttnPrBorrar.setBounds((int)(this.ancho*0.887),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnPrBorrar);
 		
 		JButton BttnPrSI = new JButton("SI");
-		BttnPrSI.setBounds((int)(this.ancho*0.253),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+		BttnPrSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnPrSI);
 		
 		JButton BttnPrNO = new JButton("NO");
-		BttnPrNO.setBounds((int)(this.ancho*0.637),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+		BttnPrNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnPrNO);
 		
 		textField = new JTextField();
