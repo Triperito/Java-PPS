@@ -12,7 +12,7 @@ public class VentanaPrincipal extends JFrame {
 	public int alto  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
 	public int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
 	private JPanel contentPane;
-	private JTextField textField;
+	public static JTextField textField;
 	
 	/**
 	 * Launch the application.
@@ -23,7 +23,6 @@ public class VentanaPrincipal extends JFrame {
 			public void run() {
 				try {		
 					VentanaPrincipal frame = new VentanaPrincipal();
-					frame.setSize(frame.ancho,frame.alto-50);
 					frame.setUndecorated(true); //OCULTA EL TITULO DE LA VENTANA Y LA BARRA DE TAREAS DE WINDOWS (QUEDA LA PANTALLA LIMPIA)
 					frame.setExtendedState(MAXIMIZED_BOTH); //MAXIMIZA LA PANTALLA
 					frame.setVisible(true);
@@ -39,7 +38,7 @@ public class VentanaPrincipal extends JFrame {
 	 */
 	public VentanaPrincipal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(0, 0, ancho, alto);
+		setBounds(0,0,ancho,alto);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
