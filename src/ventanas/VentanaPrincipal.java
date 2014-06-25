@@ -50,11 +50,11 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(BttnPrA);
 		
 		JButton BttnPrF = new JButton("Boton F");
-		BttnPrF.setBounds((int)(this.ancho*0.787),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+		BttnPrF.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(BttnPrF);
 		
 		JButton BttnPrK = new JButton("Boton K");
-		BttnPrK.setBounds((int)(this.ancho*0.375),(int)(this.alto*0.365),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+		BttnPrK.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(BttnPrK);
 		
 		JButton BttnPrO = new JButton("Boton O");
@@ -62,7 +62,7 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(BttnPrO);
 		
 		JButton BttnPrT = new JButton("Boton T");
-		BttnPrT.setBounds((int)(this.ancho*0.787),(int)(this.alto*0.744),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+		BttnPrT.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(BttnPrT);
 		
 		JButton BttnPrEspacio = new JButton("Espacio");
@@ -74,7 +74,7 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(BttnPrPunto);
 		
 		JButton BttnPrBorrar = new JButton("Borrar");
-		BttnPrBorrar.setBounds((int)(this.ancho*0.887),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+		BttnPrBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnPrBorrar);
 		
 		JButton BttnPrSI = new JButton("SI");
@@ -86,7 +86,7 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(BttnPrNO);
 		
 		textField = new JTextField();
-		textField.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.877),(int)(this.ancho*0.5),(int)(this.alto*0.12));
+		textField.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		contentPane.add(textField);
 		textField.setColumns(10);
 	}
