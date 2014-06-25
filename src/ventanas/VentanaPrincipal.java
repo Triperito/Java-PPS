@@ -119,18 +119,18 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(PanelTxt);
 		PanelTxt.setLayout(null);
 		
-		JLabel LblTxt1 = new JLabel("");
-		LblTxt1.setFont(new Font("Calibri", Font.BOLD, 20));
+		JLabel LblTxt1 = new JLabel("V");
+		LblTxt1.setFont(new Font("Arial", Font.BOLD, 30));
 		LblTxt1.setBounds(10, 10, (int)(this.ancho*0.5)-20,20);
 		PanelTxt.add(LblTxt1);
 		
-		JLabel LblTxt2 = new JLabel("");
-		LblTxt2.setFont(new Font("Calibri", Font.BOLD, 20));
+		JLabel LblTxt2 = new JLabel("V");
+		LblTxt2.setFont(new Font("Calibri", Font.BOLD, 30));
 		LblTxt2.setBounds(10, 40, (int)(this.ancho*0.5)-20,20);
 		PanelTxt.add(LblTxt2);
 		
-		JLabel LblTxt3 = new JLabel("");
-		LblTxt3.setFont(new Font("Calibri", Font.BOLD, 20));
+		JLabel LblTxt3 = new JLabel("V");
+		LblTxt3.setFont(new Font("Calibri", Font.BOLD, 30));
 		LblTxt3.setBounds(10, 70, (int)(this.ancho*0.5)-20,20);
 		PanelTxt.add(LblTxt3);
 	
