@@ -14,11 +14,7 @@ public class VentanaPrincipal extends JFrame {
 	private JPanel contentPane;
 	public static JTextField textField;
 	
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
-		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {		
@@ -33,9 +29,6 @@ public class VentanaPrincipal extends JFrame {
 		});
 	}
 	
-	/**
-	 * Create the frame.
-	 */
 	public VentanaPrincipal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0,0,ancho,alto);
@@ -89,4 +82,5 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(textField);
 		textField.setColumns(10);
 	}
+	
 }
