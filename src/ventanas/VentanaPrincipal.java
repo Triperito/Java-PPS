@@ -23,6 +23,7 @@ public class VentanaPrincipal extends JFrame {
 
 	public int alto  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
 	public int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+	static String  mensaje="";
 	private JPanel contentPane;
 	public static JTextField textField;
 	
@@ -30,7 +31,7 @@ public class VentanaPrincipal extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {		
-					VentanaPrincipal frame = new VentanaPrincipal();
+					VentanaPrincipal frame = new VentanaPrincipal(mensaje);
 					//frame.setUndecorated(true); //OCULTA EL TITULO DE LA VENTANA Y LA BARRA DE TAREAS DE WINDOWS (QUEDA LA PANTALLA LIMPIA)
 					//frame.setExtendedState(MAXIMIZED_BOTH); //MAXIMIZA LA PANTALLA
 					frame.setVisible(true);
@@ -41,7 +42,7 @@ public class VentanaPrincipal extends JFrame {
 		});
 	}
 	
-	public VentanaPrincipal() {
+	public VentanaPrincipal(final String mensaje) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0,0,ancho,alto);
 		setUndecorated(true); //OCULTA EL TITULO DE LA VENTANA Y LA BARRA DE TAREAS DE WINDOWS (QUEDA LA PANTALLA LIMPIA)
@@ -54,7 +55,7 @@ public class VentanaPrincipal extends JFrame {
 		JButton BttnPrA = new JButton("A");
 		BttnPrA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaA NewVentanaA= new VentanaA();
+				VentanaA NewVentanaA= new VentanaA(mensaje);
 				NewVentanaA.setVisible(true);
 				dispose();
 			}
@@ -128,7 +129,7 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(PanelTxt);
 		PanelTxt.setLayout(null);
 		
-		JLabel LblTxt1 = new JLabel("V");
+		JLabel LblTxt1 = new JLabel(mensaje);
 		LblTxt1.setFont(new Font("Arial", Font.BOLD, 30));
 		LblTxt1.setBounds(10, 10, (int)(this.ancho*0.5)-20,20);
 		PanelTxt.add(LblTxt1);
