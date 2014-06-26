@@ -16,6 +16,8 @@ import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class VentanaPrincipal extends JFrame {
 
@@ -50,6 +52,13 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton BttnPrA = new JButton("A");
+		BttnPrA.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaA NewVentanaA= new VentanaA();
+				NewVentanaA.setVisible(true);
+				dispose();
+			}
+		});
 		BttnPrA.setBackground(new Color(230, 230, 250));
 		BttnPrA.setForeground(new Color(0, 0, 128));
 		BttnPrA.setFont(new Font("Arial", Font.PLAIN, 99));
