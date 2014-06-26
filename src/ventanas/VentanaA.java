@@ -1,9 +1,7 @@
 package ventanas;
 
 import java.awt.Color;
-import java.awt.EventQueue;
 import java.awt.Font;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -20,21 +18,6 @@ public class VentanaA extends JFrame {
 	public int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
 	private JPanel contentPane;
 	public static JTextField textField;
-	
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {		
-					//VentanaA frame = new VentanaA();
-					//frame.setUndecorated(true); //OCULTA EL TITULO DE LA VENTANA Y LA BARRA DE TAREAS DE WINDOWS (QUEDA LA PANTALLA LIMPIA)
-					//frame.setExtendedState(MAXIMIZED_BOTH); //MAXIMIZA LA PANTALLA
-					//frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 	
 	public VentanaA(final String mensaje) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -69,26 +52,68 @@ public class VentanaA extends JFrame {
 		contentPane.add(BttnB);
 		
 		JButton BttnC = new JButton("Boton C");
+		BttnC.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+"C");
+				NewVentanaPr.setVisible(true);
+				dispose();
+			}
+		});
 		BttnC.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(BttnC);
 		
 		JButton BttnD = new JButton("Boton D");
+		BttnD.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+"D");
+				NewVentanaPr.setVisible(true);
+				dispose();
+			}
+		});
 		BttnD.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(BttnD);
 		
 		JButton BttnE = new JButton("Boton E");
+		BttnE.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+"E");
+				NewVentanaPr.setVisible(true);
+				dispose();
+			}
+		});
 		BttnE.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(BttnE);
 		
 		JButton BttnEspacio = new JButton("Espacio");
+		BttnEspacio.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+" ");
+				NewVentanaPr.setVisible(true);
+				dispose();
+			}
+		});
 		BttnEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 		contentPane.add(BttnEspacio);
 		
 		JButton BttnPunto = new JButton("Punto");
+		BttnPunto.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+".");
+				NewVentanaPr.setVisible(true);
+				dispose();
+			}
+		});
 		BttnPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnPunto);
 		
 		JButton BttnBorrar = new JButton("Borrar");
+		BttnBorrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje.substring(0,mensaje.length()-1));
+				NewVentanaPr.setVisible(true);
+				dispose();
+			}
+		});
 		BttnBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnBorrar);
 		
@@ -112,15 +137,6 @@ public class VentanaA extends JFrame {
 		LblTxt1.setBounds(10, 10, (int)(this.ancho*0.5)-20,20);
 		PanelTxt.add(LblTxt1);
 		
-		JLabel LblTxt2 = new JLabel("V");
-		LblTxt2.setFont(new Font("Calibri", Font.BOLD, 30));
-		LblTxt2.setBounds(10, 40, (int)(this.ancho*0.5)-20,20);
-		PanelTxt.add(LblTxt2);
-		
-		JLabel LblTxt3 = new JLabel("V");
-		LblTxt3.setFont(new Font("Calibri", Font.BOLD, 30));
-		LblTxt3.setBounds(10, 70, (int)(this.ancho*0.5)-20,20);
-		PanelTxt.add(LblTxt3);
 	}
 	
 }

@@ -32,8 +32,6 @@ public class VentanaPrincipal extends JFrame {
 			public void run() {
 				try {		
 					VentanaPrincipal frame = new VentanaPrincipal(mensaje);
-					//frame.setUndecorated(true); //OCULTA EL TITULO DE LA VENTANA Y LA BARRA DE TAREAS DE WINDOWS (QUEDA LA PANTALLA LIMPIA)
-					//frame.setExtendedState(MAXIMIZED_BOTH); //MAXIMIZA LA PANTALLA
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -67,6 +65,13 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(BttnPrA);
 		
 		JButton BttnPrF = new JButton("F");
+		BttnPrF.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaF NewVentanaF= new VentanaF(mensaje);
+				NewVentanaF.setVisible(true);
+				dispose();
+			}
+		});
 		BttnPrF.setBackground(new Color(230, 230, 250));
 		BttnPrF.setForeground(new Color(255, 0, 0));
 		BttnPrF.setFont(new Font("Arial", Font.PLAIN, 99));
@@ -74,6 +79,13 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(BttnPrF);
 		
 		JButton BttnPrK = new JButton("K");
+		BttnPrK.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaK NewVentanaK= new VentanaK(mensaje);
+				NewVentanaK.setVisible(true);
+				dispose();
+			}
+		});
 		BttnPrK.setBackground(new Color(230, 230, 250));
 		BttnPrK.setForeground(new Color(34, 139, 34));
 		BttnPrK.setFont(new Font("Arial", Font.PLAIN, 99));
@@ -81,12 +93,26 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(BttnPrK);
 		
 		JButton BttnPrO = new JButton("O");
+		BttnPrO.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaO NewVentanaO= new VentanaO(mensaje);
+				NewVentanaO.setVisible(true);
+				dispose();
+			}
+		});
 		BttnPrO.setBackground(new Color(230, 230, 250));
 		BttnPrO.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnPrO.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(BttnPrO);
 		
 		JButton BttnPrT = new JButton("T");
+		BttnPrT.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaT NewVentanaT= new VentanaT(mensaje);
+				NewVentanaT.setVisible(true);
+				dispose();
+			}
+		});
 		BttnPrT.setBackground(new Color(230, 230, 250));
 		BttnPrT.setForeground(new Color(255, 140, 0));
 		BttnPrT.setFont(new Font("Arial", Font.PLAIN, 99));
@@ -94,17 +120,38 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(BttnPrT);
 		
 		JButton BttnPrEspacio = new JButton("");
+		BttnPrEspacio.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+" ");
+				NewVentanaPr.setVisible(true);
+				dispose();
+			}
+		});
 		BttnPrEspacio.setBackground(new Color(148, 0, 211));
 		BttnPrEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 		contentPane.add(BttnPrEspacio);
 		
 		JButton BttnPrPunto = new JButton(".");
+		BttnPrPunto.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+".");
+				NewVentanaPr.setVisible(true);
+				dispose();
+			}
+		});
 		BttnPrPunto.setBackground(new Color(230, 230, 250));
 		BttnPrPunto.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnPrPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnPrPunto);
 		
 		JButton BttnPrBorrar = new JButton("Borrar");
+		BttnPrBorrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje.substring(0,mensaje.length()-1));
+				NewVentanaPr.setVisible(true);
+				dispose();
+			}
+		});
 		BttnPrBorrar.setBackground(new Color(230, 230, 250));
 		BttnPrBorrar.setFont(new Font("Arial", Font.PLAIN, 25));
 		BttnPrBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
@@ -133,17 +180,6 @@ public class VentanaPrincipal extends JFrame {
 		LblTxt1.setFont(new Font("Arial", Font.BOLD, 30));
 		LblTxt1.setBounds(10, 10, (int)(this.ancho*0.5)-20,20);
 		PanelTxt.add(LblTxt1);
-		
-		JLabel LblTxt2 = new JLabel("V");
-		LblTxt2.setFont(new Font("Calibri", Font.BOLD, 30));
-		LblTxt2.setBounds(10, 40, (int)(this.ancho*0.5)-20,20);
-		PanelTxt.add(LblTxt2);
-		
-		JLabel LblTxt3 = new JLabel("V");
-		LblTxt3.setFont(new Font("Calibri", Font.BOLD, 30));
-		LblTxt3.setBounds(10, 70, (int)(this.ancho*0.5)-20,20);
-		PanelTxt.add(LblTxt3);
-	
 	
 	}
 }
