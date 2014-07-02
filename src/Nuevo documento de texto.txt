@@ -1,0 +1,18 @@
+boton espacio en ventanas secundarias, no escribe nada y vuelve a la principal
+
+
+
+punto en ventanas secundarias no tiene accion
+
+
+
+
+borrar en ventanas secundarias borra igual que en la principal (si la ultima es QU borra 2) y se queda en la ventana en la que esta
+manteniendo apretado borra todo
+
+
+en ventana principal mantener apretado la tecla punto, guarda en un .txt lo que esta escrito en el textarea
+
+
+
+ 
