@@ -79,7 +79,7 @@ public class VentanaPrincipal extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaF NewVentanaF= new VentanaF(mensaje);
 				NewVentanaF.setVisible(true);
-				dispose();
+				
 			}
 		});
 		BttnPrF.setBackground(new Color(230, 230, 250));
@@ -222,7 +222,6 @@ public class VentanaPrincipal extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaF NewVentanaF= new VentanaF(mensaje);
 				NewVentanaF.setVisible(true);
-				dispose();
 			}
 		});
 		BttnPrF.setBackground(new Color(230, 230, 250));
@@ -236,7 +235,6 @@ public class VentanaPrincipal extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaK NewVentanaK= new VentanaK(mensaje);
 				NewVentanaK.setVisible(true);
-				dispose();
 			}
 		});
 		BttnPrK.setBackground(new Color(230, 230, 250));
@@ -250,7 +248,6 @@ public class VentanaPrincipal extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaO NewVentanaO= new VentanaO(mensaje);
 				NewVentanaO.setVisible(true);
-				dispose();
 			}
 		});
 		BttnPrO.setBackground(new Color(230, 230, 250));
@@ -263,7 +260,6 @@ public class VentanaPrincipal extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaT NewVentanaT= new VentanaT(mensaje);
 				NewVentanaT.setVisible(true);
-				dispose();
 			}
 		});
 		BttnPrT.setBackground(new Color(230, 230, 250));
@@ -275,9 +271,7 @@ public class VentanaPrincipal extends JFrame {
 		JButton BttnPrEspacio = new JButton("");
 		BttnPrEspacio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+" ");
-				NewVentanaPr.setVisible(true);
-				dispose();
+				txt.setText(txt.getText()+" ");
 			}
 		});
 		BttnPrEspacio.setBackground(new Color(148, 0, 211));
@@ -287,9 +281,7 @@ public class VentanaPrincipal extends JFrame {
 		JButton BttnPrPunto = new JButton(".");
 		BttnPrPunto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+".");
-				NewVentanaPr.setVisible(true);
-				dispose();
+				txt.setText(txt.getText()+".");
 			}
 		});
 		BttnPrPunto.setBackground(new Color(230, 230, 250));
@@ -300,9 +292,7 @@ public class VentanaPrincipal extends JFrame {
 		JButton BttnPrBorrar = new JButton("Borrar");
 		BttnPrBorrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje.substring(0,mensaje.length()-1));
-				NewVentanaPr.setVisible(true);
-				dispose();
+				txt.setText(txt.getText().substring(0,txt.getText().length()-1));
 			}
 		});
 		BttnPrBorrar.setBackground(new Color(230, 230, 250));
@@ -328,10 +318,6 @@ public class VentanaPrincipal extends JFrame {
 		PanelTxt.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		contentPane.add(PanelTxt);
 		PanelTxt.setLayout(null);
-		
-		JTextArea textArea_1 = new JTextArea();
-		textArea_1.setBounds(244, 11, -230, 74);
-		PanelTxt.add(textArea_1);
 		
 		txt = new JTextArea();
 		txt.setEditable(false);

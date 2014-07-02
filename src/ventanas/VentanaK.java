@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.JButton;
@@ -20,6 +21,7 @@ public class VentanaK extends JFrame {
 	public int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
 	private JPanel contentPane;
 	public static JTextField textField;
+	public JTextArea txtK;
 	
 	public VentanaK(final String mensaje) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,8 +36,7 @@ public class VentanaK extends JFrame {
 		JButton BttnK = new JButton("Boton K");
 		BttnK.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+"K");
-				NewVentanaPr.setVisible(true);
+				VentanaPrincipal.txt.setText(txtK.getText()+"K");
 				dispose();
 			}
 		});
@@ -45,8 +46,7 @@ public class VentanaK extends JFrame {
 		JButton BttnL = new JButton("Boton L");
 		BttnL.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+"L");
-				NewVentanaPr.setVisible(true);
+				VentanaPrincipal.txt.setText(txtK.getText()+"L");
 				dispose();
 			}
 		});
@@ -56,8 +56,7 @@ public class VentanaK extends JFrame {
 		JButton BttnM = new JButton("Boton M");
 		BttnM.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+"M");
-				NewVentanaPr.setVisible(true);
+				VentanaPrincipal.txt.setText(txtK.getText()+"M");
 				dispose();
 			}
 		});
@@ -67,8 +66,7 @@ public class VentanaK extends JFrame {
 		JButton BttnN = new JButton("Boton N");
 		BttnN.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+"—");
-				NewVentanaPr.setVisible(true);
+				VentanaPrincipal.txt.setText(txtK.getText()+"N");
 				dispose();
 			}
 		});
@@ -78,8 +76,7 @@ public class VentanaK extends JFrame {
 		JButton Bttn— = new JButton("Boton —");
 		Bttn—.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+"—");
-				NewVentanaPr.setVisible(true);
+				VentanaPrincipal.txt.setText(txtK.getText()+"—");
 				dispose();
 			}
 		});
@@ -89,8 +86,7 @@ public class VentanaK extends JFrame {
 		JButton BttnEspacio = new JButton("Espacio");
 		BttnEspacio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+" ");
-				NewVentanaPr.setVisible(true);
+				VentanaPrincipal.txt.setText(txtK.getText()+" ");
 				dispose();
 			}
 		});
@@ -100,8 +96,7 @@ public class VentanaK extends JFrame {
 		JButton BttnPunto = new JButton("Punto");
 		BttnPunto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+".");
-				NewVentanaPr.setVisible(true);
+				VentanaPrincipal.txt.setText(txtK.getText()+".");
 				dispose();
 			}
 		});
@@ -111,8 +106,7 @@ public class VentanaK extends JFrame {
 		JButton BttnBorrar = new JButton("Borrar");
 		BttnBorrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje.substring(0,mensaje.length()-1));
-				NewVentanaPr.setVisible(true);
+				VentanaPrincipal.txt.setText(txtK.getText().substring(0, txtK.getText().length()-1));
 				dispose();
 			}
 		});
@@ -134,10 +128,12 @@ public class VentanaK extends JFrame {
 		contentPane.add(PanelTxt);
 		PanelTxt.setLayout(null);
 		
-		JLabel LblTxt1 = new JLabel(mensaje);
-		LblTxt1.setFont(new Font("Arial", Font.BOLD, 30));
-		LblTxt1.setBounds(10, 10, (int)(this.ancho*0.5)-20,20);
-		PanelTxt.add(LblTxt1);
+		txtK = new JTextArea();
+		txtK.setEditable(false);
+		txtK.setFont(new Font("Arial", Font.BOLD, 30));
+		txtK.setBounds(10, 10, (int)(this.ancho*0.5)-20,20);
+		txtK.setText(VentanaPrincipal.txt.getText());
+		PanelTxt.add(txtK);
 		
 	}
 	
