@@ -3,7 +3,6 @@ package ventanas;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
@@ -12,6 +11,8 @@ import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+
+@SuppressWarnings("serial")
 public class VentanaA extends JFrame {
 
 	public int alto  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
@@ -20,7 +21,7 @@ public class VentanaA extends JFrame {
 	public static JTextField textField;
 	public JTextField txtA;
 	
-	public VentanaA(final String mensaje) {
+	public VentanaA() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0,0,ancho,alto);
 		setUndecorated(true); //OCULTA EL TITULO DE LA VENTANA Y LA BARRA DE TAREAS DE WINDOWS (QUEDA LA PANTALLA LIMPIA)
@@ -73,8 +74,7 @@ public class VentanaA extends JFrame {
 		JButton BttnE = new JButton("Boton E");
 		BttnE.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+"E");
-				NewVentanaPr.setVisible(true);
+				VentanaPrincipal.txt.setText(txtA.getText()+"E");
 				dispose();
 			}
 		});
@@ -84,8 +84,7 @@ public class VentanaA extends JFrame {
 		JButton BttnEspacio = new JButton("Espacio");
 		BttnEspacio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+" ");
-				NewVentanaPr.setVisible(true);
+				VentanaPrincipal.txt.setText(txtA.getText()+" ");
 				dispose();
 			}
 		});
@@ -95,8 +94,7 @@ public class VentanaA extends JFrame {
 		JButton BttnPunto = new JButton("Punto");
 		BttnPunto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje+".");
-				NewVentanaPr.setVisible(true);
+				VentanaPrincipal.txt.setText(txtA.getText()+".");
 				dispose();
 			}
 		});
@@ -106,8 +104,7 @@ public class VentanaA extends JFrame {
 		JButton BttnBorrar = new JButton("Borrar");
 		BttnBorrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal NewVentanaPr= new VentanaPrincipal(mensaje.substring(0,mensaje.length()-1));
-				NewVentanaPr.setVisible(true);
+				VentanaPrincipal.txt.setText(txtA.getText().substring(0, txtA.getText().length()-1));
 				dispose();
 			}
 		});
@@ -135,7 +132,6 @@ public class VentanaA extends JFrame {
 		txtA.setBounds(10, 10, (int)(this.ancho*0.5)-20,20);
 		txtA.setText(VentanaPrincipal.txt.getText());
 		PanelTxt.add(txtA);
-		
 	}
 	
 }

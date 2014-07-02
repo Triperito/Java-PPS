@@ -1,13 +1,10 @@
 package ventanas;
 
 import java.awt.Color;
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
@@ -15,6 +12,7 @@ import javax.swing.border.LineBorder;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
+@SuppressWarnings("serial")
 public class VentanaK extends JFrame {
 
 	public int alto  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
@@ -23,7 +21,7 @@ public class VentanaK extends JFrame {
 	public static JTextField textField;
 	public JTextArea txtK;
 	
-	public VentanaK(final String mensaje) {
+	public VentanaK() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0,0,ancho,alto);
 		setUndecorated(true); //OCULTA EL TITULO DE LA VENTANA Y LA BARRA DE TAREAS DE WINDOWS (QUEDA LA PANTALLA LIMPIA)
