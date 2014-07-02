@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.JButton;
@@ -18,7 +19,7 @@ public class VentanaF extends JFrame {
 	public int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
 	private JPanel contentPane;
 	public static JTextField textField;
-	public JTextField txtF;
+	public JTextArea txtF;
 	
 	public VentanaF() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -118,19 +119,14 @@ public class VentanaF extends JFrame {
 		BttnNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnNO);
 		
-		JPanel PanelTxt = new JPanel();
-		PanelTxt.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-		PanelTxt.setBackground(new Color(192, 192, 192));
-		PanelTxt.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
-		contentPane.add(PanelTxt);
-		PanelTxt.setLayout(null);
-		
-		txtF = new JTextField();
+		txtF = new JTextArea();
+		txtF.setBorder(new LineBorder(new Color(0, 0, 0), 2));
+		txtF.setBackground(Color.LIGHT_GRAY);
+		txtF.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
+		contentPane.add(txtF);
 		txtF.setEditable(false);
 		txtF.setFont(new Font("Arial", Font.BOLD, 30));
-		txtF.setBounds(10, 10, (int)(this.ancho*0.5)-20,20);
 		txtF.setText(VentanaPrincipal.txt.getText());
-		PanelTxt.add(txtF);
 	}
 	
 }

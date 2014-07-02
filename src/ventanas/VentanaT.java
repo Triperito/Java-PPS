@@ -119,19 +119,14 @@ public class VentanaT extends JFrame {
 		BttnNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnNO);
 		
-		JPanel PanelTxt = new JPanel();
-		PanelTxt.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-		PanelTxt.setBackground(new Color(192, 192, 192));
-		PanelTxt.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
-		contentPane.add(PanelTxt);
-		PanelTxt.setLayout(null);
-		
 		txtT = new JTextArea();
+		txtT.setBorder(new LineBorder(new Color(0, 0, 0), 2));
+		txtT.setBackground(Color.LIGHT_GRAY);
+		txtT.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
+		contentPane.add(txtT);
 		txtT.setEditable(false);
 		txtT.setFont(new Font("Arial", Font.BOLD, 30));
-		txtT.setBounds(10, 10, (int)(this.ancho*0.5)-20,20);
 		txtT.setText(VentanaPrincipal.txt.getText());
-		PanelTxt.add(txtT);
 	}
 	
 }

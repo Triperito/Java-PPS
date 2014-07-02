@@ -1,7 +1,6 @@
 package ventanas;
 
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JButton;
@@ -153,19 +152,13 @@ public class VentanaPrincipal extends JFrame {
 		BttnPrNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnPrNO);
 		
-		JPanel PanelTxt = new JPanel();
-		PanelTxt.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-		PanelTxt.setBackground(new Color(192, 192, 192));
-		PanelTxt.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
-		contentPane.add(PanelTxt);
-		PanelTxt.setLayout(null);
-		
 		txt = new JTextArea();
+		txt.setBorder(new LineBorder(new Color(0, 0, 0), 2));
+		txt.setBackground(Color.LIGHT_GRAY);
+		txt.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
+		contentPane.add(txt);
 		txt.setEditable(false);
 		txt.setFont(new Font("Arial", Font.BOLD, 30));
-		txt.setBounds(10, 10, (int)(this.ancho*0.5)-20,20);
 		txt.setText(VentanaPrincipal.txt.getText());
-		PanelTxt.add(txt);
 	}
-	
 }
