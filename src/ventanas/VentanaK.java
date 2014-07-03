@@ -108,6 +108,7 @@ public class VentanaK extends JFrame {
 		
 		JButton BttnPunto = new JButton(".");
 		BttnPunto.setBackground(new Color(230, 230, 250));
+		BttnPunto.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnPunto);
 		
@@ -115,13 +116,15 @@ public class VentanaK extends JFrame {
 		BttnBorrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int i = txtK.getText().length();
-				if((txtK.getText().charAt(i-1) == 'U') && (txtK.getText().charAt(i-2) == 'Q')){
-					txtK.setText(txtK.getText().substring(0, i-2));
-					VentanaPrincipal.txt.setText(txtK.getText().substring(0, i-2));
-				}
-				else{
-					txtK.setText(txtK.getText().substring(0, i-1));
-					VentanaPrincipal.txt.setText(txtK.getText().substring(0, i-1));
+				if (i>0){
+					if((i>1)&&(txtK.getText().charAt(i-1) == 'U') && (txtK.getText().charAt(i-2) == 'Q')){
+						txtK.setText(txtK.getText().substring(0, i-2));
+						VentanaPrincipal.txt.setText(txtK.getText().substring(0, i-2));
+					}
+					else{
+						txtK.setText(txtK.getText().substring(0, i-1));
+						VentanaPrincipal.txt.setText(txtK.getText().substring(0, i-1));
+					}
 				}
 			}
 		});

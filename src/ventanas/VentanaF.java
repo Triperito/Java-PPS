@@ -116,13 +116,15 @@ public class VentanaF extends JFrame {
 		BttnBorrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int i = txtF.getText().length();
-				if((txtF.getText().charAt(i-1) == 'U') && (txtF.getText().charAt(i-2) == 'Q')){
-					txtF.setText(txtF.getText().substring(0, i-2));
-					VentanaPrincipal.txt.setText(txtF.getText().substring(0, i-2));
-				}
-				else{
-					txtF.setText(txtF.getText().substring(0, i-1));
-					VentanaPrincipal.txt.setText(txtF.getText().substring(0, i-1));
+				if (i>0){
+					if((i>1)&&(txtF.getText().charAt(i-1) == 'U') && (txtF.getText().charAt(i-2) == 'Q')){
+						txtF.setText(txtF.getText().substring(0, i-2));
+						VentanaPrincipal.txt.setText(txtF.getText().substring(0, i-2));
+					}
+					else{
+						txtF.setText(txtF.getText().substring(0, i-1));
+						VentanaPrincipal.txt.setText(txtF.getText().substring(0, i-1));
+					}
 				}
 			}
 		});

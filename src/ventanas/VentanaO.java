@@ -110,13 +110,15 @@ public class VentanaO extends JFrame {
 		BttnBorrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int i = txtO.getText().length();
-				if((txtO.getText().charAt(i-1) == 'U') && (txtO.getText().charAt(i-2) == 'Q')){
-					txtO.setText(txtO.getText().substring(0, i-2));
-					VentanaPrincipal.txt.setText(txtO.getText().substring(0, i-2));
-				}
-				else{
-					txtO.setText(txtO.getText().substring(0, i-1));
-					VentanaPrincipal.txt.setText(txtO.getText().substring(0, i-1));
+				if (i>0){
+					if((i>1)&&(txtO.getText().charAt(i-1) == 'U') && (txtO.getText().charAt(i-2) == 'Q')){
+						txtO.setText(txtO.getText().substring(0, i-2));
+						VentanaPrincipal.txt.setText(txtO.getText().substring(0, i-2));
+					}
+					else{
+						txtO.setText(txtO.getText().substring(0, i-1));
+						VentanaPrincipal.txt.setText(txtO.getText().substring(0, i-1));
+					}
 				}
 			}
 		});

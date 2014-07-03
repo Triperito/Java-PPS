@@ -138,11 +138,13 @@ public class VentanaPrincipal extends JFrame {
 		BttnPrBorrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int i = txt.getText().length();
-				if((txt.getText().charAt(i-1) == 'U') && (txt.getText().charAt(i-2) == 'Q')){
+				if (i>0){
+				if( (i>i)&&(txt.getText().charAt(i-1) == 'U') && (txt.getText().charAt(i-2) == 'Q') ){
 					txt.setText(txt.getText().substring(0, i-2));
 				}
 				else{
 					txt.setText(txt.getText().substring(0, i-1));
+				}
 				}
 			}
 		});
