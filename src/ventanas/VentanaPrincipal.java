@@ -25,6 +25,8 @@ public class VentanaPrincipal extends JFrame {
 	private JPanel contentPane;
 	public static JTextField textField;
 	public static JTextArea txt;
+	public static JTextArea txt2;
+
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
