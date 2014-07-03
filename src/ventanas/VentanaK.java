@@ -4,10 +4,10 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
-import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.JButton;
 import javax.swing.JTextField;
@@ -27,95 +27,118 @@ public class VentanaK extends JFrame {
 		setUndecorated(true); //OCULTA EL TITULO DE LA VENTANA Y LA BARRA DE TAREAS DE WINDOWS (QUEDA LA PANTALLA LIMPIA)
 		setExtendedState(MAXIMIZED_BOTH); //MAXIMIZA LA PANTALLA
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBackground(new Color(255, 255, 255));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton BttnK = new JButton("Boton K");
+		JButton BttnK = new JButton("K");
 		BttnK.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaPrincipal.txt.setText(txtK.getText()+"K");
 				dispose();
 			}
 		});
+		BttnK.setBackground(new Color(230, 230, 250));
+		BttnK.setForeground(new Color(34, 139, 34));
+		BttnK.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnK.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(BttnK);
 		
-		JButton BttnL = new JButton("Boton L");
+		JButton BttnL = new JButton("L");
 		BttnL.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaPrincipal.txt.setText(txtK.getText()+"L");
 				dispose();
 			}
 		});
+		BttnL.setBackground(new Color(230, 230, 250));
+		BttnL.setForeground(new Color(34, 139, 34));
+		BttnL.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnL.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(BttnL);
 		
-		JButton BttnM = new JButton("Boton M");
+		JButton BttnM = new JButton("M");
 		BttnM.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaPrincipal.txt.setText(txtK.getText()+"M");
 				dispose();
 			}
 		});
+		BttnM.setBackground(new Color(230, 230, 250));
+		BttnM.setForeground(new Color(34, 139, 34));
+		BttnM.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnM.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(BttnM);
 		
-		JButton BttnN = new JButton("Boton N");
+		JButton BttnN = new JButton("N");
 		BttnN.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaPrincipal.txt.setText(txtK.getText()+"N");
 				dispose();
 			}
 		});
+		BttnN.setBackground(new Color(230, 230, 250));
+		BttnN.setForeground(new Color(34, 139, 34));
+		BttnN.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnN.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(BttnN);
 		
-		JButton Bttn— = new JButton("Boton —");
+		JButton Bttn— = new JButton("—");
 		Bttn—.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaPrincipal.txt.setText(txtK.getText()+"—");
 				dispose();
 			}
 		});
+		Bttn—.setBackground(new Color(230, 230, 250));
+		Bttn—.setForeground(new Color(34, 139, 34));
+		Bttn—.setFont(new Font("Arial", Font.PLAIN, 99));
 		Bttn—.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		contentPane.add(Bttn—);
 		
-		JButton BttnEspacio = new JButton("Espacio");
+		JButton BttnEspacio = new JButton("");
 		BttnEspacio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal.txt.setText(txtK.getText()+" ");
 				dispose();
 			}
 		});
+		BttnEspacio.setBackground(new Color(148, 0, 211));
 		BttnEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 		contentPane.add(BttnEspacio);
 		
-		JButton BttnPunto = new JButton("Punto");
-		BttnPunto.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal.txt.setText(txtK.getText()+".");
-				dispose();
-			}
-		});
+		JButton BttnPunto = new JButton(".");
+		BttnPunto.setBackground(new Color(230, 230, 250));
 		BttnPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnPunto);
 		
 		JButton BttnBorrar = new JButton("Borrar");
 		BttnBorrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaPrincipal.txt.setText(txtK.getText().substring(0, txtK.getText().length()-1));
-				dispose();
+				int i = txtK.getText().length();
+				if((txtK.getText().charAt(i-1) == 'U') && (txtK.getText().charAt(i-2) == 'Q')){
+					txtK.setText(txtK.getText().substring(0, i-2));
+					VentanaPrincipal.txt.setText(txtK.getText().substring(0, i-2));
+				}
+				else{
+					txtK.setText(txtK.getText().substring(0, i-1));
+					VentanaPrincipal.txt.setText(txtK.getText().substring(0, i-1));
+				}
 			}
 		});
+		BttnBorrar.setBackground(new Color(230, 230, 250));
+		BttnBorrar.setFont(new Font("Arial", Font.PLAIN, 25));
 		BttnBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnBorrar);
 		
 		JButton BttnSI = new JButton("SI");
+		BttnSI.setBackground(new Color(255, 165, 0));
+		BttnSI.setFont(new Font("Arial", Font.PLAIN, 30));
 		BttnSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnSI);
 		
 		JButton BttnNO = new JButton("NO");
+		BttnNO.setBackground(new Color(0, 206, 209));
+		BttnNO.setFont(new Font("Arial", Font.PLAIN, 30));
 		BttnNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		contentPane.add(BttnNO);
 		

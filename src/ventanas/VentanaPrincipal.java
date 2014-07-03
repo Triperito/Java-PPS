@@ -1,15 +1,20 @@
 package ventanas;
 
 import java.awt.EventQueue;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+
 import java.awt.Color;
 import java.awt.Font;
+
 import javax.swing.border.LineBorder;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
 import javax.swing.JTextArea;
 
 @SuppressWarnings("serial")
@@ -132,7 +137,13 @@ public class VentanaPrincipal extends JFrame {
 		JButton BttnPrBorrar = new JButton("Borrar");
 		BttnPrBorrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				txt.setText(txt.getText().substring(0,txt.getText().length()-1));
+				int i = txt.getText().length();
+				if((txt.getText().charAt(i-1) == 'U') && (txt.getText().charAt(i-2) == 'Q')){
+					txt.setText(txt.getText().substring(0, i-2));
+				}
+				else{
+					txt.setText(txt.getText().substring(0, i-1));
+				}
 			}
 		});
 		BttnPrBorrar.setBackground(new Color(230, 230, 250));
