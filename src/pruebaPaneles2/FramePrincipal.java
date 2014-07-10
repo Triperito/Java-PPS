@@ -383,9 +383,15 @@ public class FramePrincipal extends JFrame {
 				VentanaK.setBorder(new EmptyBorder(5, 5, 5, 5));
 				VentanaK.setLayout(null);
 				
-			 	JButton BttnF = new JButton("Boton K");
-				BttnF.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-				VentanaK.add(BttnF);
+			 	JButton BttnK = new JButton("Boton K");
+				BttnK.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtK.getText()+"K");
+					}
+				});
+				BttnK.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+				VentanaK.add(BttnK);
 				
 				JButton BttnG = new JButton("Boton L");
 				BttnG.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
