@@ -172,7 +172,16 @@ public class FramePrincipal extends JFrame {
 			JButton BttnPrBorrar = new JButton("Borrar");
 			BttnPrBorrar.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					txt.setText(txt.getText().substring(0,txt.getText().length()-1));
+					int i= txt.getText().length();
+					if (i>0){
+						if ((i>1) && (txt.getText().charAt(i-2)=='Q') && (txt.getText().charAt(i-1)=='U'))
+							txt.setText(txt.getText().substring(0, i-2));
+						else
+							txt.setText(txt.getText().substring(0, i-1));
+							
+									
+					}
+					
 				}
 			});
 			BttnPrBorrar.setBackground(new Color(230, 230, 250));
@@ -200,7 +209,6 @@ public class FramePrincipal extends JFrame {
 			txt.setEditable(false);
 			txt.setFont(new Font("Arial", Font.BOLD, 30));
 			VentanaPrincipal.add(txt);
-			txt.setText("HOLA");
 
 		 }
 		 public void VentanaAConstructor(){
@@ -263,6 +271,7 @@ public class FramePrincipal extends JFrame {
 				BttnAEspacio.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtA.getText());
 					}
 				});
 				BttnAEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
@@ -275,7 +284,16 @@ public class FramePrincipal extends JFrame {
 				JButton BttnABorrar = new JButton("Borrar");
 				BttnABorrar.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						txtA.setText(txtA.getText().substring(0,txtA.getText().length()-1));
+						int i= txtA.getText().length();
+						if (i>0){
+							if ((i>1) && (txtA.getText().charAt(i-2)=='Q') && (txtA.getText().charAt(i-1)=='U'))
+								txtA.setText(txtA.getText().substring(0, i-2));
+							else
+								txtA.setText(txtA.getText().substring(0, i-1));
+								
+										
+						}
+						
 					}
 				});
 				BttnABorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
@@ -355,6 +373,12 @@ public class FramePrincipal extends JFrame {
 				VentanaF.add(BttnJ);
 				
 				JButton BttnFEspacio = new JButton("Espacio");
+				BttnFEspacio.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent arg0) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtF.getText());
+					}
+				});
 				BttnFEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 				VentanaF.add(BttnFEspacio);
 				
@@ -363,6 +387,20 @@ public class FramePrincipal extends JFrame {
 				VentanaF.add(BttnFPunto);
 				
 				JButton BttnFBorrar = new JButton("Borrar");
+				BttnFBorrar.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						int i= txtF.getText().length();
+						if (i>0){
+							if ((i>1) && (txtF.getText().charAt(i-2)=='Q') && (txtF.getText().charAt(i-1)=='U'))
+								txtF.setText(txtF.getText().substring(0, i-2));
+							else
+								txtF.setText(txtF.getText().substring(0, i-1));
+								
+										
+						}
+						
+					}
+				});
 				BttnFBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 				VentanaF.add(BttnFBorrar);
 				
@@ -401,22 +439,52 @@ public class FramePrincipal extends JFrame {
 				VentanaK.add(BttnK);
 				
 				JButton BttnL = new JButton("Boton L");
+				BttnL.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtK.getText()+"L");
+					}
+				});
 				BttnL.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaK.add(BttnL);
 				
 				JButton BttnM = new JButton("Boton M");
+				BttnM.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtK.getText()+"M");
+					}
+				});
 				BttnM.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaK.add(BttnM);
 				
 				JButton BttnN = new JButton("Boton N");
+				BttnN.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtK.getText()+"N");
+					}
+				});
 				BttnN.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaK.add(BttnN);
 				
 				JButton BttnÑ = new JButton("Boton Ñ");
+				BttnÑ.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtK.getText()+"Ñ");
+					}
+				});
 				BttnÑ.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaK.add(BttnÑ);
 				
 				JButton BttnKEspacio = new JButton("Espacio");
+				BttnKEspacio.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtK.getText());
+					}
+				});
 				BttnKEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 				VentanaK.add(BttnKEspacio);
 				
@@ -425,6 +493,20 @@ public class FramePrincipal extends JFrame {
 				VentanaK.add(BttnKPunto);
 				
 				JButton BttnKBorrar = new JButton("Borrar");
+				BttnKBorrar.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						int i= txtK.getText().length();
+						if (i>0){
+							if ((i>1) && (txtK.getText().charAt(i-2)=='Q') && (txtK.getText().charAt(i-1)=='U'))
+								txtK.setText(txtK.getText().substring(0, i-2));
+							else
+								txtK.setText(txtK.getText().substring(0, i-1));
+								
+										
+						}
+						
+					}
+				});
 				BttnKBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 				VentanaK.add(BttnKBorrar);
 				
@@ -452,26 +534,62 @@ public class FramePrincipal extends JFrame {
 				VentanaO.setLayout(null);
 				
 			 	JButton BttnO = new JButton("Boton O");
+			 	BttnO.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtO.getText()+"O");
+					}
+				});
 				BttnO.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaO.add(BttnO);
 				
 				JButton BttnP = new JButton("Boton P");
+			 	BttnP.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtO.getText()+"P");
+					}
+				});
 				BttnP.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaO.add(BttnP);
 				
 				JButton BttnQU = new JButton("Boton QU");
+			 	BttnQU.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtO.getText()+"QU");
+					}
+				});
 				BttnQU.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaO.add(BttnQU);
 				
 				JButton BttnR = new JButton("Boton R");
+			 	BttnR.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtO.getText()+"R");
+					}
+				});
 				BttnR.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaO.add(BttnR);
 				
 				JButton BttnS = new JButton("Boton S");
+			 	BttnS.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtO.getText()+"S");
+					}
+				});
 				BttnS.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaO.add(BttnS);
 				
 				JButton BttnOEspacio = new JButton("Espacio");
+			 	BttnOEspacio.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtO.getText());
+					}
+				});
 				BttnOEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 				VentanaO.add(BttnOEspacio);
 				
@@ -480,6 +598,20 @@ public class FramePrincipal extends JFrame {
 				VentanaO.add(BttnOPunto);
 				
 				JButton BttnOBorrar = new JButton("Borrar");
+			 	BttnOBorrar.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						int i= txtO.getText().length();
+						if (i>0){
+							if ((i>1) && (txtO.getText().charAt(i-2)=='Q') && (txtO.getText().charAt(i-1)=='U'))
+								txtO.setText(txtO.getText().substring(0, i-2));
+							else
+								txtO.setText(txtO.getText().substring(0, i-1));
+								
+										
+						}
+						
+					}
+				});
 				BttnOBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 				VentanaO.add(BttnOBorrar);
 				
@@ -507,26 +639,62 @@ public class FramePrincipal extends JFrame {
 				VentanaT.setLayout(null);
 				
 			 	JButton BttnT = new JButton("Boton T");
+			 	BttnT.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtT.getText()+"T");
+					}
+				});
 				BttnT.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaT.add(BttnT);
 				
 				JButton BttnU = new JButton("Boton U");
+				BttnU.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtT.getText()+"U");
+					}
+				});
 				BttnU.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaT.add(BttnU);
 				
 				JButton BttnV = new JButton("Boton V");
+				BttnV.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtT.getText()+"V");
+					}
+				});
 				BttnV.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaT.add(BttnV);
 				
 				JButton BttnX = new JButton("Boton X");
+				BttnX.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtT.getText()+"X");
+					}
+				});
 				BttnX.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaT.add(BttnX);
 				
 				JButton BttnY = new JButton("Boton Y");
+				BttnY.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtT.getText()+"Y");
+					}
+				});
 				BttnY.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaT.add(BttnY);
 				
 				JButton BttnTEspacio = new JButton("Espacio");
+				BttnTEspacio.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						card.show(contentPane, "VentanaPrincipal");
+						txt.setText(txtT.getText());
+					}
+				});
 				BttnTEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 				VentanaT.add(BttnTEspacio);
 				
@@ -535,6 +703,20 @@ public class FramePrincipal extends JFrame {
 				VentanaT.add(BttnTPunto);
 				
 				JButton BttnTBorrar = new JButton("Borrar");
+				BttnTBorrar.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						int i= txtT.getText().length();
+						if (i>0){
+							if ((i>1) && (txtT.getText().charAt(i-2)=='Q') && (txtT.getText().charAt(i-1)=='U'))
+								txtT.setText(txtT.getText().substring(0, i-2));
+							else
+								txtT.setText(txtT.getText().substring(0, i-1));
+								
+										
+						}
+						
+					}
+				});
 				BttnTBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 				VentanaT.add(BttnTBorrar);
 				
