@@ -34,7 +34,6 @@ public class FramePrincipal extends JFrame {
 	private JTextArea txtO;
 	private JTextArea txtT;
 	private CardLayout card = new CardLayout();
-	private static FramePrincipal instance = null;
 
 	/**
 	 * Launch the application.
@@ -260,35 +259,35 @@ public class FramePrincipal extends JFrame {
 				BttnE.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaA.add(BttnE);
 				
-				JButton BttnEspacio = new JButton("Espacio");
-				BttnA.addActionListener(new ActionListener() {
+				JButton BttnAEspacio = new JButton("Espacio");
+				BttnAEspacio.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						card.show(contentPane, "VentanaPrincipal");
 					}
 				});
-				BttnEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
-				VentanaA.add(BttnEspacio);
+				BttnAEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
+				VentanaA.add(BttnAEspacio);
 				
-				JButton BttnPunto = new JButton("Punto");
-				BttnPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaA.add(BttnPunto);
+				JButton BttnAPunto = new JButton("Punto");
+				BttnAPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaA.add(BttnAPunto);
 				
-				JButton BttnBorrar = new JButton("Borrar");
-				BttnA.addActionListener(new ActionListener() {
+				JButton BttnABorrar = new JButton("Borrar");
+				BttnABorrar.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						txtA.setText(txtA.getText().substring(0,txtA.getText().length()-1));
 					}
 				});
-				BttnBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaA.add(BttnBorrar);
+				BttnABorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaA.add(BttnABorrar);
 				
-				JButton BttnSI = new JButton("SI");
-				BttnSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaA.add(BttnSI);
+				JButton BttnASI = new JButton("SI");
+				BttnASI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaA.add(BttnASI);
 				
-				JButton BttnNO = new JButton("NO");
-				BttnNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaA.add(BttnNO);
+				JButton BttnANO = new JButton("NO");
+				BttnANO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaA.add(BttnANO);
 				
 				txtA = new JTextArea();
 				txtA.setBorder(new LineBorder(new Color(0, 0, 0), 2));
@@ -355,25 +354,33 @@ public class FramePrincipal extends JFrame {
 				BttnJ.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaF.add(BttnJ);
 				
-				JButton BttnEspacio = new JButton("Espacio");
-				BttnEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
-				VentanaF.add(BttnEspacio);
+				JButton BttnFEspacio = new JButton("Espacio");
+				BttnFEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
+				VentanaF.add(BttnFEspacio);
 				
-				JButton BttnPunto = new JButton("Punto");
-				BttnPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaF.add(BttnPunto);
+				JButton BttnFPunto = new JButton("Punto");
+				BttnFPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaF.add(BttnFPunto);
 				
-				JButton BttnBorrar = new JButton("Borrar");
-				BttnBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaF.add(BttnBorrar);
+				JButton BttnFBorrar = new JButton("Borrar");
+				BttnFBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaF.add(BttnFBorrar);
 				
-				JButton BttnSI = new JButton("SI");
-				BttnSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaF.add(BttnSI);
+				JButton BttnFSI = new JButton("SI");
+				BttnFSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaF.add(BttnFSI);
 				
-				JButton BttnNO = new JButton("NO");
-				BttnNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaF.add(BttnNO);
+				JButton BttnFNO = new JButton("NO");
+				BttnFNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaF.add(BttnFNO);
+				
+				txtF = new JTextArea();
+				txtF.setBorder(new LineBorder(new Color(0, 0, 0), 2));
+				txtF.setBackground(Color.LIGHT_GRAY);
+				txtF.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
+				txtF.setEditable(false);
+				txtF.setFont(new Font("Arial", Font.BOLD, 30));
+				VentanaF.add(txtF);
 		 
 		 }
 
@@ -393,42 +400,49 @@ public class FramePrincipal extends JFrame {
 				BttnK.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 				VentanaK.add(BttnK);
 				
-				JButton BttnG = new JButton("Boton L");
-				BttnG.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-				VentanaK.add(BttnG);
+				JButton BttnL = new JButton("Boton L");
+				BttnL.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+				VentanaK.add(BttnL);
 				
-				JButton BttnH = new JButton("Boton M");
-				BttnH.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-				VentanaK.add(BttnH);
+				JButton BttnM = new JButton("Boton M");
+				BttnM.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+				VentanaK.add(BttnM);
 				
-				JButton BttnI = new JButton("Boton N");
-				BttnI.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-				VentanaK.add(BttnI);
+				JButton BttnN = new JButton("Boton N");
+				BttnN.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+				VentanaK.add(BttnN);
 				
-				JButton BttnJ = new JButton("Boton —");
-				BttnJ.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-				VentanaK.add(BttnJ);
+				JButton Bttn— = new JButton("Boton —");
+				Bttn—.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+				VentanaK.add(Bttn—);
 				
-				JButton BttnEspacio = new JButton("Espacio");
-				BttnEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
-				VentanaK.add(BttnEspacio);
+				JButton BttnKEspacio = new JButton("Espacio");
+				BttnKEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
+				VentanaK.add(BttnKEspacio);
 				
-				JButton BttnPunto = new JButton("Punto");
-				BttnPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaK.add(BttnPunto);
+				JButton BttnKPunto = new JButton("Punto");
+				BttnKPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaK.add(BttnKPunto);
 				
-				JButton BttnBorrar = new JButton("Borrar");
-				BttnBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaK.add(BttnBorrar);
+				JButton BttnKBorrar = new JButton("Borrar");
+				BttnKBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaK.add(BttnKBorrar);
 				
-				JButton BttnSI = new JButton("SI");
-				BttnSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaK.add(BttnSI);
+				JButton BttnKSI = new JButton("SI");
+				BttnKSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaK.add(BttnKSI);
 				
-				JButton BttnNO = new JButton("NO");
-				BttnNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaK.add(BttnNO);
-		 
+				JButton BttnKNO = new JButton("NO");
+				BttnKNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaK.add(BttnKNO);
+				
+				txtK = new JTextArea();
+				txtK.setBorder(new LineBorder(new Color(0, 0, 0), 2));
+				txtK.setBackground(Color.LIGHT_GRAY);
+				txtK.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
+				txtK.setEditable(false);
+				txtK.setFont(new Font("Arial", Font.BOLD, 30));
+				VentanaK.add(txtK);
 		 }
 		 
 		 public void VentanaOConstructor(){
@@ -437,46 +451,53 @@ public class FramePrincipal extends JFrame {
 				VentanaO.setBorder(new EmptyBorder(5, 5, 5, 5));
 				VentanaO.setLayout(null);
 				
-			 	JButton BttnF = new JButton("Boton O");
-				BttnF.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-				VentanaO.add(BttnF);
+			 	JButton BttnO = new JButton("Boton O");
+				BttnO.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+				VentanaO.add(BttnO);
 				
-				JButton BttnG = new JButton("Boton P");
-				BttnG.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-				VentanaO.add(BttnG);
+				JButton BttnP = new JButton("Boton P");
+				BttnP.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+				VentanaO.add(BttnP);
 				
-				JButton BttnH = new JButton("Boton QU");
-				BttnH.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-				VentanaO.add(BttnH);
+				JButton BttnQU = new JButton("Boton QU");
+				BttnQU.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+				VentanaO.add(BttnQU);
 				
-				JButton BttnI = new JButton("Boton R");
-				BttnI.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-				VentanaO.add(BttnI);
+				JButton BttnR = new JButton("Boton R");
+				BttnR.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+				VentanaO.add(BttnR);
 				
-				JButton BttnJ = new JButton("Boton S");
-				BttnJ.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-				VentanaO.add(BttnJ);
+				JButton BttnS = new JButton("Boton S");
+				BttnS.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+				VentanaO.add(BttnS);
 				
-				JButton BttnEspacio = new JButton("Espacio");
-				BttnEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
-				VentanaO.add(BttnEspacio);
+				JButton BttnOEspacio = new JButton("Espacio");
+				BttnOEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
+				VentanaO.add(BttnOEspacio);
 				
-				JButton BttnPunto = new JButton("Punto");
-				BttnPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaO.add(BttnPunto);
+				JButton BttnOPunto = new JButton("Punto");
+				BttnOPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaO.add(BttnOPunto);
 				
-				JButton BttnBorrar = new JButton("Borrar");
-				BttnBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaO.add(BttnBorrar);
+				JButton BttnOBorrar = new JButton("Borrar");
+				BttnOBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaO.add(BttnOBorrar);
 				
-				JButton BttnSI = new JButton("SI");
-				BttnSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaO.add(BttnSI);
+				JButton BttnOSI = new JButton("SI");
+				BttnOSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaO.add(BttnOSI);
 				
-				JButton BttnNO = new JButton("NO");
-				BttnNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaO.add(BttnNO);
+				JButton BttnONO = new JButton("NO");
+				BttnONO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaO.add(BttnONO);
 		 
+				txtO = new JTextArea();
+				txtO.setBorder(new LineBorder(new Color(0, 0, 0), 2));
+				txtO.setBackground(Color.LIGHT_GRAY);
+				txtO.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
+				txtO.setEditable(false);
+				txtO.setFont(new Font("Arial", Font.BOLD, 30));
+				VentanaO.add(txtO);
 		 }
 		
 		 public void VentanaTConstructor(){
@@ -485,45 +506,53 @@ public class FramePrincipal extends JFrame {
 				VentanaT.setBorder(new EmptyBorder(5, 5, 5, 5));
 				VentanaT.setLayout(null);
 				
-			 	JButton BttnF = new JButton("Boton T");
-				BttnF.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-				VentanaT.add(BttnF);
+			 	JButton BttnT = new JButton("Boton T");
+				BttnT.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+				VentanaT.add(BttnT);
 				
-				JButton BttnG = new JButton("Boton U");
-				BttnG.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-				VentanaT.add(BttnG);
+				JButton BttnU = new JButton("Boton U");
+				BttnU.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+				VentanaT.add(BttnU);
 				
-				JButton BttnH = new JButton("Boton V");
-				BttnH.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-				VentanaT.add(BttnH);
+				JButton BttnV = new JButton("Boton V");
+				BttnV.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+				VentanaT.add(BttnV);
 				
-				JButton BttnI = new JButton("Boton X");
-				BttnI.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-				VentanaT.add(BttnI);
+				JButton BttnX = new JButton("Boton X");
+				BttnX.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+				VentanaT.add(BttnX);
 				
-				JButton BttnJ = new JButton("Boton Y");
-				BttnJ.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-				VentanaT.add(BttnJ);
+				JButton BttnY = new JButton("Boton Y");
+				BttnY.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+				VentanaT.add(BttnY);
 				
-				JButton BttnEspacio = new JButton("Espacio");
-				BttnEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
-				VentanaT.add(BttnEspacio);
+				JButton BttnTEspacio = new JButton("Espacio");
+				BttnTEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
+				VentanaT.add(BttnTEspacio);
 				
-				JButton BttnPunto = new JButton("Punto");
-				BttnPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaT.add(BttnPunto);
+				JButton BttnTPunto = new JButton("Punto");
+				BttnTPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaT.add(BttnTPunto);
 				
-				JButton BttnBorrar = new JButton("Borrar");
-				BttnBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaT.add(BttnBorrar);
+				JButton BttnTBorrar = new JButton("Borrar");
+				BttnTBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaT.add(BttnTBorrar);
 				
-				JButton BttnSI = new JButton("SI");
-				BttnSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaT.add(BttnSI);
+				JButton BttnTSI = new JButton("SI");
+				BttnTSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaT.add(BttnTSI);
 				
-				JButton BttnNO = new JButton("NO");
-				BttnNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
-				VentanaT.add(BttnNO);
+				JButton BttnTNO = new JButton("NO");
+				BttnTNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
+				VentanaT.add(BttnTNO);
+				
+				txtT = new JTextArea();
+				txtT.setBorder(new LineBorder(new Color(0, 0, 0), 2));
+				txtT.setBackground(Color.LIGHT_GRAY);
+				txtT.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
+				txtT.setEditable(false);
+				txtT.setFont(new Font("Arial", Font.BOLD, 30));
+				VentanaT.add(txtT);
 		 
 		 }
 }
