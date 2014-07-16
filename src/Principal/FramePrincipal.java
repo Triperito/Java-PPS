@@ -84,7 +84,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON A (VENTANA PRINCIPAL) -- */
 		
-		JButton BttnPrA = new JButton("A");
+		JButton BttnPrA = new JButton("ABCDE");
 		BttnPrA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaA");
@@ -93,7 +93,7 @@ public class FramePrincipal extends JFrame{
 		});
 		BttnPrA.setBackground(new Color(230, 230, 250));
 		BttnPrA.setForeground(new Color(0, 0, 128));
-		BttnPrA.setFont(new Font("Arial", Font.PLAIN, 99));
+		BttnPrA.setFont(new Font("Arial", Font.PLAIN, 65));
 		BttnPrA.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaPrincipal.add(BttnPrA);
 		
@@ -101,7 +101,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON F (VENTANA PRINCIPAL) -- */
 		
-		JButton BttnPrF = new JButton("F");
+		JButton BttnPrF = new JButton("FGHIJ");
 		BttnPrF.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaF");
@@ -110,7 +110,7 @@ public class FramePrincipal extends JFrame{
 		});
 		BttnPrF.setBackground(new Color(230, 230, 250));
 		BttnPrF.setForeground(new Color(255, 0, 0));
-		BttnPrF.setFont(new Font("Arial", Font.PLAIN, 99));
+		BttnPrF.setFont(new Font("Arial", Font.PLAIN, 65));
 		BttnPrF.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaPrincipal.add(BttnPrF);
 		
@@ -118,7 +118,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON K (VENTANA PRINCIPAL) -- */
 		
-		JButton BttnPrK = new JButton("K");
+		JButton BttnPrK = new JButton("KLMN\u00D1");
 		BttnPrK.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaK");
@@ -127,7 +127,7 @@ public class FramePrincipal extends JFrame{
 		});
 		BttnPrK.setBackground(new Color(230, 230, 250));
 		BttnPrK.setForeground(new Color(34, 139, 34));
-		BttnPrK.setFont(new Font("Arial", Font.PLAIN, 99));
+		BttnPrK.setFont(new Font("Arial", Font.PLAIN, 65));
 		BttnPrK.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaPrincipal.add(BttnPrK);
 		
@@ -135,7 +135,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON O (VENTANA PRINCIPAL) -- */
 		
-		JButton BttnPrO = new JButton("O");
+		JButton BttnPrO = new JButton("OPQRS");
 		BttnPrO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaO");
@@ -143,7 +143,7 @@ public class FramePrincipal extends JFrame{
 			}
 		});
 		BttnPrO.setBackground(new Color(230, 230, 250));
-		BttnPrO.setFont(new Font("Arial", Font.PLAIN, 99));
+		BttnPrO.setFont(new Font("Arial", Font.PLAIN, 64));
 		BttnPrO.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaPrincipal.add(BttnPrO);
 		
@@ -151,7 +151,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON T (VENTANA PRINCIPAL) -- */
 		
-		JButton BttnPrT = new JButton("T");
+		JButton BttnPrT = new JButton("TUVXY");
 		BttnPrT.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaT");
@@ -160,7 +160,7 @@ public class FramePrincipal extends JFrame{
 		});
 		BttnPrT.setBackground(new Color(230, 230, 250));
 		BttnPrT.setForeground(new Color(255, 140, 0));
-		BttnPrT.setFont(new Font("Arial", Font.PLAIN, 99));
+		BttnPrT.setFont(new Font("Arial", Font.PLAIN, 65));
 		BttnPrT.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaPrincipal.add(BttnPrT);
 		
@@ -248,11 +248,11 @@ public class FramePrincipal extends JFrame{
 		VentanaPrincipal.add(txt);
 		
 		
-	 }
+	}
 	 
 	 
 	 
-	 public void VentanaAConstructor(){
+	public void VentanaAConstructor(){
 		 
 		VentanaA = new JPanel();
 		VentanaA.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -269,6 +269,9 @@ public class FramePrincipal extends JFrame{
 					txt.setText(txtA.getText()+"A");
 			}
 		});
+		BttnA.setBackground(new Color(230, 230, 250));
+		BttnA.setForeground(new Color(0, 0, 128));
+		BttnA.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnA.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaA.add(BttnA);
 		
@@ -283,6 +286,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtA.getText()+"B");
 		}
 		});
+		BttnB.setBackground(new Color(230, 230, 250));
+		BttnB.setForeground(new Color(0, 0, 128));
+		BttnB.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnB.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaA.add(BttnB);
 		
@@ -297,6 +303,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtA.getText()+"C");
 			}
 		});
+		BttnC.setBackground(new Color(230, 230, 250));
+		BttnC.setForeground(new Color(0, 0, 128));
+		BttnC.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnC.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaA.add(BttnC);
 		
@@ -311,6 +320,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtA.getText()+"D");
 			}
 		});
+		BttnD.setBackground(new Color(230, 230, 250));
+		BttnD.setForeground(new Color(0, 0, 128));
+		BttnD.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnD.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaA.add(BttnD);
 		
@@ -325,6 +337,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtA.getText()+"E");
 			}
 		});
+		BttnE.setBackground(new Color(230, 230, 250));
+		BttnE.setForeground(new Color(0, 0, 128));
+		BttnE.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnE.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaA.add(BttnE);
 		
@@ -339,6 +354,7 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtA.getText());
 			}
 		});
+		BttnAEspacio.setBackground(new Color(148, 0, 211));
 		BttnAEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 		VentanaA.add(BttnAEspacio);
 		
@@ -347,6 +363,8 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON PUNTO (VENTANA A) -- */
 		
 		JButton BttnAPunto = new JButton(".");
+		BttnAPunto.setBackground(new Color(230, 230, 250));
+		BttnAPunto.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnAPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaA.add(BttnAPunto);
 		
@@ -366,6 +384,8 @@ public class FramePrincipal extends JFrame{
 				}
 			}
 		});
+		BttnABorrar.setBackground(new Color(230, 230, 250));
+		BttnABorrar.setFont(new Font("Arial", Font.PLAIN, 25));
 		BttnABorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaA.add(BttnABorrar);
 		
@@ -374,6 +394,8 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON SI (VENTANA A) -- */
 		
 		JButton BttnASI = new JButton("SI");
+		BttnASI.setBackground(new Color(255, 165, 0));
+		BttnASI.setFont(new Font("Arial", Font.PLAIN, 30));
 		BttnASI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaA.add(BttnASI);
 		
@@ -382,6 +404,8 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON NO (VENTANA A) -- */
 		
 		JButton BttnANO = new JButton("NO");
+		BttnANO.setBackground(new Color(0, 206, 209));
+		BttnANO.setFont(new Font("Arial", Font.PLAIN, 30));
 		BttnANO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaA.add(BttnANO);
 		
@@ -419,6 +443,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtF.getText()+"F");
 			}
 		});
+		BttnF.setBackground(new Color(230, 230, 250));
+		BttnF.setForeground(new Color(255, 0, 0));
+		BttnF.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnF.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaF.add(BttnF);
 		
@@ -433,6 +460,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtF.getText()+"G");
 			}
 		});
+		BttnG.setBackground(new Color(230, 230, 250));
+		BttnG.setForeground(new Color(255, 0, 0));
+		BttnG.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnG.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaF.add(BttnG);
 		
@@ -447,6 +477,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtA.getText()+"H");
 			}
 		});
+		BttnH.setBackground(new Color(230, 230, 250));
+		BttnH.setForeground(new Color(255, 0, 0));
+		BttnH.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnH.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaF.add(BttnH);
 		
@@ -461,6 +494,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtA.getText()+"I");
 			}
 		});
+		BttnI.setBackground(new Color(230, 230, 250));
+		BttnI.setForeground(new Color(255, 0, 0));
+		BttnI.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnI.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaF.add(BttnI);
 		
@@ -475,6 +511,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtA.getText()+"J");
 			}
 		});
+		BttnJ.setBackground(new Color(230, 230, 250));
+		BttnJ.setForeground(new Color(255, 0, 0));
+		BttnJ.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnJ.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaF.add(BttnJ);
 		
@@ -489,6 +528,7 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtF.getText());
 			}
 		});
+		BttnFEspacio.setBackground(new Color(148, 0, 211));
 		BttnFEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 		VentanaF.add(BttnFEspacio);
 		
@@ -497,6 +537,8 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON PUNTO (VENTANA F) -- */
 		
 		JButton BttnFPunto = new JButton(".");
+		BttnFPunto.setBackground(new Color(230, 230, 250));
+		BttnFPunto.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnFPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaF.add(BttnFPunto);
 		
@@ -516,6 +558,8 @@ public class FramePrincipal extends JFrame{
 				}
 			}
 		});
+		BttnFBorrar.setBackground(new Color(230, 230, 250));
+		BttnFBorrar.setFont(new Font("Arial", Font.PLAIN, 25));
 		BttnFBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaF.add(BttnFBorrar);
 		
@@ -524,6 +568,8 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON SI (VENTANA F) -- */
 		
 		JButton BttnFSI = new JButton("SI");
+		BttnFSI.setBackground(new Color(255, 165, 0));
+		BttnFSI.setFont(new Font("Arial", Font.PLAIN, 30));
 		BttnFSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaF.add(BttnFSI);
 		
@@ -532,6 +578,8 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON NO (VENTANA F) -- */
 		
 		JButton BttnFNO = new JButton("NO");
+		BttnFNO.setBackground(new Color(0, 206, 209));
+		BttnFNO.setFont(new Font("Arial", Font.PLAIN, 30));
 		BttnFNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaF.add(BttnFNO);
 		
@@ -569,6 +617,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtK.getText()+"K");
 			}
 		});
+		BttnK.setBackground(new Color(230, 230, 250));
+		BttnK.setForeground(new Color(34, 139, 34));
+		BttnK.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnK.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaK.add(BttnK);
 		
@@ -583,6 +634,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtK.getText()+"L");
 			}
 		});
+		BttnL.setBackground(new Color(230, 230, 250));
+		BttnL.setForeground(new Color(34, 139, 34));
+		BttnL.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnL.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaK.add(BttnL);
 		
@@ -597,6 +651,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtK.getText()+"M");
 			}
 		});
+		BttnM.setBackground(new Color(230, 230, 250));
+		BttnM.setForeground(new Color(34, 139, 34));
+		BttnM.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnM.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaK.add(BttnM);
 		
@@ -611,6 +668,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtK.getText()+"N");
 			}
 		});
+		BttnN.setBackground(new Color(230, 230, 250));
+		BttnN.setForeground(new Color(34, 139, 34));
+		BttnN.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnN.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaK.add(BttnN);
 		
@@ -625,6 +685,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtK.getText()+"—");
 			}
 		});
+		Bttn—.setBackground(new Color(230, 230, 250));
+		Bttn—.setForeground(new Color(34, 139, 34));
+		Bttn—.setFont(new Font("Arial", Font.PLAIN, 99));
 		Bttn—.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaK.add(Bttn—);
 		
@@ -639,6 +702,7 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtK.getText());
 			}
 		});
+		BttnKEspacio.setBackground(new Color(148, 0, 211));
 		BttnKEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 		VentanaK.add(BttnKEspacio);
 		
@@ -647,6 +711,8 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON PUNTO (VENTANA K) -- */
 		
 		JButton BttnKPunto = new JButton(".");
+		BttnKPunto.setBackground(new Color(230, 230, 250));
+		BttnKPunto.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnKPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaK.add(BttnKPunto);
 		
@@ -666,6 +732,8 @@ public class FramePrincipal extends JFrame{
 				}
 			}
 		});
+		BttnKBorrar.setBackground(new Color(230, 230, 250));
+		BttnKBorrar.setFont(new Font("Arial", Font.PLAIN, 25));
 		BttnKBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaK.add(BttnKBorrar);
 		
@@ -674,6 +742,8 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON SI (VENTANA K) -- */
 		
 		JButton BttnKSI = new JButton("SI");
+		BttnKSI.setBackground(new Color(255, 165, 0));
+		BttnKSI.setFont(new Font("Arial", Font.PLAIN, 30));
 		BttnKSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaK.add(BttnKSI);
 		
@@ -682,6 +752,8 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON NO (VENTANA K) -- */
 		
 		JButton BttnKNO = new JButton("NO");
+		BttnKNO.setBackground(new Color(0, 206, 209));
+		BttnKNO.setFont(new Font("Arial", Font.PLAIN, 30));
 		BttnKNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaK.add(BttnKNO);
 		
@@ -719,6 +791,8 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtO.getText()+"O");
 			}
 		});
+	 	BttnO.setBackground(new Color(230, 230, 250));
+		BttnO.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnO.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaO.add(BttnO);
 		
@@ -733,6 +807,8 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtO.getText()+"P");
 			}
 		});
+		BttnP.setBackground(new Color(230, 230, 250));
+		BttnP.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnP.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaO.add(BttnP);
 		
@@ -747,6 +823,8 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtO.getText()+"QU");
 			}
 		});
+		BttnQU.setBackground(new Color(230, 230, 250));
+		BttnQU.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnQU.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaO.add(BttnQU);
 		
@@ -761,6 +839,8 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtO.getText()+"R");
 			}
 		});
+		BttnR.setBackground(new Color(230, 230, 250));
+		BttnR.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnR.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaO.add(BttnR);
 		
@@ -775,6 +855,8 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtO.getText()+"S");
 			}
 		});
+		BttnS.setBackground(new Color(230, 230, 250));
+		BttnS.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnS.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaO.add(BttnS);
 		
@@ -789,6 +871,7 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtO.getText());
 			}
 		});
+		BttnOEspacio.setBackground(new Color(148, 0, 211));
 		BttnOEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 		VentanaO.add(BttnOEspacio);
 		
@@ -797,6 +880,8 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON PUNTO (VENTANA O) -- */
 			
 		JButton BttnOPunto = new JButton(".");
+		BttnOPunto.setBackground(new Color(230, 230, 250));
+		BttnOPunto.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnOPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaO.add(BttnOPunto);
 		
@@ -816,6 +901,8 @@ public class FramePrincipal extends JFrame{
 				}
 			}
 		});
+		BttnOBorrar.setBackground(new Color(230, 230, 250));
+		BttnOBorrar.setFont(new Font("Arial", Font.PLAIN, 25));
 		BttnOBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaO.add(BttnOBorrar);
 		
@@ -824,6 +911,8 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON SI (VENTANA O) -- */
 		
 		JButton BttnOSI = new JButton("SI");
+		BttnOSI.setBackground(new Color(255, 165, 0));
+		BttnOSI.setFont(new Font("Arial", Font.PLAIN, 30));
 		BttnOSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaO.add(BttnOSI);
 		
@@ -832,6 +921,8 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON NO (VENTANA O) -- */
 		
 		JButton BttnONO = new JButton("NO");
+		BttnONO.setBackground(new Color(0, 206, 209));
+		BttnONO.setFont(new Font("Arial", Font.PLAIN, 30));
 		BttnONO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaO.add(BttnONO);
 		
@@ -869,6 +960,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtT.getText()+"T");
 			}
 		});
+		BttnT.setBackground(new Color(230, 230, 250));
+		BttnT.setForeground(new Color(255, 140, 0));
+		BttnT.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnT.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaT.add(BttnT);
 		
@@ -883,6 +977,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtT.getText()+"U");
 			}
 		});
+		BttnU.setBackground(new Color(230, 230, 250));
+		BttnU.setForeground(new Color(255, 140, 0));
+		BttnU.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnU.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaT.add(BttnU);
 		
@@ -897,6 +994,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtT.getText()+"V");
 			}
 		});
+		BttnV.setBackground(new Color(230, 230, 250));
+		BttnV.setForeground(new Color(255, 140, 0));
+		BttnV.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnV.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaT.add(BttnV);
 		
@@ -911,6 +1011,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtT.getText()+"X");
 			}
 		});
+		BttnX.setBackground(new Color(230, 230, 250));
+		BttnX.setForeground(new Color(255, 140, 0));
+		BttnX.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnX.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaT.add(BttnX);
 		
@@ -925,6 +1028,9 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtT.getText()+"Y");
 			}
 		});
+		BttnY.setBackground(new Color(230, 230, 250));
+		BttnY.setForeground(new Color(255, 140, 0));
+		BttnY.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnY.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaT.add(BttnY);
 		
@@ -939,6 +1045,7 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtT.getText());
 			}
 		});
+		BttnTEspacio.setBackground(new Color(148, 0, 211));
 		BttnTEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 		VentanaT.add(BttnTEspacio);
 		
@@ -947,6 +1054,8 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON PUNTO (VENTANA T) -- */
 		
 		JButton BttnTPunto = new JButton(".");
+		BttnTPunto.setBackground(new Color(230, 230, 250));
+		BttnTPunto.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnTPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaT.add(BttnTPunto);
 		
@@ -966,6 +1075,8 @@ public class FramePrincipal extends JFrame{
 				}
 			}
 		});
+		BttnTBorrar.setBackground(new Color(230, 230, 250));
+		BttnTBorrar.setFont(new Font("Arial", Font.PLAIN, 25));
 		BttnTBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaT.add(BttnTBorrar);
 		
@@ -974,6 +1085,8 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON SI (VENTANA T) -- */
 		
 		JButton BttnTSI = new JButton("SI");
+		BttnTSI.setBackground(new Color(255, 165, 0));
+		BttnTSI.setFont(new Font("Arial", Font.PLAIN, 30));
 		BttnTSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaT.add(BttnTSI);
 		
@@ -982,6 +1095,8 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON NO (VENTANA T) -- */
 		
 		JButton BttnTNO = new JButton("NO");
+		BttnTNO.setBackground(new Color(0, 206, 209));
+		BttnTNO.setFont(new Font("Arial", Font.PLAIN, 30));
 		BttnTNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaT.add(BttnTNO);
 		
