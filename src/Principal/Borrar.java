@@ -3,14 +3,14 @@ package Principal;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MiTarea extends TimerTask {
+public class Borrar extends TimerTask {
 
 	@SuppressWarnings("unused")
 	private Timer timer;
 	private int times = 0;
 	private char ventana;
 	
-	public MiTarea(Timer timer,char tipo){
+	public Borrar(Timer timer,char tipo){
 		this.timer = timer;
 		this.ventana = tipo;
 	}

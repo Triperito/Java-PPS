@@ -207,7 +207,7 @@ public class FramePrincipal extends JFrame{
 			@Override
 			public void mousePressed(MouseEvent arg0) {
 				timer = new Timer();
-				MiTarea t = new MiTarea(timer,'P');
+				Borrar t = new Borrar(timer,'P');
 				timer.schedule(t, 1, 500);
 			}
 			@Override
@@ -383,7 +383,7 @@ public class FramePrincipal extends JFrame{
 			@Override
 			public void mousePressed(MouseEvent arg0) {
 				timer = new Timer();
-				MiTarea t = new MiTarea(timer,'A');
+				Borrar t = new Borrar(timer,'A');
 				timer.schedule(t, 1, 500);
 			}
 			@Override
