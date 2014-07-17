@@ -568,15 +568,16 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON BORRAR (VENTANA F) -- */
 		
 		JButton BttnFBorrar = new JButton("Borrar");
-		BttnFBorrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				int i= txtF.getText().length();
-				if (i>0){
-					if ((i>1) && (txtF.getText().charAt(i-2)=='Q') && (txtF.getText().charAt(i-1)=='U'))
-						txtF.setText(txtF.getText().substring(0, i-2));
-					else
-						txtF.setText(txtF.getText().substring(0, i-1));
-				}
+		BttnFBorrar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+				timer = new Timer();
+				Borrar t = new Borrar(timer,'F');
+				timer.schedule(t, 1, 500);
+			}
+			@Override
+			public void mouseReleased(MouseEvent arg0) {
+				timer.cancel();
 			}
 		});
 		BttnFBorrar.setBackground(new Color(230, 230, 250));
@@ -745,15 +746,16 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON BORRAR (VENTANA K) -- */
 		
 		JButton BttnKBorrar = new JButton("Borrar");
-		BttnKBorrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				int i= txtK.getText().length();
-				if (i>0){
-					if ((i>1) && (txtK.getText().charAt(i-2)=='Q') && (txtK.getText().charAt(i-1)=='U'))
-						txtK.setText(txtK.getText().substring(0, i-2));
-					else
-						txtK.setText(txtK.getText().substring(0, i-1));
-				}
+		BttnKBorrar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+				timer = new Timer();
+				Borrar t = new Borrar(timer,'K');
+				timer.schedule(t, 1, 500);
+			}
+			@Override
+			public void mouseReleased(MouseEvent arg0) {
+				timer.cancel();
 			}
 		});
 		BttnKBorrar.setBackground(new Color(230, 230, 250));
@@ -917,15 +919,16 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON BORRAR (VENTANA O) -- */
 		
 		JButton BttnOBorrar = new JButton("Borrar");
-		BttnOBorrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				int i= txtO.getText().length();
-				if (i>0){
-					if ((i>1) && (txtO.getText().charAt(i-2)=='Q') && (txtO.getText().charAt(i-1)=='U'))
-						txtO.setText(txtO.getText().substring(0, i-2));
-					else
-						txtO.setText(txtO.getText().substring(0, i-1));
-				}
+		BttnOBorrar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+				timer = new Timer();
+				Borrar t = new Borrar(timer,'O');
+				timer.schedule(t, 1, 500);
+			}
+			@Override
+			public void mouseReleased(MouseEvent arg0) {
+				timer.cancel();
 			}
 		});
 		BttnOBorrar.setBackground(new Color(230, 230, 250));
@@ -1094,15 +1097,16 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON BORRAR (VENTANA T) -- */
 		
 		JButton BttnTBorrar = new JButton("Borrar");
-		BttnTBorrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				int i= txtT.getText().length();
-				if (i>0){
-					if ((i>1) && (txtT.getText().charAt(i-2)=='Q') && (txtT.getText().charAt(i-1)=='U'))
-						txtT.setText(txtT.getText().substring(0, i-2));
-					else
-						txtT.setText(txtT.getText().substring(0, i-1));
-				}
+		BttnTBorrar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+				timer = new Timer();
+				Borrar t = new Borrar(timer,'T');
+				timer.schedule(t, 1, 500);
+			}
+			@Override
+			public void mouseReleased(MouseEvent arg0) {
+				timer.cancel();
 			}
 		});
 		BttnTBorrar.setBackground(new Color(230, 230, 250));
