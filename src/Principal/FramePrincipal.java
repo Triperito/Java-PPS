@@ -30,13 +30,13 @@ public class FramePrincipal extends JFrame{
 	private static JPanel VentanaT;
 	private CardLayout card = new CardLayout();
 	private Timer timer;
+	private int milisegundos = 500;
 	public static JTextArea txt;
 	public static JTextArea txtA;
 	public static JTextArea txtF;
 	public static JTextArea txtK;
 	public static JTextArea txtO;
 	public static JTextArea txtT;
-	
 	
 	public int alto  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
 	public int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
@@ -212,7 +212,7 @@ public class FramePrincipal extends JFrame{
 			public void mousePressed(MouseEvent arg0) {
 				timer = new Timer();
 				Borrar t = new Borrar(timer,'P');
-				timer.schedule(t, 1, 500);
+				timer.schedule(t, 1, milisegundos);
 			}
 			@Override
 			public void mouseReleased(MouseEvent arg0) {
@@ -394,7 +394,7 @@ public class FramePrincipal extends JFrame{
 			public void mousePressed(MouseEvent arg0) {
 				timer = new Timer();
 				Borrar t = new Borrar(timer,'A');
-				timer.schedule(t, 1, 500);
+				timer.schedule(t, 1, milisegundos);
 			}
 			@Override
 			public void mouseReleased(MouseEvent arg0) {
@@ -573,7 +573,7 @@ public class FramePrincipal extends JFrame{
 			public void mousePressed(MouseEvent arg0) {
 				timer = new Timer();
 				Borrar t = new Borrar(timer,'F');
-				timer.schedule(t, 1, 500);
+				timer.schedule(t, 1, milisegundos);
 			}
 			@Override
 			public void mouseReleased(MouseEvent arg0) {
@@ -751,7 +751,7 @@ public class FramePrincipal extends JFrame{
 			public void mousePressed(MouseEvent arg0) {
 				timer = new Timer();
 				Borrar t = new Borrar(timer,'K');
-				timer.schedule(t, 1, 500);
+				timer.schedule(t, 1, milisegundos);
 			}
 			@Override
 			public void mouseReleased(MouseEvent arg0) {
@@ -924,7 +924,7 @@ public class FramePrincipal extends JFrame{
 			public void mousePressed(MouseEvent arg0) {
 				timer = new Timer();
 				Borrar t = new Borrar(timer,'O');
-				timer.schedule(t, 1, 500);
+				timer.schedule(t, 1, milisegundos);
 			}
 			@Override
 			public void mouseReleased(MouseEvent arg0) {
@@ -1102,7 +1102,7 @@ public class FramePrincipal extends JFrame{
 			public void mousePressed(MouseEvent arg0) {
 				timer = new Timer();
 				Borrar t = new Borrar(timer,'T');
-				timer.schedule(t, 1, 500);
+				timer.schedule(t, 1, milisegundos);
 			}
 			@Override
 			public void mouseReleased(MouseEvent arg0) {
