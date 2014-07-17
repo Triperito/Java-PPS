@@ -15,6 +15,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Timer;
+import javax.swing.JScrollPane;
+import javax.swing.ScrollPaneConstants;
 
 @SuppressWarnings("serial")
 public class FramePrincipal extends JFrame{
@@ -68,6 +70,8 @@ public class FramePrincipal extends JFrame{
 		VentanaTConstructor();
 		contentPane.setLayout(card);
 		contentPane.add(VentanaPrincipal,"VentanaPrincipal");
+		
+		
 		contentPane.add(VentanaA,"VentanaA");
 		contentPane.add(VentanaF,"VentanaF");
 		contentPane.add(VentanaK,"VentanaK");
@@ -240,10 +244,15 @@ public class FramePrincipal extends JFrame{
 		BttnPrNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaPrincipal.add(BttnPrNO);
 		
+
 		
 		
 		/* -- AREA DE TEXTO (VENTANA PRINCIPAL) -- */
 		
+		JScrollPane scrollPanePr = new JScrollPane(txt);
+		scrollPanePr.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPanePr.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
+		VentanaPrincipal.add(scrollPanePr);
 		txt = new JTextArea();
 		txt.setLineWrap(true);
 		txt.setBorder(new LineBorder(new Color(0, 0, 0), 2));
@@ -251,8 +260,9 @@ public class FramePrincipal extends JFrame{
 		txt.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		txt.setEditable(false);
 		txt.setFont(new Font("Arial", Font.BOLD, 30));
-		VentanaPrincipal.add(txt);
+		scrollPanePr.setViewportView(txt);
 		
+
 		
 	}
 	 
@@ -420,6 +430,10 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- AREA DE TEXTO (VENTANA A) -- */
 		
+		JScrollPane scrollPaneA = new JScrollPane(txtA);
+		scrollPaneA.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPaneA.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
+		VentanaA.add(scrollPaneA);
 		txtA = new JTextArea();
 		txtA.setLineWrap(true);
 		txtA.setBorder(new LineBorder(new Color(0, 0, 0), 2));
@@ -427,8 +441,7 @@ public class FramePrincipal extends JFrame{
 		txtA.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		txtA.setEditable(false);
 		txtA.setFont(new Font("Arial", Font.BOLD, 30));
-		VentanaA.add(txtA);
-		
+		scrollPaneA.setViewportView(txtA);
 		
 	}
 	
@@ -594,7 +607,10 @@ public class FramePrincipal extends JFrame{
 		
 		
 		/* -- AREA DE TEXTO (VENTANA F) -- */
-		
+		JScrollPane scrollPaneF = new JScrollPane(txtF);
+		scrollPaneF.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPaneF.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
+		VentanaF.add(scrollPaneF);
 		txtF = new JTextArea();
 		txtF.setLineWrap(true);
 		txtF.setBorder(new LineBorder(new Color(0, 0, 0), 2));
@@ -602,8 +618,7 @@ public class FramePrincipal extends JFrame{
 		txtF.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		txtF.setEditable(false);
 		txtF.setFont(new Font("Arial", Font.BOLD, 30));
-		VentanaF.add(txtF);
-		
+		scrollPaneF.setViewportView(txtF);
 		
 	}
 	
@@ -769,7 +784,10 @@ public class FramePrincipal extends JFrame{
 		
 		
 		/* -- AREA DE TEXTO (VENTANA K) -- */
-		
+		JScrollPane scrollPaneK = new JScrollPane(txtK);
+		scrollPaneK.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPaneK.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
+		VentanaK.add(scrollPaneK);
 		txtK = new JTextArea();
 		txtK.setLineWrap(true);
 		txtK.setBorder(new LineBorder(new Color(0, 0, 0), 2));
@@ -777,8 +795,7 @@ public class FramePrincipal extends JFrame{
 		txtK.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		txtK.setEditable(false);
 		txtK.setFont(new Font("Arial", Font.BOLD, 30));
-		VentanaK.add(txtK);
-		
+		scrollPaneK.setViewportView(txtK);
 		
 	}
 	 
@@ -939,7 +956,10 @@ public class FramePrincipal extends JFrame{
 		
 		
 		/* -- AREA DE TEXTO (VENTANA O) -- */
-		
+		JScrollPane scrollPaneO = new JScrollPane(txtO);
+		scrollPaneO.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPaneO.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
+		VentanaO.add(scrollPaneO);
 		txtO = new JTextArea();
 		txtO.setLineWrap(true);
 		txtO.setBorder(new LineBorder(new Color(0, 0, 0), 2));
@@ -947,8 +967,7 @@ public class FramePrincipal extends JFrame{
 		txtO.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		txtO.setEditable(false);
 		txtO.setFont(new Font("Arial", Font.BOLD, 30));
-		VentanaO.add(txtO);
-		
+		scrollPaneO.setViewportView(txtO);
 		
 	}
 	
@@ -1114,7 +1133,10 @@ public class FramePrincipal extends JFrame{
 		
 		
 		/* -- AREA DE TEXTO (VENTANA T) -- */
-		
+		JScrollPane scrollPaneT = new JScrollPane(txtT);
+		scrollPaneT.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPaneT.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
+		VentanaT.add(scrollPaneT);
 		txtT = new JTextArea();
 		txtT.setLineWrap(true);
 		txtT.setBorder(new LineBorder(new Color(0, 0, 0), 2));
@@ -1122,11 +1144,8 @@ public class FramePrincipal extends JFrame{
 		txtT.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		txtT.setEditable(false);
 		txtT.setFont(new Font("Arial", Font.BOLD, 30));
-		VentanaT.add(txtT);
+		scrollPaneT.setViewportView(txtT);
 		
 		
 	}
-
-
-	
 }
