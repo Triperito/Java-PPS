@@ -12,6 +12,9 @@ import javax.swing.border.LineBorder;
 import java.awt.CardLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.Timer;
 
 @SuppressWarnings("serial")
 public class FramePrincipal extends JFrame{
@@ -23,13 +26,15 @@ public class FramePrincipal extends JFrame{
 	private static JPanel VentanaK;
 	private static JPanel VentanaO;
 	private static JPanel VentanaT;
-	private JTextArea txt;
-	private JTextArea txtA;
-	private JTextArea txtF;
-	private JTextArea txtK;
-	private JTextArea txtO;
-	private JTextArea txtT;
 	private CardLayout card = new CardLayout();
+	private Timer timer;
+	public static JTextArea txt;
+	public static JTextArea txtA;
+	public static JTextArea txtF;
+	public static JTextArea txtK;
+	public static JTextArea txtO;
+	public static JTextArea txtT;
+	
 	
 	public int alto  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
 	public int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
@@ -198,16 +203,16 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON BORRAR (VENTANA PRINCIPAL) -- */
 		
 		JButton BttnPrBorrar = new JButton("Borrar");
-		BttnPrBorrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				int i= txt.getText().length();
-				if (i>0){
-					if ((i>1) && (txt.getText().charAt(i-2)=='Q') && (txt.getText().charAt(i-1)=='U'))
-						txt.setText(txt.getText().substring(0, i-2));
-					else
-						txt.setText(txt.getText().substring(0, i-1));
-				}
-				
+		BttnPrBorrar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+				timer = new Timer();
+				MiTarea t = new MiTarea(timer,'P');
+				timer.schedule(t, 1, 500);
+			}
+			@Override
+			public void mouseReleased(MouseEvent arg0) {
+				timer.cancel();
 			}
 		});
 		BttnPrBorrar.setBackground(new Color(230, 230, 250));
@@ -240,6 +245,7 @@ public class FramePrincipal extends JFrame{
 		/* -- AREA DE TEXTO (VENTANA PRINCIPAL) -- */
 		
 		txt = new JTextArea();
+		txt.setLineWrap(true);
 		txt.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		txt.setBackground(Color.LIGHT_GRAY);
 		txt.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
@@ -373,15 +379,16 @@ public class FramePrincipal extends JFrame{
 		/* -- BOTON BORRAR (VENTANA A) -- */
 		
 		JButton BttnABorrar = new JButton("Borrar");
-		BttnABorrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				int i= txtA.getText().length();
-				if (i>0){
-					if ((i>1) && (txtA.getText().charAt(i-2)=='Q') && (txtA.getText().charAt(i-1)=='U'))
-						txtA.setText(txtA.getText().substring(0, i-2));
-					else
-						txtA.setText(txtA.getText().substring(0, i-1));
-				}
+		BttnABorrar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+				timer = new Timer();
+				MiTarea t = new MiTarea(timer,'A');
+				timer.schedule(t, 1, 500);
+			}
+			@Override
+			public void mouseReleased(MouseEvent arg0) {
+				timer.cancel();
 			}
 		});
 		BttnABorrar.setBackground(new Color(230, 230, 250));
@@ -414,6 +421,7 @@ public class FramePrincipal extends JFrame{
 		/* -- AREA DE TEXTO (VENTANA A) -- */
 		
 		txtA = new JTextArea();
+		txtA.setLineWrap(true);
 		txtA.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		txtA.setBackground(Color.LIGHT_GRAY);
 		txtA.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
@@ -474,7 +482,7 @@ public class FramePrincipal extends JFrame{
 		BttnH.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
-				txt.setText(txtA.getText()+"H");
+				txt.setText(txtF.getText()+"H");
 			}
 		});
 		BttnH.setBackground(new Color(230, 230, 250));
@@ -491,7 +499,7 @@ public class FramePrincipal extends JFrame{
 		BttnI.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
-				txt.setText(txtA.getText()+"I");
+				txt.setText(txtF.getText()+"I");
 			}
 		});
 		BttnI.setBackground(new Color(230, 230, 250));
@@ -508,7 +516,7 @@ public class FramePrincipal extends JFrame{
 		BttnJ.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
-				txt.setText(txtA.getText()+"J");
+				txt.setText(txtF.getText()+"J");
 			}
 		});
 		BttnJ.setBackground(new Color(230, 230, 250));
@@ -588,6 +596,7 @@ public class FramePrincipal extends JFrame{
 		/* -- AREA DE TEXTO (VENTANA F) -- */
 		
 		txtF = new JTextArea();
+		txtF.setLineWrap(true);
 		txtF.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		txtF.setBackground(Color.LIGHT_GRAY);
 		txtF.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
@@ -762,6 +771,7 @@ public class FramePrincipal extends JFrame{
 		/* -- AREA DE TEXTO (VENTANA K) -- */
 		
 		txtK = new JTextArea();
+		txtK.setLineWrap(true);
 		txtK.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		txtK.setBackground(Color.LIGHT_GRAY);
 		txtK.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
@@ -931,6 +941,7 @@ public class FramePrincipal extends JFrame{
 		/* -- AREA DE TEXTO (VENTANA O) -- */
 		
 		txtO = new JTextArea();
+		txtO.setLineWrap(true);
 		txtO.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		txtO.setBackground(Color.LIGHT_GRAY);
 		txtO.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
@@ -1105,6 +1116,7 @@ public class FramePrincipal extends JFrame{
 		/* -- AREA DE TEXTO (VENTANA T) -- */
 		
 		txtT = new JTextArea();
+		txtT.setLineWrap(true);
 		txtT.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		txtT.setBackground(Color.LIGHT_GRAY);
 		txtT.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
