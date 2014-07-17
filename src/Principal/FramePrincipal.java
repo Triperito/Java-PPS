@@ -259,7 +259,7 @@ public class FramePrincipal extends JFrame{
 		txt.setBackground(Color.LIGHT_GRAY);
 		txt.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		txt.setEditable(false);
-		txt.setFont(new Font("Arial", Font.BOLD, 30));
+		txt.setFont(new Font("Arial", Font.BOLD, (int) (alto*0.033)));
 		scrollPanePr.setViewportView(txt);
 		
 
@@ -282,7 +282,7 @@ public class FramePrincipal extends JFrame{
 		BttnA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
-					txt.setText(txtA.getText()+"A");
+					txt.setText(txtA.getText()+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 			}
 		});
 		BttnA.setBackground(new Color(230, 230, 250));
@@ -440,7 +440,7 @@ public class FramePrincipal extends JFrame{
 		txtA.setBackground(Color.LIGHT_GRAY);
 		txtA.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		txtA.setEditable(false);
-		txtA.setFont(new Font("Arial", Font.BOLD, 30));
+		txtA.setFont(new Font("Arial", Font.BOLD, (int) (alto*0.033)));
 		scrollPaneA.setViewportView(txtA);
 		
 	}
@@ -618,7 +618,7 @@ public class FramePrincipal extends JFrame{
 		txtF.setBackground(Color.LIGHT_GRAY);
 		txtF.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		txtF.setEditable(false);
-		txtF.setFont(new Font("Arial", Font.BOLD, 30));
+		txtF.setFont(new Font("Arial", Font.BOLD, (int) (alto*0.033)));
 		scrollPaneF.setViewportView(txtF);
 		
 	}
@@ -796,7 +796,7 @@ public class FramePrincipal extends JFrame{
 		txtK.setBackground(Color.LIGHT_GRAY);
 		txtK.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		txtK.setEditable(false);
-		txtK.setFont(new Font("Arial", Font.BOLD, 30));
+		txtK.setFont(new Font("Arial", Font.BOLD, (int) (alto*0.033)));
 		scrollPaneK.setViewportView(txtK);
 		
 	}
@@ -969,7 +969,7 @@ public class FramePrincipal extends JFrame{
 		txtO.setBackground(Color.LIGHT_GRAY);
 		txtO.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		txtO.setEditable(false);
-		txtO.setFont(new Font("Arial", Font.BOLD, 30));
+		txtO.setFont(new Font("Arial", Font.BOLD, (int) (alto*0.033)));
 		scrollPaneO.setViewportView(txtO);
 		
 	}
@@ -1147,7 +1147,7 @@ public class FramePrincipal extends JFrame{
 		txtT.setBackground(Color.LIGHT_GRAY);
 		txtT.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		txtT.setEditable(false);
-		txtT.setFont(new Font("Arial", Font.BOLD, 30));
+		txtT.setFont(new Font("Arial", Font.BOLD, (int) (alto*0.033)));
 		scrollPaneT.setViewportView(txtT);
 		
 		
