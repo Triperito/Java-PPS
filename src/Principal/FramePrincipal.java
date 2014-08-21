@@ -268,7 +268,7 @@ public class FramePrincipal extends JFrame{
 					timerClose.cancel();
 				}
 				timerClose = new Timer();
-				Timers t1 = new Timers(timer,'1');
+				Timers t1 = new Timers(timerClose,'1');
 				timerClose.schedule(t1, 1, 2000);
 			}
 		});
@@ -290,7 +290,7 @@ public class FramePrincipal extends JFrame{
 					timerClose.cancel();
 				}
 				timerClose = new Timer();
-				Timers t2 = new Timers(timer,'2');
+				Timers t2 = new Timers(timerClose,'2');
 				timerClose.schedule(t2, 1, 100);
 			}
 		});
