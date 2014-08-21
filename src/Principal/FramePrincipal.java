@@ -17,6 +17,7 @@ import java.awt.event.MouseEvent;
 import java.util.Timer;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
+import javax.swing.UIManager;
 
 @SuppressWarnings("serial")
 public class FramePrincipal extends JFrame{
@@ -30,6 +31,7 @@ public class FramePrincipal extends JFrame{
 	private static JPanel VentanaT;
 	private CardLayout card = new CardLayout();
 	private Timer timer;
+	public static Timer timerClose;
 	private int milisegundos = 500;
 	public static JTextArea txt;
 	public static JTextArea txtA;
@@ -37,6 +39,7 @@ public class FramePrincipal extends JFrame{
 	public static JTextArea txtK;
 	public static JTextArea txtO;
 	public static JTextArea txtT;
+	public static boolean okCerrar=false;
 	
 	public int alto  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
 	public int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
@@ -70,6 +73,8 @@ public class FramePrincipal extends JFrame{
 		VentanaTConstructor();
 		contentPane.setLayout(card);
 		contentPane.add(VentanaPrincipal,"VentanaPrincipal");
+		
+		
 		
 		
 		contentPane.add(VentanaA,"VentanaA");
@@ -211,7 +216,7 @@ public class FramePrincipal extends JFrame{
 			@Override
 			public void mousePressed(MouseEvent arg0) {
 				timer = new Timer();
-				TimerBorrar t = new TimerBorrar(timer,'P');
+				Timers t = new Timers(timer,'P');
 				timer.schedule(t, 1, milisegundos);
 			}
 			@Override
@@ -244,8 +249,54 @@ public class FramePrincipal extends JFrame{
 		BttnPrNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaPrincipal.add(BttnPrNO);
 		
-
+		/* -- BOTON CLOSE1 (VENTANA PRINCIPAL) --*/
 		
+		JButton BttnClose1 = new JButton("");
+		BttnClose1.setOpaque(false);
+		BttnClose1.setBorderPainted(false);
+		BttnClose1.setBorder(null);
+		BttnClose1.setBackground(new Color(255, 255, 255));
+		BttnClose1.setForeground(UIManager.getColor("Panel.background"));
+		BttnClose1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		BttnClose1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				if(timerClose != null){
+					timerClose.cancel();
+				}
+				timerClose = new Timer();
+				Timers t1 = new Timers(timer,'1');
+				timerClose.schedule(t1, 1, 2000);
+			}
+		});
+		BttnClose1.setBounds((int)(this.ancho*0.643),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+		VentanaPrincipal.add(BttnClose1); 
+
+		/* -- BOTON CLOSE2 (VENTANA PRINCIPAL) --*/
+		
+		JButton BttnClose2 = new JButton("");
+		BttnClose2.setOpaque(false);
+		BttnClose2.setBorderPainted(false);
+		BttnClose2.setBorder(null);
+		BttnClose2.setBackground(new Color(255, 255, 255));
+		BttnClose2.setForeground(UIManager.getColor("Panel.background"));
+		BttnClose2.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				if(timerClose != null){
+					timerClose.cancel();
+				}
+				timerClose = new Timer();
+				Timers t2 = new Timers(timer,'2');
+				timerClose.schedule(t2, 1, 100);
+			}
+		});
+		BttnClose2.setBounds((int)(this.ancho*0.143),(int)(this.alto*0.375), (int)(this.ancho*0.21),(int)(this.alto*0.25));
+		VentanaPrincipal.add(BttnClose2);
+
 		
 		/* -- AREA DE TEXTO (VENTANA PRINCIPAL) -- */
 		
@@ -282,7 +333,7 @@ public class FramePrincipal extends JFrame{
 		BttnA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
-					txt.setText(txtA.getText()+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+				txt.setText(txtA.getText()+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 			}
 		});
 		BttnA.setBackground(new Color(230, 230, 250));
@@ -393,7 +444,7 @@ public class FramePrincipal extends JFrame{
 			@Override
 			public void mousePressed(MouseEvent arg0) {
 				timer = new Timer();
-				TimerBorrar t = new TimerBorrar(timer,'A');
+				Timers t = new Timers(timer,'A');
 				timer.schedule(t, 1, milisegundos);
 			}
 			@Override
@@ -572,7 +623,7 @@ public class FramePrincipal extends JFrame{
 			@Override
 			public void mousePressed(MouseEvent arg0) {
 				timer = new Timer();
-				TimerBorrar t = new TimerBorrar(timer,'F');
+				Timers t = new Timers(timer,'F');
 				timer.schedule(t, 1, milisegundos);
 			}
 			@Override
@@ -750,7 +801,7 @@ public class FramePrincipal extends JFrame{
 			@Override
 			public void mousePressed(MouseEvent arg0) {
 				timer = new Timer();
-				TimerBorrar t = new TimerBorrar(timer,'K');
+				Timers t = new Timers(timer,'K');
 				timer.schedule(t, 1, milisegundos);
 			}
 			@Override
@@ -923,7 +974,7 @@ public class FramePrincipal extends JFrame{
 			@Override
 			public void mousePressed(MouseEvent arg0) {
 				timer = new Timer();
-				TimerBorrar t = new TimerBorrar(timer,'O');
+				Timers t = new Timers(timer,'O');
 				timer.schedule(t, 1, milisegundos);
 			}
 			@Override
@@ -1101,7 +1152,7 @@ public class FramePrincipal extends JFrame{
 			@Override
 			public void mousePressed(MouseEvent arg0) {
 				timer = new Timer();
-				TimerBorrar t = new TimerBorrar(timer,'T');
+				Timers t = new Timers(timer,'T');
 				timer.schedule(t, 1, milisegundos);
 			}
 			@Override

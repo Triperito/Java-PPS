@@ -3,14 +3,14 @@ package Principal;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class TimerBorrar extends TimerTask {
+public class Timers extends TimerTask {
 
 	@SuppressWarnings("unused")
 	private Timer timer;
 	private int times = 0;
 	private char ventana;
 	
-	public TimerBorrar(Timer timer,char tipo){
+	public Timers(Timer timer,char tipo){
 		this.timer = timer;
 		this.ventana = tipo;
 	}
@@ -189,6 +189,27 @@ public class TimerBorrar extends TimerTask {
 					else{
 						FramePrincipal.txtT.setText(null);
 					}
+				}
+				break;
+				
+			case '1':
+				if (times==1){
+					FramePrincipal.okCerrar=true;
+				}
+				else{
+					FramePrincipal.okCerrar=false;
+					FramePrincipal.timerClose.cancel();
+				}
+				break;
+				
+			case '2':
+				if(times==1) {
+					if (FramePrincipal.okCerrar){
+						System.exit(0);
+					}
+				}
+				else{
+					FramePrincipal.timerClose.cancel();
 				}
 				break;
 				
