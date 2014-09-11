@@ -3,6 +3,7 @@ package Principal;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -44,6 +45,34 @@ public class FramePrincipal extends JFrame{
 	public int alto  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
 	public int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
 	
+	ImageIcon Cerrar = new ImageIcon(FramePrincipal.class.getResource("/Graficos/ImagenFondo.png"));
+	ImageIcon CerrarMod = new ImageIcon(Cerrar.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon APrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnAPrincipal.png"));
+	ImageIcon APrincipalMod = new ImageIcon(APrincipal.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon APrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnAPrincipal.png"));
+	ImageIcon APrincipalModCliked = new ImageIcon(APrincipalCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon FPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnFPrincipal.png"));
+	ImageIcon FPrincipalMod = new ImageIcon(FPrincipal.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon FPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnFPrincipal.png"));
+	ImageIcon FPrincipalModCliked = new ImageIcon(FPrincipalCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon KPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnKPrincipal.png"));
+	ImageIcon KPrincipalMod = new ImageIcon(KPrincipal.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon KPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnKPrincipal.png"));
+	ImageIcon KPrincipalModCliked = new ImageIcon(KPrincipalCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon OPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnOPrincipal.png"));
+	ImageIcon OPrincipalMod = new ImageIcon(OPrincipal.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon OPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnOPrincipal.png"));
+	ImageIcon OPrincipalModCliked = new ImageIcon(OPrincipalCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon TPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnTPrincipal.png"));
+	ImageIcon TPrincipalMod = new ImageIcon(TPrincipal.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon TPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnTPrincipal.png"));
+	ImageIcon TPrincipalModCliked = new ImageIcon(TPrincipalCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
 	public static void main(String[] args){
 		EventQueue.invokeLater(new Runnable(){
 			public void run(){
@@ -73,10 +102,6 @@ public class FramePrincipal extends JFrame{
 		VentanaTConstructor();
 		contentPane.setLayout(card);
 		contentPane.add(VentanaPrincipal,"VentanaPrincipal");
-		
-		
-		
-		
 		contentPane.add(VentanaA,"VentanaA");
 		contentPane.add(VentanaF,"VentanaF");
 		contentPane.add(VentanaK,"VentanaK");
@@ -98,33 +123,32 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON A (VENTANA PRINCIPAL) -- */
 		
-		JButton BttnPrA = new JButton("ABCDE");
+		JButton BttnPrA = new JButton("");
+		BttnPrA.setIcon(APrincipalMod);
+		BttnPrA.setPressedIcon(APrincipalModCliked);
 		BttnPrA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaA");
 				txtA.setText(txt.getText());
 			}
 		});
-		BttnPrA.setBackground(new Color(230, 230, 250));
-		BttnPrA.setForeground(new Color(0, 0, 128));
-		BttnPrA.setFont(new Font("Arial", Font.PLAIN, 65));
 		BttnPrA.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaPrincipal.add(BttnPrA);
 		
 		
 		
+		
 		/* -- BOTON F (VENTANA PRINCIPAL) -- */
 		
-		JButton BttnPrF = new JButton("FGHIJ");
+		JButton BttnPrF = new JButton("");
+		BttnPrF.setIcon(FPrincipalMod);
+		BttnPrF.setPressedIcon(FPrincipalModCliked);
 		BttnPrF.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaF");
 				txtF.setText(txt.getText());
 			}
 		});
-		BttnPrF.setBackground(new Color(230, 230, 250));
-		BttnPrF.setForeground(new Color(255, 0, 0));
-		BttnPrF.setFont(new Font("Arial", Font.PLAIN, 65));
 		BttnPrF.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaPrincipal.add(BttnPrF);
 		
@@ -132,16 +156,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON K (VENTANA PRINCIPAL) -- */
 		
-		JButton BttnPrK = new JButton("KLMN\u00D1");
+		JButton BttnPrK = new JButton("");
+		BttnPrK.setIcon(KPrincipalMod);
+		BttnPrK.setPressedIcon(KPrincipalModCliked);
 		BttnPrK.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaK");
 				txtK.setText(txt.getText());
 			}
 		});
-		BttnPrK.setBackground(new Color(230, 230, 250));
-		BttnPrK.setForeground(new Color(34, 139, 34));
-		BttnPrK.setFont(new Font("Arial", Font.PLAIN, 65));
 		BttnPrK.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaPrincipal.add(BttnPrK);
 		
@@ -149,15 +172,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON O (VENTANA PRINCIPAL) -- */
 		
-		JButton BttnPrO = new JButton("OPQRS");
+		JButton BttnPrO = new JButton("");
+		BttnPrO.setIcon(OPrincipalMod);
+		BttnPrO.setPressedIcon(OPrincipalModCliked);
 		BttnPrO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaO");
 				txtO.setText(txt.getText());
 			}
 		});
-		BttnPrO.setBackground(new Color(230, 230, 250));
-		BttnPrO.setFont(new Font("Arial", Font.PLAIN, 64));
 		BttnPrO.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaPrincipal.add(BttnPrO);
 		
@@ -165,16 +188,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON T (VENTANA PRINCIPAL) -- */
 		
-		JButton BttnPrT = new JButton("TUVXY");
+		JButton BttnPrT = new JButton("");
+		BttnPrT.setIcon(TPrincipalMod);
+		BttnPrT.setPressedIcon(TPrincipalModCliked);
 		BttnPrT.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaT");
 				txtT.setText(txt.getText());
 			}
 		});
-		BttnPrT.setBackground(new Color(230, 230, 250));
-		BttnPrT.setForeground(new Color(255, 140, 0));
-		BttnPrT.setFont(new Font("Arial", Font.PLAIN, 65));
 		BttnPrT.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaPrincipal.add(BttnPrT);
 		
@@ -249,9 +271,10 @@ public class FramePrincipal extends JFrame{
 		BttnPrNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaPrincipal.add(BttnPrNO);
 		
-		/* -- BOTON CLOSE1 (VENTANA PRINCIPAL) --*/
+		/* -- BOTON CERRAR1 (VENTANA PRINCIPAL) --*/
 		
 		JButton BttnClose1 = new JButton("");
+		BttnClose1.setIcon(CerrarMod);
 		BttnClose1.setOpaque(false);
 		BttnClose1.setBorderPainted(false);
 		BttnClose1.setBorder(null);
@@ -275,9 +298,10 @@ public class FramePrincipal extends JFrame{
 		BttnClose1.setBounds((int)(this.ancho*0.643),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaPrincipal.add(BttnClose1); 
 
-		/* -- BOTON CLOSE2 (VENTANA PRINCIPAL) --*/
+		/* -- BOTON CERRAR2 (VENTANA PRINCIPAL) --*/
 		
 		JButton BttnClose2 = new JButton("");
+		BttnClose2.setIcon(CerrarMod);
 		BttnClose2.setOpaque(false);
 		BttnClose2.setBorderPainted(false);
 		BttnClose2.setBorder(null);
@@ -333,7 +357,7 @@ public class FramePrincipal extends JFrame{
 		BttnA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
-				txt.setText(txtA.getText()+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+				txt.setText(txtA.getText()+"A");
 			}
 		});
 		BttnA.setBackground(new Color(230, 230, 250));
