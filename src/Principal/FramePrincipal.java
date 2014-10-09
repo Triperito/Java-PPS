@@ -48,30 +48,214 @@ public class FramePrincipal extends JFrame{
 	ImageIcon Cerrar = new ImageIcon(FramePrincipal.class.getResource("/Graficos/ImagenFondo.png"));
 	ImageIcon CerrarMod = new ImageIcon(Cerrar.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
 	
-	ImageIcon APrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnAPrincipal.png"));
+	
+	/* -- BOTONES (VENTANA PRINCIPAL) -- */
+	
+	ImageIcon APrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrA.png"));
 	ImageIcon APrincipalMod = new ImageIcon(APrincipal.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
-	ImageIcon APrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnAPrincipal.png"));
+	ImageIcon APrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrA.png"));
 	ImageIcon APrincipalModCliked = new ImageIcon(APrincipalCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
 	
-	ImageIcon FPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnFPrincipal.png"));
+	ImageIcon FPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrF.png"));
 	ImageIcon FPrincipalMod = new ImageIcon(FPrincipal.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
-	ImageIcon FPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnFPrincipal.png"));
+	ImageIcon FPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrF.png"));
 	ImageIcon FPrincipalModCliked = new ImageIcon(FPrincipalCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
 	
-	ImageIcon KPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnKPrincipal.png"));
+	ImageIcon KPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrK.png"));
 	ImageIcon KPrincipalMod = new ImageIcon(KPrincipal.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
-	ImageIcon KPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnKPrincipal.png"));
+	ImageIcon KPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrK.png"));
 	ImageIcon KPrincipalModCliked = new ImageIcon(KPrincipalCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
 	
-	ImageIcon OPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnOPrincipal.png"));
+	ImageIcon OPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrO.png"));
 	ImageIcon OPrincipalMod = new ImageIcon(OPrincipal.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
-	ImageIcon OPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnOPrincipal.png"));
+	ImageIcon OPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrO.png"));
 	ImageIcon OPrincipalModCliked = new ImageIcon(OPrincipalCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
 	
-	ImageIcon TPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnTPrincipal.png"));
+	ImageIcon TPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrT.png"));
 	ImageIcon TPrincipalMod = new ImageIcon(TPrincipal.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
-	ImageIcon TPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnTPrincipal.png"));
+	ImageIcon TPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrT.png"));
 	ImageIcon TPrincipalModCliked = new ImageIcon(TPrincipalCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	
+	/* -- BOTONES VENTANA A  -- */
+	
+	ImageIcon BotonA = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnA.png"));
+	ImageIcon BotonAMod = new ImageIcon(BotonA.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonACliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnA.png"));
+	ImageIcon BotonAModCliked = new ImageIcon(BotonACliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonB = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnB.png"));
+	ImageIcon BotonBMod = new ImageIcon(BotonB.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonBCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnB.png"));
+	ImageIcon BotonBModCliked = new ImageIcon(BotonBCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonC = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnC.png"));
+	ImageIcon BotonCMod = new ImageIcon(BotonC.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonCCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnC.png"));
+	ImageIcon BotonCModCliked = new ImageIcon(BotonCCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonD = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnD.png"));
+	ImageIcon BotonDMod = new ImageIcon(BotonD.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonDCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnD.png"));
+	ImageIcon BotonDModCliked = new ImageIcon(BotonDCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonE = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnE.png"));
+	ImageIcon BotonEMod = new ImageIcon(BotonE.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonECliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnE.png"));
+	ImageIcon BotonEModCliked = new ImageIcon(BotonECliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	
+/* -- BOTONES VENTANA F  -- */
+	
+	ImageIcon BotonF = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnF.png"));
+	ImageIcon BotonFMod = new ImageIcon(BotonF.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonFCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnF.png"));
+	ImageIcon BotonFModCliked = new ImageIcon(BotonFCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonG = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnG.png"));
+	ImageIcon BotonGMod = new ImageIcon(BotonG.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonGCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnG.png"));
+	ImageIcon BotonGModCliked = new ImageIcon(BotonGCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonH = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnH.png"));
+	ImageIcon BotonHMod = new ImageIcon(BotonH.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonHCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnH.png"));
+	ImageIcon BotonHModCliked = new ImageIcon(BotonHCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonI = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnI.png"));
+	ImageIcon BotonIMod = new ImageIcon(BotonI.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonICliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnI.png"));
+	ImageIcon BotonIModCliked = new ImageIcon(BotonICliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonJ = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnJ.png"));
+	ImageIcon BotonJMod = new ImageIcon(BotonJ.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonJCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnJ.png"));
+	ImageIcon BotonJModCliked = new ImageIcon(BotonJCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	
+/* -- BOTONES VENTANA K  -- */
+	
+	ImageIcon BotonK = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnK.png"));
+	ImageIcon BotonKMod = new ImageIcon(BotonK.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonKCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnK.png"));
+	ImageIcon BotonKModCliked = new ImageIcon(BotonKCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonL = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnL.png"));
+	ImageIcon BotonLMod = new ImageIcon(BotonL.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonLCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnL.png"));
+	ImageIcon BotonLModCliked = new ImageIcon(BotonLCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonM = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnM.png"));
+	ImageIcon BotonMMod = new ImageIcon(BotonM.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonMCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnM.png"));
+	ImageIcon BotonMModCliked = new ImageIcon(BotonMCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonN = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnN.png"));
+	ImageIcon BotonNMod = new ImageIcon(BotonN.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonNCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnN.png"));
+	ImageIcon BotonNModCliked = new ImageIcon(BotonNCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon Boton— = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttn—.png"));
+	ImageIcon Boton—Mod = new ImageIcon(Boton—.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon Boton—Cliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttn—.png"));
+	ImageIcon Boton—ModCliked = new ImageIcon(Boton—Cliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	
+/* -- BOTONES VENTANA O  -- */
+	
+	ImageIcon BotonO = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnO.png"));
+	ImageIcon BotonOMod = new ImageIcon(BotonO.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonOCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnO.png"));
+	ImageIcon BotonOModCliked = new ImageIcon(BotonOCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonP = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnP.png"));
+	ImageIcon BotonPMod = new ImageIcon(BotonP.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonPCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnP.png"));
+	ImageIcon BotonPModCliked = new ImageIcon(BotonPCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonQU = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnQU.png"));
+	ImageIcon BotonQUMod = new ImageIcon(BotonQU.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonQUCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnQU.png"));
+	ImageIcon BotonQUModCliked = new ImageIcon(BotonQUCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonR = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnR.png"));
+	ImageIcon BotonRMod = new ImageIcon(BotonR.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonRCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnR.png"));
+	ImageIcon BotonRModCliked = new ImageIcon(BotonRCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonS = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnS.png"));
+	ImageIcon BotonSMod = new ImageIcon(BotonS.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonSCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnS.png"));
+	ImageIcon BotonSModCliked = new ImageIcon(BotonSCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	
+/* -- BOTONES VENTANA T  -- */
+	
+	ImageIcon BotonT = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnT.png"));
+	ImageIcon BotonTMod = new ImageIcon(BotonT.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonTCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnT.png"));
+	ImageIcon BotonTModCliked = new ImageIcon(BotonTCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonU = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnU.png"));
+	ImageIcon BotonUMod = new ImageIcon(BotonU.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonUCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnU.png"));
+	ImageIcon BotonUModCliked = new ImageIcon(BotonUCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonV = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnV.png"));
+	ImageIcon BotonVMod = new ImageIcon(BotonV.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonVCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnV.png"));
+	ImageIcon BotonVModCliked = new ImageIcon(BotonVCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonX = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnX.png"));
+	ImageIcon BotonXMod = new ImageIcon(BotonX.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonXCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnX.png"));
+	ImageIcon BotonXModCliked = new ImageIcon(BotonXCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	ImageIcon BotonY = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnY.png"));
+	ImageIcon BotonYMod = new ImageIcon(BotonY.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonYCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnY.png"));
+	ImageIcon BotonYModCliked = new ImageIcon(BotonYCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	
+	
+	/* -- BOTON ESPACIO  -- */
+	/*
+	ImageIcon BotonEspacio = new ImageIcon(FramePrincipal.class.getResource("/Graficos/.png"));
+	ImageIcon BotonEspacioMod = new ImageIcon(BotonEspacio.getImage().getScaledInstance((int)(this.ancho*0.4),(int)(this.alto*0.1), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonEspacioCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/.png"));
+	ImageIcon BotonEspacioModCliked = new ImageIcon(BotonEspacioCliked.getImage().getScaledInstance((int)(this.ancho*0.4),(int)(this.alto*0.1), java.awt.Image.SCALE_DEFAULT));
+	*/
+	
+	/* -- BOTON PUNTO  -- */
+	/*
+	ImageIcon BotonPunto = new ImageIcon(FramePrincipal.class.getResource("/Graficos/.png"));
+	ImageIcon BotonPuntoMod = new ImageIcon(BotonPunto.getImage().getScaledInstance((int)(this.ancho*0.11),(int)(this.alto*0.14), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonPuntoCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/.png"));
+	ImageIcon BotonPuntoModCliked = new ImageIcon(BotonPuntoCliked.getImage().getScaledInstance((int)(this.ancho*0.11),(int)(this.alto*0.14), java.awt.Image.SCALE_DEFAULT));
+	*/
+	
+	/* -- BOTON BORRAR  -- */
+	/*
+	ImageIcon BotonBorrar = new ImageIcon(FramePrincipal.class.getResource("/Graficos/.png"));
+	ImageIcon BotonBorrarMod = new ImageIcon(BotonBorrar.getImage().getScaledInstance((int)(this.ancho*0.11),(int)(this.alto*0.14), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonBorrarCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/.png"));
+	ImageIcon BotonBorrarModCliked = new ImageIcon(BotonBorrarCliked.getImage().getScaledInstance((int)(this.ancho*0.11),(int)(this.alto*0.14), java.awt.Image.SCALE_DEFAULT));
+	*/
+	
+	/* -- BOTON SI  -- */
+	/*
+	ImageIcon BotonSI = new ImageIcon(FramePrincipal.class.getResource("/Graficos/.png"));
+	ImageIcon BotonSIMod = new ImageIcon(BotonSI.getImage().getScaledInstance((int)(this.ancho*0.11),(int)(this.alto*0.14), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonSICliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/.png"));
+	ImageIcon BotonSIModCliked = new ImageIcon(BotonSICliked.getImage().getScaledInstance((int)(this.ancho*0.11),(int)(this.alto*0.14), java.awt.Image.SCALE_DEFAULT));
+	*/
+	
+	/* -- BOTON NO  -- */
+	/*
+	ImageIcon BotonNO = new ImageIcon(FramePrincipal.class.getResource("/Graficos/.png"));
+	ImageIcon BotonNOMod = new ImageIcon(BotonNO.getImage().getScaledInstance((int)(this.ancho*0.11),(int)(this.alto*0.14), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonNOCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/.png"));
+	ImageIcon BotonNOModCliked = new ImageIcon(BotonNOCliked.getImage().getScaledInstance((int)(this.ancho*0.11),(int)(this.alto*0.14), java.awt.Image.SCALE_DEFAULT));
+	*/
 	
 	public static void main(String[] args){
 		EventQueue.invokeLater(new Runnable(){
@@ -210,7 +394,6 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txt.getText()+" ");
 			}
 		});
-		BttnPrEspacio.setBackground(new Color(148, 0, 211));
 		BttnPrEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 		VentanaPrincipal.add(BttnPrEspacio);
 		
@@ -218,14 +401,12 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON PUNTO (VENTANA PRINCIPAL) -- */
 		
-		JButton BttnPrPunto = new JButton(".");
+		JButton BttnPrPunto = new JButton("");
 		BttnPrPunto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				txt.setText(txt.getText()+".");
 			}
 		});
-		BttnPrPunto.setBackground(new Color(230, 230, 250));
-		BttnPrPunto.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnPrPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaPrincipal.add(BttnPrPunto);
 		
@@ -233,7 +414,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON BORRAR (VENTANA PRINCIPAL) -- */
 		
-		JButton BttnPrBorrar = new JButton("Borrar");
+		JButton BttnPrBorrar = new JButton("");
 		BttnPrBorrar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent arg0) {
@@ -246,8 +427,6 @@ public class FramePrincipal extends JFrame{
 				timer.cancel();
 			}
 		});
-		BttnPrBorrar.setBackground(new Color(230, 230, 250));
-		BttnPrBorrar.setFont(new Font("Arial", Font.PLAIN, 25));
 		BttnPrBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaPrincipal.add(BttnPrBorrar);
 		
@@ -255,9 +434,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON SI (VENTANA PRINCIPAL) -- */
 		
-		JButton BttnPrSI = new JButton("SI");
-		BttnPrSI.setBackground(new Color(255, 165, 0));
-		BttnPrSI.setFont(new Font("Arial", Font.PLAIN, 30));
+		JButton BttnPrSI = new JButton("");
 		BttnPrSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaPrincipal.add(BttnPrSI);
 		
@@ -265,9 +442,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON NO (VENTANA PRINCIPAL) -- */
 		
-		JButton BttnPrNO = new JButton("NO");
-		BttnPrNO.setBackground(new Color(0, 206, 209));
-		BttnPrNO.setFont(new Font("Arial", Font.PLAIN, 30));
+		JButton BttnPrNO = new JButton("");
 		BttnPrNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaPrincipal.add(BttnPrNO);
 		
@@ -353,16 +528,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA A (VENTANA A) -- */
 		
-		JButton BttnA = new JButton("A");
+		JButton BttnA = new JButton("");
+		BttnA.setIcon(BotonAMod);
+		BttnA.setPressedIcon(BotonAModCliked);
 		BttnA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText()+"A");
 			}
 		});
-		BttnA.setBackground(new Color(230, 230, 250));
-		BttnA.setForeground(new Color(0, 0, 128));
-		BttnA.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnA.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaA.add(BttnA);
 		
@@ -370,16 +544,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA B (VENTANA A) -- */
 		
-		JButton BttnB = new JButton("B");
+		JButton BttnB = new JButton("");
+		BttnB.setIcon(BotonBMod);
+		BttnB.setPressedIcon(BotonBModCliked);
 		BttnB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText()+"B");
 		}
 		});
-		BttnB.setBackground(new Color(230, 230, 250));
-		BttnB.setForeground(new Color(0, 0, 128));
-		BttnB.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnB.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaA.add(BttnB);
 		
@@ -387,16 +560,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA C (VENTANA A) -- */
 		
-		JButton BttnC = new JButton("C");
+		JButton BttnC = new JButton("");
+		BttnC.setIcon(BotonCMod);
+		BttnC.setPressedIcon(BotonCModCliked);
 		BttnC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText()+"C");
 			}
 		});
-		BttnC.setBackground(new Color(230, 230, 250));
-		BttnC.setForeground(new Color(0, 0, 128));
-		BttnC.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnC.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaA.add(BttnC);
 		
@@ -404,16 +576,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA D (VENTANA A) -- */
 		
-		JButton BttnD = new JButton("D");
+		JButton BttnD = new JButton("");
+		BttnD.setIcon(BotonDMod);
+		BttnD.setPressedIcon(BotonDModCliked);
 		BttnD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText()+"D");
 			}
 		});
-		BttnD.setBackground(new Color(230, 230, 250));
-		BttnD.setForeground(new Color(0, 0, 128));
-		BttnD.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnD.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaA.add(BttnD);
 		
@@ -421,16 +592,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA E (VENTANA A) -- */
 		
-		JButton BttnE = new JButton("E");
+		JButton BttnE = new JButton("");
+		BttnE.setIcon(BotonEMod);
+		BttnE.setPressedIcon(BotonEModCliked);
 		BttnE.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText()+"E");
 			}
 		});
-		BttnE.setBackground(new Color(230, 230, 250));
-		BttnE.setForeground(new Color(0, 0, 128));
-		BttnE.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnE.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaA.add(BttnE);
 		
@@ -445,7 +615,6 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtA.getText());
 			}
 		});
-		BttnAEspacio.setBackground(new Color(148, 0, 211));
 		BttnAEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 		VentanaA.add(BttnAEspacio);
 		
@@ -453,9 +622,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON PUNTO (VENTANA A) -- */
 		
-		JButton BttnAPunto = new JButton(".");
-		BttnAPunto.setBackground(new Color(230, 230, 250));
-		BttnAPunto.setFont(new Font("Arial", Font.PLAIN, 99));
+		JButton BttnAPunto = new JButton("");
 		BttnAPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaA.add(BttnAPunto);
 		
@@ -463,7 +630,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON BORRAR (VENTANA A) -- */
 		
-		JButton BttnABorrar = new JButton("Borrar");
+		JButton BttnABorrar = new JButton("");
 		BttnABorrar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent arg0) {
@@ -476,8 +643,6 @@ public class FramePrincipal extends JFrame{
 				timer.cancel();
 			}
 		});
-		BttnABorrar.setBackground(new Color(230, 230, 250));
-		BttnABorrar.setFont(new Font("Arial", Font.PLAIN, 25));
 		BttnABorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaA.add(BttnABorrar);
 		
@@ -485,9 +650,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON SI (VENTANA A) -- */
 		
-		JButton BttnASI = new JButton("SI");
-		BttnASI.setBackground(new Color(255, 165, 0));
-		BttnASI.setFont(new Font("Arial", Font.PLAIN, 30));
+		JButton BttnASI = new JButton("");
 		BttnASI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaA.add(BttnASI);
 		
@@ -495,9 +658,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON NO (VENTANA A) -- */
 		
-		JButton BttnANO = new JButton("NO");
-		BttnANO.setBackground(new Color(0, 206, 209));
-		BttnANO.setFont(new Font("Arial", Font.PLAIN, 30));
+		JButton BttnANO = new JButton("");
 		BttnANO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaA.add(BttnANO);
 		
@@ -532,16 +693,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA F (VENTANA F) -- */
 		
-	 	JButton BttnF = new JButton("F");
+	 	JButton BttnF = new JButton("");
+	 	BttnF.setIcon(BotonFMod);
+		BttnF.setPressedIcon(BotonFModCliked);
 		BttnF.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText()+"F");
 			}
 		});
-		BttnF.setBackground(new Color(230, 230, 250));
-		BttnF.setForeground(new Color(255, 0, 0));
-		BttnF.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnF.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaF.add(BttnF);
 		
@@ -549,16 +709,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA G (VENTANA F) -- */
 		
-		JButton BttnG = new JButton("G");
+		JButton BttnG = new JButton("");
+		BttnG.setIcon(BotonGMod);
+		BttnG.setPressedIcon(BotonGModCliked);
 		BttnG.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText()+"G");
 			}
 		});
-		BttnG.setBackground(new Color(230, 230, 250));
-		BttnG.setForeground(new Color(255, 0, 0));
-		BttnG.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnG.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaF.add(BttnG);
 		
@@ -566,16 +725,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA H (VENTANA F) -- */
 		
-		JButton BttnH = new JButton("H");
+		JButton BttnH = new JButton("");
+		BttnH.setIcon(BotonHMod);
+		BttnH.setPressedIcon(BotonHModCliked);
 		BttnH.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText()+"H");
 			}
 		});
-		BttnH.setBackground(new Color(230, 230, 250));
-		BttnH.setForeground(new Color(255, 0, 0));
-		BttnH.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnH.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaF.add(BttnH);
 		
@@ -583,16 +741,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA I (VENTANA F) -- */
 		
-		JButton BttnI = new JButton("I");
+		JButton BttnI = new JButton("");
+		BttnI.setIcon(BotonIMod);
+		BttnI.setPressedIcon(BotonIModCliked);
 		BttnI.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText()+"I");
 			}
 		});
-		BttnI.setBackground(new Color(230, 230, 250));
-		BttnI.setForeground(new Color(255, 0, 0));
-		BttnI.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnI.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaF.add(BttnI);
 		
@@ -600,16 +757,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA J (VENTANA F) -- */
 		
-		JButton BttnJ = new JButton("J");
+		JButton BttnJ = new JButton("");
+		BttnJ.setIcon(BotonJMod);
+		BttnJ.setPressedIcon(BotonJModCliked);
 		BttnJ.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText()+"J");
 			}
 		});
-		BttnJ.setBackground(new Color(230, 230, 250));
-		BttnJ.setForeground(new Color(255, 0, 0));
-		BttnJ.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnJ.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaF.add(BttnJ);
 		
@@ -624,7 +780,6 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtF.getText());
 			}
 		});
-		BttnFEspacio.setBackground(new Color(148, 0, 211));
 		BttnFEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 		VentanaF.add(BttnFEspacio);
 		
@@ -632,9 +787,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON PUNTO (VENTANA F) -- */
 		
-		JButton BttnFPunto = new JButton(".");
-		BttnFPunto.setBackground(new Color(230, 230, 250));
-		BttnFPunto.setFont(new Font("Arial", Font.PLAIN, 99));
+		JButton BttnFPunto = new JButton("");
 		BttnFPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaF.add(BttnFPunto);
 		
@@ -642,7 +795,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON BORRAR (VENTANA F) -- */
 		
-		JButton BttnFBorrar = new JButton("Borrar");
+		JButton BttnFBorrar = new JButton("");
 		BttnFBorrar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent arg0) {
@@ -655,8 +808,6 @@ public class FramePrincipal extends JFrame{
 				timer.cancel();
 			}
 		});
-		BttnFBorrar.setBackground(new Color(230, 230, 250));
-		BttnFBorrar.setFont(new Font("Arial", Font.PLAIN, 25));
 		BttnFBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaF.add(BttnFBorrar);
 		
@@ -664,9 +815,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON SI (VENTANA F) -- */
 		
-		JButton BttnFSI = new JButton("SI");
-		BttnFSI.setBackground(new Color(255, 165, 0));
-		BttnFSI.setFont(new Font("Arial", Font.PLAIN, 30));
+		JButton BttnFSI = new JButton("");
 		BttnFSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaF.add(BttnFSI);
 		
@@ -674,9 +823,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON NO (VENTANA F) -- */
 		
-		JButton BttnFNO = new JButton("NO");
-		BttnFNO.setBackground(new Color(0, 206, 209));
-		BttnFNO.setFont(new Font("Arial", Font.PLAIN, 30));
+		JButton BttnFNO = new JButton("");
 		BttnFNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaF.add(BttnFNO);
 		
@@ -710,16 +857,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA K (VENTANA K) -- */
 		
-	 	JButton BttnK = new JButton("K");
+	 	JButton BttnK = new JButton("");
+	 	BttnK.setIcon(BotonKMod);
+		BttnK.setPressedIcon(BotonKModCliked);
 		BttnK.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText()+"K");
 			}
 		});
-		BttnK.setBackground(new Color(230, 230, 250));
-		BttnK.setForeground(new Color(34, 139, 34));
-		BttnK.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnK.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaK.add(BttnK);
 		
@@ -727,16 +873,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA L (VENTANA K) -- */
 		
-		JButton BttnL = new JButton("L");
+		JButton BttnL = new JButton("");
+		BttnL.setIcon(BotonLMod);
+		BttnL.setPressedIcon(BotonLModCliked);
 		BttnL.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText()+"L");
 			}
 		});
-		BttnL.setBackground(new Color(230, 230, 250));
-		BttnL.setForeground(new Color(34, 139, 34));
-		BttnL.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnL.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaK.add(BttnL);
 		
@@ -744,16 +889,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA M (VENTANA K) -- */
 		
-		JButton BttnM = new JButton("M");
+		JButton BttnM = new JButton("");
+		BttnM.setIcon(BotonMMod);
+		BttnM.setPressedIcon(BotonMModCliked);
 		BttnM.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText()+"M");
 			}
 		});
-		BttnM.setBackground(new Color(230, 230, 250));
-		BttnM.setForeground(new Color(34, 139, 34));
-		BttnM.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnM.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaK.add(BttnM);
 		
@@ -761,16 +905,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA N (VENTANA K) -- */
 		
-		JButton BttnN = new JButton("N");
+		JButton BttnN = new JButton("");
+		BttnN.setIcon(BotonNMod);
+		BttnN.setPressedIcon(BotonNModCliked);
 		BttnN.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText()+"N");
 			}
 		});
-		BttnN.setBackground(new Color(230, 230, 250));
-		BttnN.setForeground(new Color(34, 139, 34));
-		BttnN.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnN.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaK.add(BttnN);
 		
@@ -778,16 +921,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA — (VENTANA K) -- */
 		
-		JButton Bttn— = new JButton("—");
+		JButton Bttn— = new JButton("");
+		Bttn—.setIcon(Boton—Mod);
+		Bttn—.setPressedIcon(Boton—ModCliked);
 		Bttn—.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText()+"—");
 			}
 		});
-		Bttn—.setBackground(new Color(230, 230, 250));
-		Bttn—.setForeground(new Color(34, 139, 34));
-		Bttn—.setFont(new Font("Arial", Font.PLAIN, 99));
 		Bttn—.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaK.add(Bttn—);
 		
@@ -802,7 +944,6 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtK.getText());
 			}
 		});
-		BttnKEspacio.setBackground(new Color(148, 0, 211));
 		BttnKEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 		VentanaK.add(BttnKEspacio);
 		
@@ -810,9 +951,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON PUNTO (VENTANA K) -- */
 		
-		JButton BttnKPunto = new JButton(".");
-		BttnKPunto.setBackground(new Color(230, 230, 250));
-		BttnKPunto.setFont(new Font("Arial", Font.PLAIN, 99));
+		JButton BttnKPunto = new JButton("");
 		BttnKPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaK.add(BttnKPunto);
 		
@@ -820,7 +959,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON BORRAR (VENTANA K) -- */
 		
-		JButton BttnKBorrar = new JButton("Borrar");
+		JButton BttnKBorrar = new JButton("");
 		BttnKBorrar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent arg0) {
@@ -833,8 +972,6 @@ public class FramePrincipal extends JFrame{
 				timer.cancel();
 			}
 		});
-		BttnKBorrar.setBackground(new Color(230, 230, 250));
-		BttnKBorrar.setFont(new Font("Arial", Font.PLAIN, 25));
 		BttnKBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaK.add(BttnKBorrar);
 		
@@ -842,9 +979,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON SI (VENTANA K) -- */
 		
-		JButton BttnKSI = new JButton("SI");
-		BttnKSI.setBackground(new Color(255, 165, 0));
-		BttnKSI.setFont(new Font("Arial", Font.PLAIN, 30));
+		JButton BttnKSI = new JButton("");
 		BttnKSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaK.add(BttnKSI);
 		
@@ -852,9 +987,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON NO (VENTANA K) -- */
 		
-		JButton BttnKNO = new JButton("NO");
-		BttnKNO.setBackground(new Color(0, 206, 209));
-		BttnKNO.setFont(new Font("Arial", Font.PLAIN, 30));
+		JButton BttnKNO = new JButton("");
 		BttnKNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaK.add(BttnKNO);
 		
@@ -888,15 +1021,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA O (VENTANA O) -- */
 		
-	 	JButton BttnO = new JButton("O");
+	 	JButton BttnO = new JButton("");
+	 	BttnO.setIcon(BotonOMod);
+		BttnO.setPressedIcon(BotonOModCliked);
 	 	BttnO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText()+"O");
 			}
 		});
-	 	BttnO.setBackground(new Color(230, 230, 250));
-		BttnO.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnO.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaO.add(BttnO);
 		
@@ -904,15 +1037,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA P (VENTANA O) -- */
 		
-		JButton BttnP = new JButton("P");
+		JButton BttnP = new JButton("");
+		BttnP.setIcon(BotonPMod);
+		BttnP.setPressedIcon(BotonPModCliked);
 		BttnP.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText()+"P");
 			}
 		});
-		BttnP.setBackground(new Color(230, 230, 250));
-		BttnP.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnP.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaO.add(BttnP);
 		
@@ -920,15 +1053,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA QU (VENTANA O) -- */
 		
-		JButton BttnQU = new JButton("QU");
+		JButton BttnQU = new JButton("");
+		BttnQU.setIcon(BotonQUMod);
+		BttnQU.setPressedIcon(BotonQUModCliked);
 		BttnQU.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText()+"QU");
 			}
 		});
-		BttnQU.setBackground(new Color(230, 230, 250));
-		BttnQU.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnQU.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaO.add(BttnQU);
 		
@@ -936,15 +1069,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA R (VENTANA O) -- */
 		
-		JButton BttnR = new JButton("R");
+		JButton BttnR = new JButton("");
+		BttnR.setIcon(BotonRMod);
+		BttnR.setPressedIcon(BotonRModCliked);
 		BttnR.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText()+"R");
 			}
 		});
-		BttnR.setBackground(new Color(230, 230, 250));
-		BttnR.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnR.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaO.add(BttnR);
 		
@@ -952,15 +1085,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA S (VENTANA O) -- */
 		
-		JButton BttnS = new JButton("S");
+		JButton BttnS = new JButton("");
+		BttnS.setIcon(BotonSMod);
+		BttnS.setPressedIcon(BotonSModCliked);
 		BttnS.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText()+"S");
 			}
 		});
-		BttnS.setBackground(new Color(230, 230, 250));
-		BttnS.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnS.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaO.add(BttnS);
 		
@@ -975,7 +1108,6 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtO.getText());
 			}
 		});
-		BttnOEspacio.setBackground(new Color(148, 0, 211));
 		BttnOEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 		VentanaO.add(BttnOEspacio);
 		
@@ -983,9 +1115,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON PUNTO (VENTANA O) -- */
 			
-		JButton BttnOPunto = new JButton(".");
-		BttnOPunto.setBackground(new Color(230, 230, 250));
-		BttnOPunto.setFont(new Font("Arial", Font.PLAIN, 99));
+		JButton BttnOPunto = new JButton("");
 		BttnOPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaO.add(BttnOPunto);
 		
@@ -993,7 +1123,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON BORRAR (VENTANA O) -- */
 		
-		JButton BttnOBorrar = new JButton("Borrar");
+		JButton BttnOBorrar = new JButton("");
 		BttnOBorrar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent arg0) {
@@ -1006,8 +1136,6 @@ public class FramePrincipal extends JFrame{
 				timer.cancel();
 			}
 		});
-		BttnOBorrar.setBackground(new Color(230, 230, 250));
-		BttnOBorrar.setFont(new Font("Arial", Font.PLAIN, 25));
 		BttnOBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaO.add(BttnOBorrar);
 		
@@ -1015,9 +1143,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON SI (VENTANA O) -- */
 		
-		JButton BttnOSI = new JButton("SI");
-		BttnOSI.setBackground(new Color(255, 165, 0));
-		BttnOSI.setFont(new Font("Arial", Font.PLAIN, 30));
+		JButton BttnOSI = new JButton("");
 		BttnOSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaO.add(BttnOSI);
 		
@@ -1025,9 +1151,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON NO (VENTANA O) -- */
 		
-		JButton BttnONO = new JButton("NO");
-		BttnONO.setBackground(new Color(0, 206, 209));
-		BttnONO.setFont(new Font("Arial", Font.PLAIN, 30));
+		JButton BttnONO = new JButton("");
 		BttnONO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaO.add(BttnONO);
 		
@@ -1061,16 +1185,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA T (VENTANA T) -- */
 		
-		JButton BttnT = new JButton("T");
+		JButton BttnT = new JButton("");
+		BttnT.setIcon(BotonTMod);
+		BttnT.setPressedIcon(BotonTModCliked);
 		BttnT.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtT.getText()+"T");
 			}
 		});
-		BttnT.setBackground(new Color(230, 230, 250));
-		BttnT.setForeground(new Color(255, 140, 0));
-		BttnT.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnT.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaT.add(BttnT);
 		
@@ -1078,16 +1201,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA U (VENTANA T) -- */
 		
-		JButton BttnU = new JButton("U");
+		JButton BttnU = new JButton("");
+		BttnU.setIcon(BotonUMod);
+		BttnU.setPressedIcon(BotonUModCliked);
 		BttnU.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtT.getText()+"U");
 			}
 		});
-		BttnU.setBackground(new Color(230, 230, 250));
-		BttnU.setForeground(new Color(255, 140, 0));
-		BttnU.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnU.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaT.add(BttnU);
 		
@@ -1095,16 +1217,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA V (VENTANA T) -- */
 		
-		JButton BttnV = new JButton("V");
+		JButton BttnV = new JButton("");
+		BttnV.setIcon(BotonVMod);
+		BttnV.setPressedIcon(BotonVModCliked);
 		BttnV.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtT.getText()+"V");
 			}
 		});
-		BttnV.setBackground(new Color(230, 230, 250));
-		BttnV.setForeground(new Color(255, 140, 0));
-		BttnV.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnV.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaT.add(BttnV);
 		
@@ -1112,16 +1233,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA X (VENTANA T) -- */
 		
-		JButton BttnX = new JButton("X");
+		JButton BttnX = new JButton("");
+		BttnX.setIcon(BotonXMod);
+		BttnX.setPressedIcon(BotonXModCliked);
 		BttnX.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtT.getText()+"X");
 			}
 		});
-		BttnX.setBackground(new Color(230, 230, 250));
-		BttnX.setForeground(new Color(255, 140, 0));
-		BttnX.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnX.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaT.add(BttnX);
 		
@@ -1129,16 +1249,15 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON LETRA Y (VENTANA T) -- */
 		
-		JButton BttnY = new JButton("Y");
+		JButton BttnY = new JButton("");
+		BttnY.setIcon(BotonYMod);
+		BttnY.setPressedIcon(BotonYModCliked);
 		BttnY.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtT.getText()+"Y");
 			}
 		});
-		BttnY.setBackground(new Color(230, 230, 250));
-		BttnY.setForeground(new Color(255, 140, 0));
-		BttnY.setFont(new Font("Arial", Font.PLAIN, 99));
 		BttnY.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaT.add(BttnY);
 		
@@ -1153,7 +1272,6 @@ public class FramePrincipal extends JFrame{
 				txt.setText(txtT.getText());
 			}
 		});
-		BttnTEspacio.setBackground(new Color(148, 0, 211));
 		BttnTEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
 		VentanaT.add(BttnTEspacio);
 		
@@ -1161,9 +1279,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON PUNTO (VENTANA T) -- */
 		
-		JButton BttnTPunto = new JButton(".");
-		BttnTPunto.setBackground(new Color(230, 230, 250));
-		BttnTPunto.setFont(new Font("Arial", Font.PLAIN, 99));
+		JButton BttnTPunto = new JButton("");
 		BttnTPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaT.add(BttnTPunto);
 		
@@ -1171,7 +1287,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON BORRAR (VENTANA T) -- */
 		
-		JButton BttnTBorrar = new JButton("Borrar");
+		JButton BttnTBorrar = new JButton("");
 		BttnTBorrar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent arg0) {
@@ -1184,8 +1300,6 @@ public class FramePrincipal extends JFrame{
 				timer.cancel();
 			}
 		});
-		BttnTBorrar.setBackground(new Color(230, 230, 250));
-		BttnTBorrar.setFont(new Font("Arial", Font.PLAIN, 25));
 		BttnTBorrar.setBounds((int)(this.ancho*0.889),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaT.add(BttnTBorrar);
 		
@@ -1193,9 +1307,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON SI (VENTANA T) -- */
 		
-		JButton BttnTSI = new JButton("SI");
-		BttnTSI.setBackground(new Color(255, 165, 0));
-		BttnTSI.setFont(new Font("Arial", Font.PLAIN, 30));
+		JButton BttnTSI = new JButton("");
 		BttnTSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaT.add(BttnTSI);
 		
@@ -1203,9 +1315,7 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON NO (VENTANA T) -- */
 		
-		JButton BttnTNO = new JButton("NO");
-		BttnTNO.setBackground(new Color(0, 206, 209));
-		BttnTNO.setFont(new Font("Arial", Font.PLAIN, 30));
+		JButton BttnTNO = new JButton("");
 		BttnTNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaT.add(BttnTNO);
 		
