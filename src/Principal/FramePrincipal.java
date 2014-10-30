@@ -53,12 +53,12 @@ public class FramePrincipal extends JFrame{
 	
 	ImageIcon APrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrA.png"));
 	ImageIcon APrincipalMod = new ImageIcon(APrincipal.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
-	ImageIcon APrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrA.png"));
+	ImageIcon APrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnclickeadoPrA.png"));
 	ImageIcon APrincipalModCliked = new ImageIcon(APrincipalCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
 	
 	ImageIcon FPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrF.png"));
 	ImageIcon FPrincipalMod = new ImageIcon(FPrincipal.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
-	ImageIcon FPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrF.png"));
+	ImageIcon FPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnclickeadoPrF.png"));
 	ImageIcon FPrincipalModCliked = new ImageIcon(FPrincipalCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
 	
 	ImageIcon KPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrK.png"));
