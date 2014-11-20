@@ -51,12 +51,12 @@ public class FramePrincipal extends JFrame{
 	/* -- BOTONES (VENTANA PRINCIPAL) -- */
 	ImageIcon APrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrA.png"));
 	ImageIcon APrincipalMod = new ImageIcon(APrincipal.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
-	ImageIcon APrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnclickeadoPrA.png"));
+	ImageIcon APrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnClickeadoPrA.png"));
 	ImageIcon APrincipalModCliked = new ImageIcon(APrincipalCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
 	
 	ImageIcon FPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrF.png"));
 	ImageIcon FPrincipalMod = new ImageIcon(FPrincipal.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
-	ImageIcon FPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnclickeadoPrF.png"));
+	ImageIcon FPrincipalCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnClickeadoPrF.png"));
 	ImageIcon FPrincipalModCliked = new ImageIcon(FPrincipalCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
 	
 	ImageIcon KPrincipal = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnPrK.png"));
@@ -147,10 +147,10 @@ public class FramePrincipal extends JFrame{
 	ImageIcon BotonNCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnClickeadoN.png"));
 	ImageIcon BotonNModCliked = new ImageIcon(BotonNCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
 	
-	ImageIcon Boton— = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttn—.png"));
-	ImageIcon Boton—Mod = new ImageIcon(Boton—.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
-	ImageIcon Boton—Cliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnClickeado—.png"));
-	ImageIcon Boton—ModCliked = new ImageIcon(Boton—Cliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonNi = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnNi.png"));
+	ImageIcon BotonNiMod = new ImageIcon(BotonNi.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon BotonNiCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnClickeadoNi.png"));
+	ImageIcon Boton—ModCliked = new ImageIcon(BotonNiCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
 	
 	/* -- BOTONES VENTANA O  -- */
 	ImageIcon BotonO = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnO.png"));
@@ -163,9 +163,9 @@ public class FramePrincipal extends JFrame{
 	ImageIcon BotonPCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnClickeadoP.png"));
 	ImageIcon BotonPModCliked = new ImageIcon(BotonPCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
 	
-	ImageIcon BotonQU = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnQU.png"));
+	ImageIcon BotonQU = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnQu.png"));
 	ImageIcon BotonQUMod = new ImageIcon(BotonQU.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
-	ImageIcon BotonQUCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnClickeadoQU.png"));
+	ImageIcon BotonQUCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnClickeadoQu.png"));
 	ImageIcon BotonQUModCliked = new ImageIcon(BotonQUCliked.getImage().getScaledInstance((int)(this.ancho*0.21),(int)(this.alto*0.25), java.awt.Image.SCALE_DEFAULT));
 	
 	ImageIcon BotonR = new ImageIcon(FramePrincipal.class.getResource("/Graficos/bttnR.png"));
@@ -802,17 +802,17 @@ public class FramePrincipal extends JFrame{
 		VentanaK.add(BttnN);
 		
 		/* -- BOTON LETRA — (VENTANA K) -- */
-		JButton Bttn— = new JButton("");
-		Bttn—.setIcon(Boton—Mod);
-		Bttn—.setPressedIcon(Boton—ModCliked);
-		Bttn—.addActionListener(new ActionListener() {
+		JButton BttnNi = new JButton("");
+		BttnNi.setIcon(BotonNiMod);
+		BttnNi.setPressedIcon(Boton—ModCliked);
+		BttnNi.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText()+"—");
 			}
 		});
-		Bttn—.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
-		VentanaK.add(Bttn—);
+		BttnNi.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
+		VentanaK.add(BttnNi);
 		
 		/* -- BOTON ESPACIO (VENTANA K) -- */
 		JButton BttnKEspacio = new JButton("");
