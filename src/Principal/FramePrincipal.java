@@ -326,7 +326,6 @@ public class FramePrincipal extends JFrame{
 				txtO.setText(txt.getText());
 			}
 		});
-		//BttnPrO.setBounds(3,597,(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		BttnPrO.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
 		VentanaPrincipal.add(BttnPrO);
 		
