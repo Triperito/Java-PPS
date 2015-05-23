@@ -4,11 +4,19 @@ import java.io.File;
 import java.io.IOException;
 
 public class Speak {
-	
+
 	private String pathAbsoluto = path();  
 	private String[] directorios;
+
 	private String voz = "es";
-	
+
+	private String ultimaOracion;
+	private String palabra;
+	private int ultimoPunto=0;
+	private int AnteUltimoPunto=0;
+	private int ultimoBlanco=0;
+	private int anteUltimoBlanco=0;
+
 	public void setVoz(String voz) {
 		this.voz = voz;
 	}
@@ -23,18 +31,16 @@ public class Speak {
 		}
 		return comando.toString();
 	}
-	
+
 	public void eSpeak(String txt){
-		String[] oracion = txt.split(".");
-		String[] palabras = oracion[oracion.length-1].split(" ");
+		
+		
 		try {
-			for(int i=0 ; i<palabras.length ; i++){
-				Runtime.getRuntime().exec(pathAbsoluto + "eSpeak\\command_line\\espeak -v" + voz + " " + palabras[i]);
-			}
-		} 
+			Runtime.getRuntime().exec(pathAbsoluto + "eSpeak\\command_line\\espeak -v" + voz + " \"" + txt + "\"");
+		}
 		catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 }

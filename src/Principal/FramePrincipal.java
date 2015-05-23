@@ -36,6 +36,7 @@ public class FramePrincipal extends JFrame{
 	private int milisegundos = 500;
 	public static Timer timerClose;
 	public static JTextArea txt;
+	public static String[] texto;
 	public static JTextArea txtA;
 	public static JTextArea txtF;
 	public static JTextArea txtK;
