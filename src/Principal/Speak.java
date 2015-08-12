@@ -10,13 +10,6 @@ public class Speak {
 
 	private String voz = "es";
 
-	private String ultimaOracion;
-	private String palabra;
-	private int ultimoPunto=0;
-	private int AnteUltimoPunto=0;
-	private int ultimoBlanco=0;
-	private int anteUltimoBlanco=0;
-
 	public void setVoz(String voz) {
 		this.voz = voz;
 	}
