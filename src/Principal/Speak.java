@@ -29,7 +29,7 @@ public class Speak {
 		
 		
 		try {
-			Runtime.getRuntime().exec(pathAbsoluto + "command_line\\espeak -v" + voz + " \"" + txt + "\"");
+			Runtime.getRuntime().exec(pathAbsoluto + "eSpeak\\command_line\\espeak -v" + voz + " \"" + txt + "\"");
 		}
 		catch (IOException e) {
 			e.printStackTrace();
