@@ -236,19 +236,6 @@ public class FramePrincipal extends JFrame{
 	ImageIcon BotonNOCliked = new ImageIcon(FramePrincipal.class.getResource("/Graficos/BttnClickeadoNO.png"));
 	ImageIcon BotonNOModCliked = new ImageIcon(BotonNOCliked.getImage().getScaledInstance((int)(this.ancho*0.11),(int)(this.alto*0.14), java.awt.Image.SCALE_DEFAULT));
 	
-	public static void main(String[] args){
-		EventQueue.invokeLater(new Runnable(){
-			public void run(){
-				try{
-					FramePrincipal frame = new FramePrincipal();
-					frame.setVisible(true);
-				}catch (Exception e){
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
 	public FramePrincipal(){
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
