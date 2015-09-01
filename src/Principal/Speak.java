@@ -26,14 +26,16 @@ public class Speak {
 	}
 
 	public static void eSpeak(String txt){
-		
-		
 		try {
 			Runtime.getRuntime().exec(pathAbsoluto + "eSpeak\\command_line\\espeak -v" + voz + " \"" + txt + "\"");
 		}
 		catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public static String getPathAbsoluto() {
+		return pathAbsoluto;
 	}
 
 }

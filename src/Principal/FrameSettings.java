@@ -22,6 +22,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
+import java.io.IOException;
 
 public class FrameSettings extends JFrame {
 
@@ -85,7 +86,7 @@ public class FrameSettings extends JFrame {
 					case "Luciano":
 						Speak.setVoz("mb-mx1+m6");
 					break;
-					case "María":
+					case "Valeria":
 						Speak.setVoz("mb-mx2+f3");
 					break;
 					case "Hugo":
@@ -103,7 +104,7 @@ public class FrameSettings extends JFrame {
 		comboBox.addItem("Leandro");
 		comboBox.addItem("Florencia");
 		comboBox.addItem("Luciano");
-		comboBox.addItem("María");
+		comboBox.addItem("Valeria"); 
 		comboBox.addItem("Hugo");
 		contentPane.add(comboBox);
 		
@@ -145,13 +146,18 @@ public class FrameSettings extends JFrame {
 		btnIntruccionesDeUso.setBounds((int)(0.016*ancho), (int)(0.432*alto), (int)(0.312*ancho), (int)(0.075*alto));
 		contentPane.add(btnIntruccionesDeUso);
 		
-		JButton btnimportante = new JButton("");
-		btnimportante.addActionListener(new ActionListener() {
+		JButton btnImportante = new JButton("");
+		btnImportante.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				/*try { //Reemplazar por el nombre del instalador cuando este dentro de la carpeta eSpeak
+					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "eSpeak\\EL NOMBRE DEL INSTALADOR");
+				} catch (IOException e) {
+					e.printStackTrace();
+				}*/
 			}
 		});
-		btnimportante.setBounds((int)(0.016*ancho), (int)(0.535*alto), ancho-(2*((int)(0.029*ancho))), (int)(0.250*alto));
-		contentPane.add(btnimportante);
+		btnImportante.setBounds((int)(0.016*ancho), (int)(0.535*alto), ancho-(2*((int)(0.029*ancho))), (int)(0.250*alto));
+		contentPane.add(btnImportante);
 		
 		JButton btnFinalizar = new JButton("Finalizar");
 		btnFinalizar.setFont(new Font("Calibri", Font.PLAIN, 20));
