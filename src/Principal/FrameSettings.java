@@ -73,25 +73,26 @@ public class FrameSettings extends JFrame {
 		comboBox.addItem((Object)"Leandro");
 		comboBox.addItem((Object)"Florencia");
 		comboBox.addItem((Object)"Luciano");
-		comboBox.addItem((Object)"Maria");
+		comboBox.addItem((Object)"María");
 		comboBox.addItem((Object)"Hugo");
 		contentPane.add(comboBox);
 		
-		JButton btnNewButton = new JButton("");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnPlay = new JButton("");
+		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Speak.eSpeak("Hola, esta es la voz de "+comboBox.getSelectedItem());
 			}
 		});
-		btnNewButton.setBackground(Color.WHITE);
-		btnNewButton.setBorder(null);
+		btnPlay.setBackground(Color.WHITE);
+		btnPlay.setBorder(null);
 		ImageIcon Play = new ImageIcon(FrameSettings.class.getResource("/Graficos/Play.png"));
 		ImageIcon PlayMod = new ImageIcon(Play.getImage().getScaledInstance((int)(0.078*ancho),(int)(0.125*alto), java.awt.Image.SCALE_DEFAULT));
 		ImageIcon PlayClicked = new ImageIcon(FrameSettings.class.getResource("/Graficos/PlayClickeado.png"));
 		ImageIcon PlayModClicked = new ImageIcon(PlayClicked.getImage().getScaledInstance((int)(0.078*ancho),(int)(0.125*alto), java.awt.Image.SCALE_DEFAULT));
-		btnNewButton.setIcon(PlayMod);
-		btnNewButton.setPressedIcon(PlayModClicked);
-		btnNewButton.setBounds((int)(0.515*ancho), (int)(0.137*alto), (int)(0.078*ancho), (int)(0.125*alto));
-		contentPane.add(btnNewButton);
+		btnPlay.setIcon(PlayMod);
+		btnPlay.setPressedIcon(PlayModClicked);
+		btnPlay.setBounds((int)(0.515*ancho), (int)(0.137*alto), (int)(0.078*ancho), (int)(0.125*alto));
+		contentPane.add(btnPlay);
 		
 		JCheckBox chckbxActivarSonidoDe = new JCheckBox("Activar sonido de botones");
 		chckbxActivarSonidoDe.setFont(new Font("Calibri", Font.PLAIN, 20));
