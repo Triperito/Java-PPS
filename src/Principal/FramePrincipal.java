@@ -32,7 +32,7 @@ public class FramePrincipal extends JFrame{
 	private static JPanel VentanaT;
 	private CardLayout card = new CardLayout();
 	private Timer timer;
-	private Speak speak = new Speak();
+	//private Speak speak = new Speak();
 	private int milisegundos = 500;
 	public static Timer timerClose;
 	public static JTextArea txt;
@@ -350,8 +350,7 @@ public class FramePrincipal extends JFrame{
 		BttnPrPunto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				txt.setText(txt.getText()+".");
-				speak.eSpeak(txt.getText());
-				
+				Speak.eSpeak(txt.getText());			
 			}
 		});
 		BttnPrPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
@@ -382,7 +381,7 @@ public class FramePrincipal extends JFrame{
 		BttnPrSI.setPressedIcon(BotonSIModCliked);
 		BttnPrSI.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				speak.eSpeak("SI");
+				Speak.eSpeak("SI");
 			}
 		});
 		BttnPrSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
@@ -394,7 +393,7 @@ public class FramePrincipal extends JFrame{
 		BttnPrNO.setPressedIcon(BotonNOModCliked);
 		BttnPrNO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				speak.eSpeak("NO");
+				Speak.eSpeak("NO");
 			}
 		});
 		BttnPrNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
@@ -580,7 +579,7 @@ public class FramePrincipal extends JFrame{
 		BttnASI.setPressedIcon(BotonSIModCliked);
 		BttnASI.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				speak.eSpeak("SI");
+				Speak.eSpeak("SI");
 			}
 		});
 		BttnASI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
@@ -592,7 +591,7 @@ public class FramePrincipal extends JFrame{
 		BttnANO.setPressedIcon(BotonNOModCliked);
 		BttnANO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				speak.eSpeak("NO");
+				Speak.eSpeak("NO");
 			}
 		});
 		BttnANO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
@@ -730,7 +729,7 @@ public class FramePrincipal extends JFrame{
 		BttnFSI.setPressedIcon(BotonSIModCliked);
 		BttnFSI.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				speak.eSpeak("SI");
+				Speak.eSpeak("SI");
 			}
 		});
 		BttnFSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
@@ -742,7 +741,7 @@ public class FramePrincipal extends JFrame{
 		BttnFNO.setPressedIcon(BotonNOModCliked);
 		BttnFNO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				speak.eSpeak("NO");
+				Speak.eSpeak("NO");
 			}
 		});
 		BttnFNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
@@ -880,7 +879,7 @@ public class FramePrincipal extends JFrame{
 		BttnKSI.setPressedIcon(BotonSIModCliked);
 		BttnKSI.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				speak.eSpeak("SI");
+				Speak.eSpeak("SI");
 			}
 		});
 		BttnKSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
@@ -892,7 +891,7 @@ public class FramePrincipal extends JFrame{
 		BttnKNO.setPressedIcon(BotonNOModCliked);
 		BttnKNO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				speak.eSpeak("NO");
+				Speak.eSpeak("NO");
 			}
 		});
 		BttnKNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
@@ -1030,7 +1029,7 @@ public class FramePrincipal extends JFrame{
 		BttnOSI.setPressedIcon(BotonSIModCliked);
 		BttnOSI.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				speak.eSpeak("SI");
+				Speak.eSpeak("SI");
 			}
 		});
 		BttnOSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
@@ -1042,7 +1041,7 @@ public class FramePrincipal extends JFrame{
 		BttnONO.setPressedIcon(BotonNOModCliked);
 		BttnONO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				speak.eSpeak("NO");
+				Speak.eSpeak("NO");
 			}
 		});
 		BttnONO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
@@ -1180,7 +1179,7 @@ public class FramePrincipal extends JFrame{
 		BttnTSI.setPressedIcon(BotonSIModCliked);
 		BttnTSI.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				speak.eSpeak("SI");
+				Speak.eSpeak("SI");
 			}
 		});
 		BttnTSI.setBounds((int)(this.ancho*0.293),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
@@ -1192,7 +1191,7 @@ public class FramePrincipal extends JFrame{
 		BttnTNO.setPressedIcon(BotonNOModCliked);
 		BttnTNO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				speak.eSpeak("NO");
+				Speak.eSpeak("NO");
 			}
 		});
 		BttnTNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));

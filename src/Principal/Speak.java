@@ -5,16 +5,16 @@ import java.io.IOException;
 
 public class Speak {
 
-	private String pathAbsoluto = path();  
-	private String[] directorios;
+	private static String pathAbsoluto = path();  
+	private static String[] directorios;
 
-	private String voz = "es";
+	private static String voz = "es";
 
 	public void setVoz(String voz) {
 		this.voz = voz;
 	}
 
-	private String path(){
+	private static String path(){
 		StringBuilder comando = new StringBuilder("");
 		pathAbsoluto = new File ("").getAbsolutePath(); //ME GUARDO EL PATH ABSOLUTO DE DONDE SE ESTA EJECUTANDO LA APLICACION
 		directorios = pathAbsoluto.split("\\\\");		//SEPARO CADA CARPETA DEL ARBOL SUPERIOR
@@ -25,7 +25,7 @@ public class Speak {
 		return comando.toString();
 	}
 
-	public void eSpeak(String txt){
+	public static void eSpeak(String txt){
 		
 		
 		try {
