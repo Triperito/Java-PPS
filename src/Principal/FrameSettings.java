@@ -140,6 +140,8 @@ public class FrameSettings extends JFrame {
 		JButton btnIntruccionesDeUso = new JButton("Intrucciones de uso");
 		btnIntruccionesDeUso.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Instrucciones ventana = new Instrucciones();
+				ventana.setVisible(true);
 			}
 		});
 		btnIntruccionesDeUso.setFont(new Font("Calibri", Font.PLAIN, 20));
