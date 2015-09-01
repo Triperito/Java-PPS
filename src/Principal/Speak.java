@@ -8,10 +8,10 @@ public class Speak {
 	private static String pathAbsoluto = path();  
 	private static String[] directorios;
 
-	private static String voz = "es";
+	private static String voz = "mb-es1+m6";
 
-	public void setVoz(String voz) {
-		this.voz = voz;
+	public static void setVoz(String vozElegida) {
+		voz = vozElegida;
 	}
 
 	private static String path(){

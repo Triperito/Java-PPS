@@ -1,6 +1,5 @@
 package Principal;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -21,6 +20,8 @@ import javax.swing.JCheckBox;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.ItemListener;
+import java.awt.event.ItemEvent;
 
 public class FrameSettings extends JFrame {
 
@@ -65,16 +66,45 @@ public class FrameSettings extends JFrame {
 		lblVoces.setBounds((int)(0.016*ancho),(int)(0.177*alto), (int)(0.125*ancho), (int)(0.062*alto));
 		contentPane.add(lblVoces);
 		
-		JComboBox comboBox = new JComboBox();
+		JComboBox<String> comboBox = new JComboBox<String>();
+		comboBox.addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent arg0) {
+				switch (comboBox.getSelectedItem().toString()) {
+					case "Juan":
+						Speak.setVoz("mb-es1+m6");
+					break;
+					case "Juliana":
+						Speak.setVoz("mb-es1+f3");
+					break;
+					case "Leandro":
+						Speak.setVoz("mb-es2+m6");
+					break;
+					case "Florencia":
+						Speak.setVoz("mb-es2+f3");
+					break;
+					case "Luciano":
+						Speak.setVoz("mb-mx1+m6");
+					break;
+					case "María":
+						Speak.setVoz("mb-mx2+f3");
+					break;
+					case "Hugo":
+						Speak.setVoz("mb-mx2+m6");
+					break;
+				    default:
+			    	break;
+				}
+			}
+		});
 		comboBox.setFont(new Font("Calibri", Font.PLAIN, 20));
 		comboBox.setBounds((int)(0.16*ancho), (int)(0.177*alto), (int)(0.312*ancho), (int)(0.062*alto));
-		comboBox.addItem((Object)"Juan");
-		comboBox.addItem((Object)"Juliana");
-		comboBox.addItem((Object)"Leandro");
-		comboBox.addItem((Object)"Florencia");
-		comboBox.addItem((Object)"Luciano");
-		comboBox.addItem((Object)"María");
-		comboBox.addItem((Object)"Hugo");
+		comboBox.addItem("Juan");
+		comboBox.addItem("Juliana");
+		comboBox.addItem("Leandro");
+		comboBox.addItem("Florencia");
+		comboBox.addItem("Luciano");
+		comboBox.addItem("María");
+		comboBox.addItem("Hugo");
 		contentPane.add(comboBox);
 		
 		JButton btnPlay = new JButton("");
