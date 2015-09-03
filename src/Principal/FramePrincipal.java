@@ -19,6 +19,7 @@ import java.util.Timer;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.UIManager;
+import java.awt.Cursor;
 
 @SuppressWarnings("serial")
 public class FramePrincipal extends JFrame{
@@ -453,11 +454,12 @@ public class FramePrincipal extends JFrame{
 		scrollPanePr.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		VentanaPrincipal.add(scrollPanePr);
 		txt = new JTextArea();
+		txt.setEditable(false);
+		txt.getCaret().setVisible(true);
 		txt.setLineWrap(true);
 		txt.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		txt.setBackground(new Color(192, 192, 192));
 		txt.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
-		txt.setEditable(false);
 		txt.setFont(new Font("Arial", Font.BOLD, (int) (alto*0.033)));
 		scrollPanePr.setViewportView(txt);
 		
@@ -604,6 +606,7 @@ public class FramePrincipal extends JFrame{
 		VentanaA.add(scrollPaneA);
 		txtA = new JTextArea();
 		txtA.setLineWrap(true);
+		txtA.getCaret().setVisible(true);
 		txtA.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		txtA.setBackground(Color.LIGHT_GRAY);
 		txtA.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
@@ -754,6 +757,7 @@ public class FramePrincipal extends JFrame{
 		VentanaF.add(scrollPaneF);
 		txtF = new JTextArea();
 		txtF.setLineWrap(true);
+		txtF.getCaret().setVisible(true);
 		txtF.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		txtF.setBackground(Color.LIGHT_GRAY);
 		txtF.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
@@ -904,6 +908,7 @@ public class FramePrincipal extends JFrame{
 		VentanaK.add(scrollPaneK);
 		txtK = new JTextArea();
 		txtK.setLineWrap(true);
+		txtK.getCaret().setVisible(true);
 		txtK.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		txtK.setBackground(Color.LIGHT_GRAY);
 		txtK.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
@@ -1054,6 +1059,7 @@ public class FramePrincipal extends JFrame{
 		VentanaO.add(scrollPaneO);
 		txtO = new JTextArea();
 		txtO.setLineWrap(true);
+		txtO.getCaret().setVisible(true);
 		txtO.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		txtO.setBackground(Color.LIGHT_GRAY);
 		txtO.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
@@ -1197,7 +1203,12 @@ public class FramePrincipal extends JFrame{
 		BttnTNO.setBounds((int)(this.ancho*0.597),(int)(this.alto*0.717),(int)(this.ancho*0.11),(int)(this.alto*0.14));
 		VentanaT.add(BttnTNO);
 		
-		/* -- AREA DE TEXTO (VENTANA T) -- */
+		/* -- AREA DE TEXTO (VENTANA T) --
+		 * int indice_ultima_linea = JTextArea_variable.getDocument().getLength(); //retorna el numero de lineas
+				JTextArea_variable.setCaretPosition(indice_ultima_linea); //ubica el cursor al final
+		 *  
+		 *  
+		 *  */
 		JScrollPane scrollPaneT = new JScrollPane(txtT);
 		scrollPaneT.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		scrollPaneT.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
@@ -1208,6 +1219,7 @@ public class FramePrincipal extends JFrame{
 		txtT.setBackground(Color.LIGHT_GRAY);
 		txtT.setBounds((int)(this.ancho*0.25),(int)(this.alto*0.879),(int)(this.ancho*0.5),(int)(this.alto*0.12));
 		txtT.setEditable(false);
+		txtT.getCaret().setVisible(true);
 		txtT.setFont(new Font("Arial", Font.BOLD, (int) (alto*0.033)));
 		scrollPaneT.setViewportView(txtT);
 		
