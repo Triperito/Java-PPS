@@ -213,10 +213,14 @@ public class Timers extends TimerTask {
 				}
 				break;
 				
-				
+			case 'D': //Se iniciar el timer del boton Punto (DOT)
+				if(times==5){
+					FramePrincipal.Guardando=true;
+				}
+				if(times==10){
+					FramePrincipal.CrearArchivo();
+				}
+				break;
 		}
-		
 	}
-	
-	
 }

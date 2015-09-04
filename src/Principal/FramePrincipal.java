@@ -1,8 +1,8 @@
 package Principal;
 
 import java.awt.Color;
-import java.awt.EventQueue;
 import java.awt.Font;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -10,16 +10,19 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
+
 import java.awt.CardLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Date;
+import java.util.Calendar;
 import java.util.Timer;
+
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.UIManager;
-import java.awt.Cursor;
 
 @SuppressWarnings("serial")
 public class FramePrincipal extends JFrame{
@@ -44,6 +47,8 @@ public class FramePrincipal extends JFrame{
 	public static JTextArea txtO;
 	public static JTextArea txtT;
 	public static boolean okCerrar=false;
+	public static boolean Guardando=false;
+	public static Date fecha;
 	
 	public int alto  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
 	public int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
@@ -346,12 +351,27 @@ public class FramePrincipal extends JFrame{
 		
 		/* -- BOTON PUNTO (VENTANA PRINCIPAL) -- */
 		JButton BttnPrPunto = new JButton("");
+		BttnPrPunto.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+				timer = new Timer();
+				Timers t = new Timers(timer,'D');
+				timer.schedule(t, 1, milisegundos);
+			}
+			@Override
+			public void mouseReleased(MouseEvent arg0) {
+				timer.cancel();
+				Guardando=false;
+			}
+		});
 		BttnPrPunto.setIcon(BotonPuntoMod);
 		BttnPrPunto.setPressedIcon(BotonPuntoModCliked);
 		BttnPrPunto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txt.setText(txt.getText()+".");
-				Speak.eSpeak(txt.getText());			
+				if(Guardando==false){
+					txt.setText(txt.getText()+".");
+					Speak.eSpeak(txt.getText());	
+				}
 			}
 		});
 		BttnPrPunto.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.43),(int)(this.ancho*0.11),(int)(this.alto*0.14));
@@ -1224,4 +1244,14 @@ public class FramePrincipal extends JFrame{
 		scrollPaneT.setViewportView(txtT);
 		
 	}
+
+	static public void CrearArchivo(){
+		fecha = new Date ();
+		System.out.println(fecha.toString());
+		//Crear un archivo con lo que haya en txt
+	}
+
 }
+
+
+
