@@ -16,8 +16,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.Date;
-import java.util.Calendar;
 import java.util.Timer;
 
 import javax.swing.JScrollPane;
@@ -48,7 +46,10 @@ public class FramePrincipal extends JFrame{
 	public static JTextArea txtT;
 	public static boolean okCerrar=false;
 	public static boolean Guardando=false;
-	public static Date fecha;
+	public static int numArchivo=0;
+	public static StringBuilder nombre;
+	public static boolean SonidoActivado=true;
+	public static Reproductor play = new Reproductor();
 	
 	public int alto  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
 	public int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
@@ -280,6 +281,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaA");
 				txtA.setText(txt.getText());
+				if (SonidoActivado==true){
+					play.SimplePlayer();
+				}
 			}
 		});
 		BttnPrA.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -293,6 +297,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaF");
 				txtF.setText(txt.getText());
+				if (SonidoActivado==true){
+					play.SimplePlayer();
+				}
 			}
 		});
 		BttnPrF.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -306,6 +313,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaK");
 				txtK.setText(txt.getText());
+				if (SonidoActivado==true){
+					play.SimplePlayer();
+				}
 			}
 		});
 		BttnPrK.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -319,6 +329,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaO");
 				txtO.setText(txt.getText());
+				if (SonidoActivado==true){
+					play.SimplePlayer();
+				}
 			}
 		});
 		BttnPrO.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -332,6 +345,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaT");
 				txtT.setText(txt.getText());
+				if (SonidoActivado==true){
+					play.SimplePlayer();
+				}
 			}
 		});
 		BttnPrT.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -344,6 +360,9 @@ public class FramePrincipal extends JFrame{
 		BttnPrEspacio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				txt.setText(txt.getText()+" ");
+				if (SonidoActivado==true){
+					play.SimplePlayer();
+				}
 			}
 		});
 		BttnPrEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
@@ -370,7 +389,10 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				if(Guardando==false){
 					txt.setText(txt.getText()+".");
-					Speak.eSpeak(txt.getText());	
+					Speak.eSpeak(txt.getText());
+					if (SonidoActivado==true){
+						play.SimplePlayer();
+					}
 				}
 			}
 		});
@@ -499,6 +521,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText()+"A");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnA.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -512,6 +537,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText()+"B");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 		}
 		});
 		BttnB.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -525,6 +553,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText()+"C");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnC.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -538,6 +569,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText()+"D");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnD.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -551,6 +585,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText()+"E");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnE.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -564,6 +601,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText());
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnAEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
@@ -650,6 +690,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText()+"F");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnF.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -663,6 +706,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText()+"G");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnG.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -676,6 +722,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText()+"H");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnH.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -689,6 +738,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText()+"I");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnI.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -702,6 +754,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText()+"J");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnJ.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -715,6 +770,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent arg0) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText());
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnFEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
@@ -801,6 +859,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText()+"K");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnK.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -814,6 +875,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText()+"L");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnL.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -827,6 +891,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText()+"M");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnM.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -840,6 +907,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText()+"N");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnN.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -853,6 +923,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText()+"Ñ");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnNi.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -866,6 +939,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText());
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnKEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
@@ -952,6 +1028,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText()+"O");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnO.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -965,6 +1044,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText()+"P");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnP.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -978,6 +1060,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText()+"QU");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnQU.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -991,6 +1076,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText()+"R");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnR.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -1004,6 +1092,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText()+"S");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnS.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -1017,6 +1108,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText());
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnOEspacio.setBounds((int)(this.ancho*0.3),(int)(this.alto*0.003),(int)(this.ancho*0.4),(int)(this.alto*0.1));
@@ -1103,6 +1197,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtT.getText()+"T");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnT.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -1116,6 +1213,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtT.getText()+"U");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnU.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.003),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -1129,6 +1229,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtT.getText()+"V");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnV.setBounds((int)(this.ancho*0.393),(int)(this.alto*0.375),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -1142,6 +1245,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtT.getText()+"X");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnX.setBounds((int)(this.ancho*0.003),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -1155,6 +1261,9 @@ public class FramePrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtT.getText()+"Y");
+				if (FramePrincipal.SonidoActivado==true){
+					FramePrincipal.play.SimplePlayer();
+				}
 			}
 		});
 		BttnY.setBounds((int)(this.ancho*0.789),(int)(this.alto*0.747),(int)(this.ancho*0.21),(int)(this.alto*0.25));
@@ -1246,10 +1355,24 @@ public class FramePrincipal extends JFrame{
 	}
 
 	static public void CrearArchivo(){
-		fecha = new Date ();
-		System.out.println(fecha.toString());
-		//Crear un archivo con lo que haya en txt
+		if(numArchivo<10){
+			nombre.append("Archivo000"+numArchivo);
+		}
+		else if(numArchivo<100){
+			nombre.append("Archivo00"+numArchivo);
+		}
+		else if(numArchivo<1000){
+			nombre.append("Archivo0"+numArchivo);
+		}
+		else
+			nombre.append("Archivo"+numArchivo);
+		
+				
+		//TODO Crear un archivo con lo que haya en txt
 	}
+	
+	
+
 
 }
 
