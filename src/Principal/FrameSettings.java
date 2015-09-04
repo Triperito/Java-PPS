@@ -22,7 +22,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
-import java.io.IOException;
 
 public class FrameSettings extends JFrame {
 
@@ -126,12 +125,33 @@ public class FrameSettings extends JFrame {
 		contentPane.add(btnPlay);
 		
 		JCheckBox chckbxActivarSonidoDe = new JCheckBox("Activar sonido de botones");
+		chckbxActivarSonidoDe.setSelected(false);
+		chckbxActivarSonidoDe.addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent arg0) {
+				if(chckbxActivarSonidoDe.isSelected()){
+					FramePrincipal.SonidoActivado=true;
+				}
+				else{
+					FramePrincipal.SonidoActivado=false;
+				}
+			}
+		});
 		chckbxActivarSonidoDe.setFont(new Font("Calibri", Font.PLAIN, 20));
 		chckbxActivarSonidoDe.setBackground(Color.WHITE);
 		chckbxActivarSonidoDe.setBounds((int)(0.016*ancho), (int)(0.257*alto), (int)(0.468*ancho), (int)(0.075*alto));
 		contentPane.add(chckbxActivarSonidoDe);
 		
 		JCheckBox chckbxActivarGuardadoDe = new JCheckBox("Activar guardado de texto");
+		chckbxActivarGuardadoDe.addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent e) {
+				if(chckbxActivarGuardadoDe.isSelected()){
+					FramePrincipal.GuardadoActivado=true;
+				}
+				else
+					FramePrincipal.GuardadoActivado=false;
+			}
+		});
+		chckbxActivarGuardadoDe.setSelected(false);
 		chckbxActivarGuardadoDe.setFont(new Font("Calibri", Font.PLAIN, 20));
 		chckbxActivarGuardadoDe.setBackground(Color.WHITE);
 		chckbxActivarGuardadoDe.setBounds((int)(0.016*ancho), (int)(0.340*alto), (int)(0.468*ancho), (int)(0.075*alto));

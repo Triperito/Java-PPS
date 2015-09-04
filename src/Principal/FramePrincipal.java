@@ -48,7 +48,8 @@ public class FramePrincipal extends JFrame{
 	public static boolean Guardando=false;
 	public static int numArchivo=0;
 	public static StringBuilder nombre;
-	public static boolean SonidoActivado=true;
+	public static boolean SonidoActivado=false;
+	public static boolean GuardadoActivado=false;
 	public static Reproductor play = new Reproductor();
 	
 	public int alto  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
@@ -380,7 +381,9 @@ public class FramePrincipal extends JFrame{
 			@Override
 			public void mouseReleased(MouseEvent arg0) {
 				timer.cancel();
-				Guardando=false;
+				if(GuardadoActivado==true){
+					Guardando=false;
+				}
 			}
 		});
 		BttnPrPunto.setIcon(BotonPuntoMod);
@@ -1355,7 +1358,7 @@ public class FramePrincipal extends JFrame{
 	}
 
 	static public void CrearArchivo(){
-		if(numArchivo<10){
+		/*if(numArchivo<10){
 			nombre.append("Archivo000"+numArchivo);
 		}
 		else if(numArchivo<100){
@@ -1365,9 +1368,9 @@ public class FramePrincipal extends JFrame{
 			nombre.append("Archivo0"+numArchivo);
 		}
 		else
-			nombre.append("Archivo"+numArchivo);
+			nombre.append("Archivo"+numArchivo);*/
 		
-				
+				System.out.println("Guardearchivo");
 		//TODO Crear un archivo con lo que haya en txt
 	}
 	

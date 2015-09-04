@@ -218,7 +218,12 @@ public class Timers extends TimerTask {
 					FramePrincipal.Guardando=true;
 				}
 				if(times==10){
-					FramePrincipal.CrearArchivo();
+					if(FramePrincipal.GuardadoActivado){
+						FramePrincipal.CrearArchivo();
+					}
+					else
+						System.out.println("No esta activado mostro");
+					
 				}
 				break;
 		}
