@@ -1370,7 +1370,7 @@ public class FramePrincipal extends JFrame{
 		else
 			nombre.append("Archivo"+numArchivo);*/
 		
-				System.out.println("Guardearchivo");
+		System.out.println("Guardearchivo");
 		//TODO Crear un archivo con lo que haya en txt
 	}
 	
