@@ -14,7 +14,7 @@ public class Speak {
 		voz = vozElegida;
 	}
 
-	private static String path(){
+	public static String path(){
 		StringBuilder comando = new StringBuilder("");
 		pathAbsoluto = new File ("").getAbsolutePath(); //ME GUARDO EL PATH ABSOLUTO DE DONDE SE ESTA EJECUTANDO LA APLICACION
 		directorios = pathAbsoluto.split("\\\\");		//SEPARO CADA CARPETA DEL ARBOL SUPERIOR
