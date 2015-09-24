@@ -1413,9 +1413,6 @@ public class FramePrincipal extends JFrame{
 		}
 		return NroArchivo;
 	}
-	
-	
-
 
 }
 

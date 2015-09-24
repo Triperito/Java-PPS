@@ -28,8 +28,10 @@ public class FrameSettings extends JFrame {
 
 	private JPanel contentPane;
 	
-	public int altoPantalla  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
-	public int anchoPantalla = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+	//public int altoPantalla  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
+	//public int anchoPantalla = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+	public int altoPantalla  = 900;
+	public int anchoPantalla = 1600;
 	public int alto = (int) (altoPantalla*0.5);
 	public int ancho = (int) (anchoPantalla*0.5);
 
@@ -168,6 +170,17 @@ public class FrameSettings extends JFrame {
 		btnIntruccionesDeUso.setFont(new Font("Calibri", Font.PLAIN, 20));
 		btnIntruccionesDeUso.setBounds((int)(0.016*ancho), (int)(0.432*alto), (int)(0.312*ancho), (int)(0.075*alto));
 		contentPane.add(btnIntruccionesDeUso);
+		
+		JButton btnReproducirArchivo = new JButton("Reproducir archivo");
+		btnReproducirArchivo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				fileChooser chooser = new fileChooser();
+				chooser.setVisible(true);
+			}
+		});
+		btnReproducirArchivo.setFont(new Font("Calibri", Font.PLAIN, 20));
+		btnReproducirArchivo.setBounds((int)(0.350*ancho), (int)(0.432*alto), (int)(0.312*ancho), (int)(0.075*alto));
+		contentPane.add(btnReproducirArchivo);
 		
 		JButton btnImportante = new JButton("");
 		btnImportante.addActionListener(new ActionListener() {
