@@ -16,6 +16,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.*;
 import java.util.Timer;
 
 import javax.swing.JScrollPane;
@@ -51,6 +52,9 @@ public class FramePrincipal extends JFrame{
 	public static boolean SonidoActivado=false;
 	public static boolean GuardadoActivado=false;
 	public static Reproductor play = new Reproductor();
+	public static File ArchivoTexto;
+	public static File ArchivoContador;
+	public static int NroArchivo = LeerArchivoContador();
 	
 	public int alto  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
 	public int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
@@ -1358,20 +1362,56 @@ public class FramePrincipal extends JFrame{
 	}
 
 	static public void CrearArchivo(){
-		/*if(numArchivo<10){
-			nombre.append("Archivo000"+numArchivo);
+		if (NroArchivo<10){
+			ArchivoTexto = new File("Archivo00" + NroArchivo + ".txt");
 		}
-		else if(numArchivo<100){
-			nombre.append("Archivo00"+numArchivo);
+		else if(NroArchivo<100){
+			ArchivoTexto = new File("Archivo0" + NroArchivo + ".txt");
 		}
-		else if(numArchivo<1000){
-			nombre.append("Archivo0"+numArchivo);
+		else if (NroArchivo<1000){
+			ArchivoTexto = new File("Archivo" + NroArchivo + ".txt");
 		}
-		else
-			nombre.append("Archivo"+numArchivo);*/
-		
-		System.out.println("Guardearchivo");
-		//TODO Crear un archivo con lo que haya en txt
+		NroArchivo++;
+		ActualizarCantidadDeArchivos();
+		try{
+			FileWriter escritura = new FileWriter(ArchivoTexto);
+			BufferedWriter bufferEscritura = new BufferedWriter(escritura);
+			PrintWriter escritor = new PrintWriter(bufferEscritura);
+			escritor.write(txt.getText());
+			escritor.close();
+			bufferEscritura.close();
+		}
+		catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+	static void ActualizarCantidadDeArchivos(){
+		ArchivoContador = new File("\\eSpeack\\docs\\Contador.txt");
+		try{
+			FileWriter escrituraC = new FileWriter(ArchivoContador);
+			BufferedWriter bufferEscrituraC = new BufferedWriter(escrituraC);
+			PrintWriter escritorC = new PrintWriter(bufferEscrituraC);
+			escritorC.write(NroArchivo);
+			escritorC.close();
+			bufferEscrituraC.close();
+		}
+		catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+	
+	static int LeerArchivoContador(){
+		ArchivoContador = new File("\\eSpeack\\docs\\Contador.txt");
+		try{
+			FileReader lecturaC = new FileReader(ArchivoContador);
+			BufferedReader bufferLecturaC = new BufferedReader(lecturaC);
+			NroArchivo = Integer.parseInt(bufferLecturaC.readLine());
+			bufferLecturaC.close();
+		}
+		catch(IOException e){
+			e.printStackTrace();
+		}
+		return NroArchivo;
 	}
 	
 	

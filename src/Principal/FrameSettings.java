@@ -22,6 +22,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
+import java.io.IOException;
 
 public class FrameSettings extends JFrame {
 
@@ -171,11 +172,11 @@ public class FrameSettings extends JFrame {
 		JButton btnImportante = new JButton("");
 		btnImportante.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				/*try { //Reemplazar por el nombre del instalador cuando este dentro de la carpeta eSpeak
-					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "eSpeak\\EL NOMBRE DEL INSTALADOR");
+				try {
+					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "eSpeak\\Setup-eSpeak-1.48.04");
 				} catch (IOException e) {
 					e.printStackTrace();
-				}*/
+				}
 			}
 		});
 		btnImportante.setBounds((int)(0.016*ancho), (int)(0.535*alto), ancho-(2*((int)(0.029*ancho))), (int)(0.250*alto));

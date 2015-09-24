@@ -23,19 +23,27 @@ public class Timers extends TimerTask {
 				int  p = FramePrincipal.txt.getText().length();
 				if(times <= 5){
 					if (p>0){
-						if ((p>1) && (FramePrincipal.txt.getText().charAt(p-2)=='Q') && (FramePrincipal.txt.getText().charAt(p-1)=='U'))
+						if ((p>1) && (FramePrincipal.txt.getText().charAt(p-2)=='Q') && (FramePrincipal.txt.getText().charAt(p-1)=='U')){
 							FramePrincipal.txt.setText(FramePrincipal.txt.getText().substring(0, p-2));
-						else
+							FramePrincipal.txt.setCaretPosition(FramePrincipal.txt.getText().length());
+						}
+						else{
 							FramePrincipal.txt.setText(FramePrincipal.txt.getText().substring(0, p-1));
+							FramePrincipal.txt.setCaretPosition(FramePrincipal.txt.getText().length());
+						}
 					}
 				}
 				else{
 					if((times > 5) && (times <=15)){
 						if (p>5){
-							if ((p>6) && (FramePrincipal.txt.getText().charAt(p-6)=='Q') && (FramePrincipal.txt.getText().charAt(p-5)=='U'))
+							if ((p>6) && (FramePrincipal.txt.getText().charAt(p-6)=='Q') && (FramePrincipal.txt.getText().charAt(p-5)=='U')){
 								FramePrincipal.txt.setText(FramePrincipal.txt.getText().substring(0, p-6));
-							else
+								FramePrincipal.txt.setCaretPosition(FramePrincipal.txt.getText().length());
+							}
+							else{
 								FramePrincipal.txt.setText(FramePrincipal.txt.getText().substring(0, p-5));
+								FramePrincipal.txt.setCaretPosition(FramePrincipal.txt.getText().length());
+							}
 						}
 						else{
 							FramePrincipal.txt.setText(null);
@@ -229,3 +237,4 @@ public class Timers extends TimerTask {
 		}
 	}
 }
+
