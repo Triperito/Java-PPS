@@ -184,6 +184,7 @@ public class FrameSettings extends JFrame {
 		contentPane.add(btnReproducirArchivo);
 		
 		JButton btnImportante = new JButton("");
+		//TODO PONERLE LA IMAGEN
 		btnImportante.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
