@@ -41,6 +41,7 @@ public class Instrucciones extends JFrame {
 	 * Create the frame.
 	 */
 	public Instrucciones() {
+		this.setTitle("Instrucciones de uso");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds((anchoPantalla/2)-(ancho/2), (altoPantalla/2)-(alto/2), 450, 300);
 		contentPane = new JPanel();

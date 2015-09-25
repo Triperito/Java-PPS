@@ -1,49 +1,66 @@
 package Principal;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.awt.FlowLayout;
 import java.io.File;
 
-import javax.swing.JFrame;
+import javax.smartcardio.CommandAPDU;
+import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JFileChooser;
 
-public class fileChooser extends JFrame {
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-	private JPanel contentPane;
+public class fileChooser extends JDialog {
+
+	private final JPanel contentPanel = new JPanel();
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					fileChooser frame = new fileChooser();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		try {
+			fileChooser dialog = new fileChooser();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
-	 * Create the frame.
+	 * Create the dialog.
 	 */
 	public fileChooser() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 568, 437);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
-		setContentPane(contentPane);
-		
-		JFileChooser fileChooser = new JFileChooser();
-		contentPane.add(fileChooser, BorderLayout.NORTH);
-		fileChooser.setCurrentDirectory(new File(Speak.path()+"Textos"));
-		//fileChooser.setCurrentDirectory("<YOUR DIR COMES HERE>");
+		this.setTitle("Eliga el archivo a reproducir...");
+		setBounds(100, 100, 656, 432);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+
+		JFileChooser Chooser = new JFileChooser();
+		Chooser.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (e.getActionCommand().equals(JFileChooser.APPROVE_SELECTION)){
+					Speak.eSpeakFile(Chooser.getSelectedFile().getAbsolutePath());
+					dispose();
+				}
+				else if (e.getActionCommand().equals(JFileChooser.CANCEL_SELECTION)){
+					dispose();
+				}
+			}
+		});
+		Chooser.setBounds(0, 0, 623, 397);
+		contentPanel.add(Chooser);
+		Chooser.setCurrentDirectory(new File(Speak.path()+"Textos"));
+		{
+
+		}
+
 	}
 
 }
