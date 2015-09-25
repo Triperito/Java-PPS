@@ -52,23 +52,7 @@ public class Instrucciones extends JFrame {
 			"\n",
 			"-Al presion el boton Punto se terminara una oracion, la misma",
 			"sera reproducida con la voz elegida."	
-			}; // TODO Arreglalas si queres.
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Instrucciones frame = new Instrucciones();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+			}; // TODO Fijate si te gustan como estan asi, o le queres agregar algo.
 
 	/**
 	 * Create the frame.
