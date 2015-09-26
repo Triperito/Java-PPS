@@ -187,12 +187,11 @@ public class FrameSettings extends JFrame {
 		
 		JButton btnImportante = new JButton("");
 		btnImportante.setIcon(SetupImgMod);
-		System.out.println("ancho"+btnImportante.getWidth()+"     largo"+btnImportante.getHeight());
 		btnImportante.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "eSpeak\\Setup-eSpeak-1.48.04");
+					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "eSpeak\\Instalador.exe");
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
