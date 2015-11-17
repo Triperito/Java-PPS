@@ -177,7 +177,7 @@ public class FrameSettings extends JFrame {
 		JButton btnReproducirArchivo = new JButton("Reproducir archivo");
 		btnReproducirArchivo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				fileChooser chooser = new fileChooser();
+				FileChooser chooser = new FileChooser();
 				chooser.setVisible(true);
 			}
 		});

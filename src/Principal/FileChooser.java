@@ -14,14 +14,14 @@ import javax.swing.JFileChooser;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class fileChooser extends JDialog {
+public class FileChooser extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
 
 	/**
 	 * Create the dialog.
 	 */
-	public fileChooser() {
+	public FileChooser() {
 		this.setTitle("Eliga el archivo a reproducir...");
 		setBounds(100, 100, 656, 432);
 		getContentPane().setLayout(new BorderLayout());
