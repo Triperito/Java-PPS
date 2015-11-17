@@ -1,7 +1,6 @@
 package Principal;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -16,6 +15,7 @@ import javax.swing.JTextPane;
 
 import java.awt.Font;
 
+@SuppressWarnings("serial")
 public class Instrucciones extends JFrame {
 
 	private JPanel contentPane;

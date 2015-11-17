@@ -1,29 +1,24 @@
 package Principal;
 
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
 import java.awt.Color;
-
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-
 import java.awt.Font;
-
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
-
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
 import java.io.IOException;
 
+@SuppressWarnings("serial")
 public class FrameSettings extends JFrame {
 
 	private JPanel contentPane;
