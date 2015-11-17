@@ -15,6 +15,7 @@ import javax.swing.JTextPane;
 
 import java.awt.Font;
 
+@SuppressWarnings("serial")
 public class Instrucciones extends JFrame {
 
 	private JPanel contentPane;
