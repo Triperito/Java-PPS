@@ -55,6 +55,7 @@ public class FrameSettings extends JFrame {
 	}
 
 	public FrameSettings() {
+		setResizable(false);
 		this.setTitle("Configuracion");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds((anchoPantalla/2)-(ancho/2), (altoPantalla/2)-(alto/2), ancho, alto);
