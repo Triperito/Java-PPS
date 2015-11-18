@@ -23,18 +23,16 @@ public class FrameSettings extends JFrame {
 
 	private JPanel contentPane;
 	
-	//public int altoPantalla  = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
-	//public int anchoPantalla = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
 	public int altoPantalla  = 900;
 	public int anchoPantalla = 1600;
 	public int alto = (int) (altoPantalla*0.5);
 	public int ancho = (int) (anchoPantalla*0.5);
 	ImageIcon Play = new ImageIcon(FrameSettings.class.getResource("/Graficos/Play.png"));
-	ImageIcon PlayMod = new ImageIcon(Play.getImage().getScaledInstance((int)(0.078*ancho),(int)(0.125*alto), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon PlayMod = new ImageIcon(Play.getImage().getScaledInstance((int)(0.078*ancho), (int)(0.125*alto), java.awt.Image.SCALE_DEFAULT));
 	ImageIcon PlayClicked = new ImageIcon(FrameSettings.class.getResource("/Graficos/PlayClickeado.png"));
-	ImageIcon PlayModClicked = new ImageIcon(PlayClicked.getImage().getScaledInstance((int)(0.078*ancho),(int)(0.125*alto), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon PlayModClicked = new ImageIcon(PlayClicked.getImage().getScaledInstance((int)(0.078*ancho), (int)(0.125*alto), java.awt.Image.SCALE_DEFAULT));
 	ImageIcon SetupImg = new ImageIcon(FramePrincipal.class.getResource("/Graficos/SetupImg.jpg"));
-	ImageIcon SetupImgMod = new ImageIcon(SetupImg.getImage().getScaledInstance(ancho-(2*((int)(0.029*ancho))),(int)(0.250*alto), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon SetupImgMod = new ImageIcon(SetupImg.getImage().getScaledInstance(ancho-(2*((int)(0.029*ancho))), (int)(0.250*alto), java.awt.Image.SCALE_DEFAULT));
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -63,13 +61,13 @@ public class FrameSettings extends JFrame {
 		JLabel lblConfiguraciones = new JLabel("Bienvenidos al Intercomunicador Java");
 		lblConfiguraciones.setFont(new Font("Calibri", Font.BOLD, 30));
 		lblConfiguraciones.setHorizontalAlignment(SwingConstants.CENTER);
-		lblConfiguraciones.setBounds((int)(0.095*ancho),(int)(0.027*alto),(int)(0.781*ancho),(int)(0.075*alto));
+		lblConfiguraciones.setBounds((int)(0.095*ancho), (int)(0.027*alto), (int)(0.781*ancho), (int)(0.075*alto));
 		contentPane.add(lblConfiguraciones);
 		
 		JLabel lblVoces = new JLabel("Voces:");
 		lblVoces.setHorizontalAlignment(SwingConstants.CENTER);
 		lblVoces.setFont(new Font("Calibri", Font.PLAIN, 20));
-		lblVoces.setBounds((int)(0.016*ancho),(int)(0.177*alto), (int)(0.125*ancho), (int)(0.062*alto));
+		lblVoces.setBounds((int)(0.016*ancho), (int)(0.177*alto), (int)(0.125*ancho), (int)(0.062*alto));
 		contentPane.add(lblVoces);
 		
 		JComboBox<String> comboBox = new JComboBox<String>();
@@ -116,7 +114,7 @@ public class FrameSettings extends JFrame {
 		JButton btnPlay = new JButton("");
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Speak.eSpeak("Hola, esta es la voz de "+comboBox.getSelectedItem());
+				Speak.eSpeak("Hola, esta es la voz de " + comboBox.getSelectedItem());
 			}
 		});
 		btnPlay.setBackground(Color.WHITE);
@@ -130,11 +128,11 @@ public class FrameSettings extends JFrame {
 		chckbxActivarSonidoDe.setSelected(false);
 		chckbxActivarSonidoDe.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				if(chckbxActivarSonidoDe.isSelected()){
-					FramePrincipal.SonidoActivado=true;
+				if (chckbxActivarSonidoDe.isSelected()) {
+					FramePrincipal.SonidoActivado = true;
 				}
-				else{
-					FramePrincipal.SonidoActivado=false;
+				else {
+					FramePrincipal.SonidoActivado = false;
 				}
 			}
 		});
@@ -146,11 +144,11 @@ public class FrameSettings extends JFrame {
 		JCheckBox chckbxActivarGuardadoDe = new JCheckBox("Activar guardado de texto");
 		chckbxActivarGuardadoDe.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
-				if(chckbxActivarGuardadoDe.isSelected()){
-					FramePrincipal.GuardadoActivado=true;
+				if (chckbxActivarGuardadoDe.isSelected()) {
+					FramePrincipal.GuardadoActivado = true;
 				}
 				else
-					FramePrincipal.GuardadoActivado=false;
+					FramePrincipal.GuardadoActivado = false;
 			}
 		});
 		chckbxActivarGuardadoDe.setSelected(false);
@@ -187,7 +185,7 @@ public class FrameSettings extends JFrame {
 			
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "eSpeak\\Instalador.exe");
+					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "eSpeak\\Instaladores\\instalar.bat");
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -205,7 +203,6 @@ public class FrameSettings extends JFrame {
 				dispose();
 			}
 		});
-		//btnFinalizar.setBounds(241, 320, 124, 30);
 		btnFinalizar.setBounds((ancho/2)-(int)((0.194*ancho)/2), (int)(0.800*alto), (int)(0.194*ancho), (int)(0.075*alto));
 		contentPane.add(btnFinalizar);
 	}
