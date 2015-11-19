@@ -8,6 +8,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JFileChooser;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
 
 @SuppressWarnings("serial")
 public class FileChooser extends JDialog {
@@ -15,6 +16,7 @@ public class FileChooser extends JDialog {
 	private final JPanel contentPanel = new JPanel();
 
 	public FileChooser() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FileChooser.class.getResource("/Graficos/IconoVentanas.png")));
 		this.setTitle("Eliga el archivo a reproducir...");
 		setBounds(100, 100, 656, 432);
 		getContentPane().setLayout(new BorderLayout());

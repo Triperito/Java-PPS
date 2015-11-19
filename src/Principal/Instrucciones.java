@@ -10,6 +10,7 @@ import javax.swing.SwingConstants;
 import java.awt.Color;
 import javax.swing.JTextPane;
 import java.awt.Font;
+import java.awt.Toolkit;
 
 @SuppressWarnings("serial")
 public class Instrucciones extends JFrame {
@@ -52,6 +53,7 @@ public class Instrucciones extends JFrame {
 	};
 	
 	public Instrucciones() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Instrucciones.class.getResource("/Graficos/IconoVentanas.png")));
 		this.setTitle("Instrucciones de uso");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds((anchoPantalla/2)-(ancho/2), (altoPantalla/2)-(alto/2), 450, 300);

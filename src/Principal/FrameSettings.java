@@ -50,7 +50,7 @@ public class FrameSettings extends JFrame {
 	}
 
 	public FrameSettings() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrameSettings.class.getResource("/Graficos/foto sin intercom.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrameSettings.class.getResource("/Graficos/IconoVentanas.png")));
 		setResizable(false);
 		this.setTitle("Configuracion");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
