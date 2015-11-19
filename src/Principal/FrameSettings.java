@@ -17,14 +17,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
 import java.io.IOException;
+import java.awt.Toolkit;
 
 @SuppressWarnings("serial")
 public class FrameSettings extends JFrame {
 
 	private JPanel contentPane;
 	
-	public int altoPantalla  = 900;
-	public int anchoPantalla = 1600;
+	public int altoPantalla = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
+	public int anchoPantalla = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+	
 	public int alto = (int) (altoPantalla*0.5);
 	public int ancho = (int) (anchoPantalla*0.5);
 	ImageIcon Play = new ImageIcon(FrameSettings.class.getResource("/Graficos/Play.png"));
@@ -33,7 +35,7 @@ public class FrameSettings extends JFrame {
 	ImageIcon PlayModClicked = new ImageIcon(PlayClicked.getImage().getScaledInstance((int)(0.078*ancho), (int)(0.125*alto), java.awt.Image.SCALE_DEFAULT));
 	ImageIcon SetupImg = new ImageIcon(FramePrincipal.class.getResource("/Graficos/SetupImg.jpg"));
 	ImageIcon SetupImgMod = new ImageIcon(SetupImg.getImage().getScaledInstance(ancho-(2*((int)(0.029*ancho))), (int)(0.250*alto), java.awt.Image.SCALE_DEFAULT));
-
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -48,6 +50,7 @@ public class FrameSettings extends JFrame {
 	}
 
 	public FrameSettings() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrameSettings.class.getResource("/Graficos/foto sin intercom.png")));
 		setResizable(false);
 		this.setTitle("Configuracion");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -58,18 +61,21 @@ public class FrameSettings extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		//  * LABEL CONFIGURACIONES *  //
 		JLabel lblConfiguraciones = new JLabel("Bienvenidos al Intercomunicador Java");
 		lblConfiguraciones.setFont(new Font("Calibri", Font.BOLD, 30));
 		lblConfiguraciones.setHorizontalAlignment(SwingConstants.CENTER);
 		lblConfiguraciones.setBounds((int)(0.095*ancho), (int)(0.027*alto), (int)(0.781*ancho), (int)(0.075*alto));
 		contentPane.add(lblConfiguraciones);
 		
+		//  * LABEL VOCES *  //
 		JLabel lblVoces = new JLabel("Voces:");
 		lblVoces.setHorizontalAlignment(SwingConstants.CENTER);
 		lblVoces.setFont(new Font("Calibri", Font.PLAIN, 20));
 		lblVoces.setBounds((int)(0.016*ancho), (int)(0.177*alto), (int)(0.125*ancho), (int)(0.062*alto));
 		contentPane.add(lblVoces);
 		
+		//  * COMBOBOX VOCES *  //
 		JComboBox<String> comboBox = new JComboBox<String>();
 		comboBox.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
@@ -111,6 +117,7 @@ public class FrameSettings extends JFrame {
 		comboBox.addItem("Hugo");
 		contentPane.add(comboBox);
 		
+		//  * BOTON PLAY PRELIMINAR *  //
 		JButton btnPlay = new JButton("");
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -124,6 +131,7 @@ public class FrameSettings extends JFrame {
 		btnPlay.setBounds((int)(0.515*ancho), (int)(0.137*alto), (int)(0.078*ancho), (int)(0.125*alto));
 		contentPane.add(btnPlay);
 		
+		//  * CHECK ACTIVAR SONIDO DE BOTONES *  //
 		JCheckBox chckbxActivarSonidoDe = new JCheckBox("Activar sonido de botones");
 		chckbxActivarSonidoDe.setSelected(false);
 		chckbxActivarSonidoDe.addItemListener(new ItemListener() {
@@ -141,6 +149,7 @@ public class FrameSettings extends JFrame {
 		chckbxActivarSonidoDe.setBounds((int)(0.016*ancho), (int)(0.257*alto), (int)(0.468*ancho), (int)(0.075*alto));
 		contentPane.add(chckbxActivarSonidoDe);
 		
+		//  * CHECK GUARDAR ARCHIVO DE TEXTO *  //
 		JCheckBox chckbxActivarGuardadoDe = new JCheckBox("Activar guardado de texto");
 		chckbxActivarGuardadoDe.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
@@ -157,6 +166,7 @@ public class FrameSettings extends JFrame {
 		chckbxActivarGuardadoDe.setBounds((int)(0.016*ancho), (int)(0.340*alto), (int)(0.468*ancho), (int)(0.075*alto));
 		contentPane.add(chckbxActivarGuardadoDe);
 		
+		//  * BOTON INSTRUCCIONES DE USO *  //
 		JButton btnIntruccionesDeUso = new JButton("Intrucciones de uso");
 		btnIntruccionesDeUso.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -168,6 +178,7 @@ public class FrameSettings extends JFrame {
 		btnIntruccionesDeUso.setBounds((int)(0.016*ancho), (int)(0.432*alto), (int)(0.312*ancho), (int)(0.075*alto));
 		contentPane.add(btnIntruccionesDeUso);
 		
+		//  * BOTON REPRODUCIR ARCHIVO *  //
 		JButton btnReproducirArchivo = new JButton("Reproducir archivo");
 		btnReproducirArchivo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -179,6 +190,7 @@ public class FrameSettings extends JFrame {
 		btnReproducirArchivo.setBounds((int)(0.350*ancho), (int)(0.432*alto), (int)(0.312*ancho), (int)(0.075*alto));
 		contentPane.add(btnReproducirArchivo);
 		
+		//  * BOTON INSTALADOR DE ESPEAK Y VOCES MBROLA *  //
 		JButton btnImportante = new JButton("");
 		btnImportante.setIcon(SetupImgMod);
 		btnImportante.addActionListener(new ActionListener() {
@@ -191,9 +203,10 @@ public class FrameSettings extends JFrame {
 				}
 			}
 		});
-		btnImportante.setBounds((int)(0.016*ancho), (int)(0.535*alto), ancho-(2*((int)(0.029*ancho))), (int)(0.250*alto));
+		btnImportante.setBounds((int)(0.024*ancho), (int)(0.535*alto), ancho-(2*((int)(0.029*ancho))), (int)(0.250*alto));
 		contentPane.add(btnImportante);
 		
+		//  * BOTON FINALIZAR *  //
 		JButton btnFinalizar = new JButton("Finalizar");
 		btnFinalizar.setFont(new Font("Calibri", Font.PLAIN, 20));
 		btnFinalizar.addActionListener(new ActionListener() {
@@ -203,7 +216,7 @@ public class FrameSettings extends JFrame {
 				dispose();
 			}
 		});
-		btnFinalizar.setBounds((ancho/2)-(int)((0.194*ancho)/2), (int)(0.800*alto), (int)(0.194*ancho), (int)(0.075*alto));
+		btnFinalizar.setBounds((ancho/2)-(int)((0.194*ancho)/2), (int)(0.820*alto), (int)(0.194*ancho), (int)(0.075*alto));
 		contentPane.add(btnFinalizar);
 	}
 }
