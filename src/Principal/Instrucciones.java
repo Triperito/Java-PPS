@@ -22,37 +22,31 @@ public class Instrucciones extends JFrame {
 	public int alto = (int) (altoPantalla*0.4);
 	public int ancho = (int) (anchoPantalla*0.4);
 	private String[] cadenas = {
-			"Ventana de Configuracion:",
+			"Ventana de Configuracion:","\r",
 			"-Si es la priemra vez que utiliza la aplicacion debera instalar",
 			"el eSpeak para poder escuchar las voces, esto lo realiza",
 			"con el boton de instalacion.",
-			"\n",
 			"-Podra elegir una voz para que sea la que se reproduzca en la ",
 			"aplicaicon, mediante el boton azul podra escucharlas.",
-			"\n",
 			"-\"Activar sonido de botones\" genera un sonido cada vez que ",
 			"cada vez que se presiona una letra o espacio en la aplicacion.",
-			"\n",
 			"-\"Activar guardado de texto\" dara la posibilidad de guardar",
 			"lo escrito hasta el momento en un archivo en la carpeta \"Textos\"",
-			"\n",
 			"-El boton \"Reproducir archivo\" dara la posibilidad de elegir ",
-			"un archivo previamente guardado para su reproduccion.",
-			"\n",
-			"En la aplicacion:",
+			"un archivo previamente guardado para su reproduccion.","\n",
+			"En la aplicacion:","\r",
 			"-Dispondra de grupos de letras a los cuales debera introducirse",
 			"para escoger la letra correspondiente, si se equivoca de grupo ",
 			"podra volver atras con el boton espacio (boton violeta).",
-			"\n",
 			"-Si se equivoca y es necesario borrar puede precionar el boton",
 			"\"Borrar\" para eliminar una letra, o mantenerlo precionado para",
 			"borrar todo.",
-			"\n",
 			"-Al presion el boton Punto se terminara una oracion, la misma",
 			"sera reproducida con la voz elegida."	
 	};
 	
 	public Instrucciones() {
+		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Instrucciones.class.getResource("/Graficos/IconoVentanas.png")));
 		this.setTitle("Instrucciones de uso");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
