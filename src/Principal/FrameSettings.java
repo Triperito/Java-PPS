@@ -61,8 +61,6 @@ public class FrameSettings extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		System.out.println(altoPantalla);
-		System.out.println(anchoPantalla); 
 		
 		//  * LABEL CONFIGURACIONES *  //
 		JLabel lblConfiguraciones = new JLabel("Bienvenidos al Intercomunicador Java");
@@ -199,7 +197,7 @@ public class FrameSettings extends JFrame {
 
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "\\NOMBRE DEL MANUAL"); //TODO agregar nombre del manual
+					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "\\Manual de Instalacion.pdf"); //TODO agregar nombre del manual
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
