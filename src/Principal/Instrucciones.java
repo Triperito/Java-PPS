@@ -49,7 +49,7 @@ public class Instrucciones extends JFrame {
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Instrucciones.class.getResource("/Graficos/IconoVentanas.png")));
 		this.setTitle("Instrucciones de uso");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds((anchoPantalla/2)-(ancho/2), (altoPantalla/2)-(alto/2), 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

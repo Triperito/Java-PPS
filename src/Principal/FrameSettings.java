@@ -197,7 +197,7 @@ public class FrameSettings extends JFrame {
 			
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "eSpeak\\Instaladores\\instalar.bat");
+					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "\\eSpeak\\Instaladores\\instalar.bat");
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
