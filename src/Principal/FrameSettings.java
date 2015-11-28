@@ -26,6 +26,7 @@ public class FrameSettings extends JFrame {
 	
 	public int altoPantalla = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
 	public int anchoPantalla = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+
 	
 	public int alto = (int) (altoPantalla*0.5);
 	public int ancho = (int) (anchoPantalla*0.5);
@@ -54,12 +55,14 @@ public class FrameSettings extends JFrame {
 		setResizable(false);
 		this.setTitle("Configuracion");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds((anchoPantalla/2)-(ancho/2), (altoPantalla/2)-(alto/2), ancho, alto);
+		setBounds((anchoPantalla/2)-(ancho/2), (altoPantalla/2)-(alto/2), ancho, (int) (alto-alto*0.290));
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		System.out.println(altoPantalla);
+		System.out.println(anchoPantalla); 
 		
 		//  * LABEL CONFIGURACIONES *  //
 		JLabel lblConfiguraciones = new JLabel("Bienvenidos al Intercomunicador Java");
@@ -175,7 +178,7 @@ public class FrameSettings extends JFrame {
 			}
 		});
 		btnIntruccionesDeUso.setFont(new Font("Calibri", Font.PLAIN, 20));
-		btnIntruccionesDeUso.setBounds((int)(0.016*ancho), (int)(0.432*alto), (int)(0.312*ancho), (int)(0.075*alto));
+		btnIntruccionesDeUso.setBounds((int)(0.016*ancho), (int)(0.432*alto), (int)(0.300*ancho), (int)(0.075*alto));
 		contentPane.add(btnIntruccionesDeUso);
 		
 		//  * BOTON REPRODUCIR ARCHIVO *  //
@@ -187,11 +190,27 @@ public class FrameSettings extends JFrame {
 			}
 		});
 		btnReproducirArchivo.setFont(new Font("Calibri", Font.PLAIN, 20));
-		btnReproducirArchivo.setBounds((int)(0.350*ancho), (int)(0.432*alto), (int)(0.312*ancho), (int)(0.075*alto));
+		btnReproducirArchivo.setBounds((int)(0.345*ancho), (int)(0.432*alto), (int)(0.300*ancho), (int)(0.075*alto));
 		contentPane.add(btnReproducirArchivo);
 		
+		//  * BOTON DE MANUAL DE INSTALACION * //
+		JButton btnManual = new JButton("Manual de instalación");
+		btnManual.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "\\NOMBRE DEL MANUAL"); //TODO agregar nombre del manual
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		btnManual.setFont(new Font("Calibri", Font.PLAIN, 20));
+		btnManual.setBounds((int)(0.679*ancho), (int)(0.432*alto), (int)(0.300*ancho), (int)(0.075*alto));
+		contentPane.add(btnManual);
+		
 		//  * BOTON INSTALADOR DE ESPEAK Y VOCES MBROLA *  //
-		JButton btnImportante = new JButton("");
+		/*JButton btnImportante = new JButton("");
 		btnImportante.setIcon(SetupImgMod);
 		btnImportante.addActionListener(new ActionListener() {
 			
@@ -204,7 +223,7 @@ public class FrameSettings extends JFrame {
 			}
 		});
 		btnImportante.setBounds((int)(0.024*ancho), (int)(0.535*alto), ancho-(2*((int)(0.029*ancho))), (int)(0.250*alto));
-		contentPane.add(btnImportante);
+		contentPane.add(btnImportante);*/
 		
 		//  * BOTON FINALIZAR *  //
 		JButton btnFinalizar = new JButton("Finalizar");
@@ -216,7 +235,7 @@ public class FrameSettings extends JFrame {
 				dispose();
 			}
 		});
-		btnFinalizar.setBounds((ancho/2)-(int)((0.194*ancho)/2), (int)(0.820*alto), (int)(0.194*ancho), (int)(0.075*alto));
+		btnFinalizar.setBounds((ancho/2)-(int)((0.194*ancho)/2), (int)(0.535*alto), (int)(0.194*ancho), (int)(0.075*alto));
 		contentPane.add(btnFinalizar);
 	}
 }
