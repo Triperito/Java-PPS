@@ -51,7 +51,7 @@ public class FrameSettings extends JFrame {
 	}
 
 	public FrameSettings() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrameSettings.class.getResource("/Graficos/IconoVentanas.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrameSettings.class.getResource("/Graficos/Icono.png")));
 		setResizable(false);
 		this.setTitle("Configuracion");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -125,7 +125,6 @@ public class FrameSettings extends JFrame {
 				Speak.eSpeak("Hola, esta es la voz de " + comboBox.getSelectedItem());
 			}
 		});
-		btnPlay.setBackground(Color.WHITE);
 		btnPlay.setBorder(null);
 		btnPlay.setIcon(PlayMod);
 		btnPlay.setPressedIcon(PlayModClicked);
@@ -191,10 +190,9 @@ public class FrameSettings extends JFrame {
 		btnReproducirArchivo.setBounds((int)(0.345*ancho), (int)(0.432*alto), (int)(0.300*ancho), (int)(0.075*alto));
 		contentPane.add(btnReproducirArchivo);
 		
-		//  * BOTON DE MANUAL DE INSTALACION * //
+		//  * BOTON MANUAL DE INSTALACION * //
 		JButton btnManual = new JButton("Manual de instalación");
 		btnManual.addActionListener(new ActionListener() {
-
 			public void actionPerformed(ActionEvent arg0) {
 				try {
 					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "\\Manual de Instalacion.pdf"); //TODO agregar nombre del manual
@@ -206,22 +204,6 @@ public class FrameSettings extends JFrame {
 		btnManual.setFont(new Font("Calibri", Font.PLAIN, 20));
 		btnManual.setBounds((int)(0.679*ancho), (int)(0.432*alto), (int)(0.300*ancho), (int)(0.075*alto));
 		contentPane.add(btnManual);
-		
-		//  * BOTON INSTALADOR DE ESPEAK Y VOCES MBROLA *  //
-		/*JButton btnImportante = new JButton("");
-		btnImportante.setIcon(SetupImgMod);
-		btnImportante.addActionListener(new ActionListener() {
-			
-			public void actionPerformed(ActionEvent arg0) {
-				try {
-					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "\\eSpeak\\Instaladores\\instalar.bat");
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		});
-		btnImportante.setBounds((int)(0.024*ancho), (int)(0.535*alto), ancho-(2*((int)(0.029*ancho))), (int)(0.250*alto));
-		contentPane.add(btnImportante);*/
 		
 		//  * BOTON FINALIZAR *  //
 		JButton btnFinalizar = new JButton("Finalizar");
@@ -235,5 +217,7 @@ public class FrameSettings extends JFrame {
 		});
 		btnFinalizar.setBounds((ancho/2)-(int)((0.194*ancho)/2), (int)(0.535*alto), (int)(0.194*ancho), (int)(0.075*alto));
 		contentPane.add(btnFinalizar);
+		
 	}
+	
 }
