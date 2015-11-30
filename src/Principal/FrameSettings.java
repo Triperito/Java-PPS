@@ -31,9 +31,9 @@ public class FrameSettings extends JFrame {
 	public int alto = (int) (altoPantalla*0.5);
 	public int ancho = (int) (anchoPantalla*0.5);
 	ImageIcon Play = new ImageIcon(FrameSettings.class.getResource("/Graficos/Play.png"));
-	ImageIcon PlayMod = new ImageIcon(Play.getImage().getScaledInstance((int)(0.078*ancho), (int)(0.125*alto), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon PlayMod = new ImageIcon(Play.getImage().getScaledInstance((int)(0.080*ancho), (int)(0.130*alto), java.awt.Image.SCALE_DEFAULT));
 	ImageIcon PlayClicked = new ImageIcon(FrameSettings.class.getResource("/Graficos/PlayClickeado.png"));
-	ImageIcon PlayModClicked = new ImageIcon(PlayClicked.getImage().getScaledInstance((int)(0.078*ancho), (int)(0.125*alto), java.awt.Image.SCALE_DEFAULT));
+	ImageIcon PlayModClicked = new ImageIcon(PlayClicked.getImage().getScaledInstance((int)(0.080*ancho), (int)(0.130*alto), java.awt.Image.SCALE_DEFAULT));
 	ImageIcon SetupImg = new ImageIcon(FramePrincipal.class.getResource("/Graficos/SetupImg.jpg"));
 	ImageIcon SetupImgMod = new ImageIcon(SetupImg.getImage().getScaledInstance(ancho-(2*((int)(0.029*ancho))), (int)(0.250*alto), java.awt.Image.SCALE_DEFAULT));
 	
@@ -128,7 +128,7 @@ public class FrameSettings extends JFrame {
 		btnPlay.setBorder(null);
 		btnPlay.setIcon(PlayMod);
 		btnPlay.setPressedIcon(PlayModClicked);
-		btnPlay.setBounds((int)(0.515*ancho), (int)(0.137*alto), (int)(0.078*ancho), (int)(0.125*alto));
+		btnPlay.setBounds((int)(0.515*ancho), (int)(0.137*alto), (int)(0.080*ancho), (int)(0.130*alto));
 		contentPane.add(btnPlay);
 		
 		//  * CHECK ACTIVAR SONIDO DE BOTONES *  //
