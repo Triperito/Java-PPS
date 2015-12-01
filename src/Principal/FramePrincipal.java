@@ -1355,17 +1355,18 @@ public class FramePrincipal extends JFrame {
 
 	static public void CrearArchivo() {
 		if (NroArchivo < 10) {
-			ArchivoTexto = new File(Speak.path() + "Textos\\Archivo00" + NroArchivo + ".txt");
+			ArchivoTexto = new File(Speak.path() + "\\Textos\\Archivo00" + NroArchivo + ".txt");
 		} 
 		else 
 			if (NroArchivo < 100) {
-				ArchivoTexto = new File(Speak.path() + "Textos\\Archivo0" + NroArchivo + ".txt");
+				ArchivoTexto = new File(Speak.path() + "\\Textos\\Archivo0" + NroArchivo + ".txt");
 			} 
 			else 
 				if (NroArchivo < 1000) {
-					ArchivoTexto = new File(Speak.path() + "Textos\\Archivo" + NroArchivo + ".txt");
+					ArchivoTexto = new File(Speak.path() + "\\Textos\\Archivo" + NroArchivo + ".txt");
 				}
 		NroArchivo++;
+		System.out.println("Cree el archivo de texto con la ruta"+ArchivoTexto.getAbsolutePath());
 		ActualizarCantidadDeArchivos();
 		try {
 			FileWriter escritura = new FileWriter(ArchivoTexto);
@@ -1380,7 +1381,7 @@ public class FramePrincipal extends JFrame {
 	}
 
 	static void ActualizarCantidadDeArchivos() {
-		ArchivoContador = new File(Speak.path() + "eSpeak\\docs\\Contador.txt");
+		ArchivoContador = new File(Speak.path() + "\\eSpeak\\docs\\Contador.txt");
 		try {
 			FileWriter escrituraC = new FileWriter(ArchivoContador);
 			BufferedWriter bufferEscrituraC = new BufferedWriter(escrituraC);
@@ -1394,7 +1395,7 @@ public class FramePrincipal extends JFrame {
 	}
 
 	static int LeerArchivoContador() {
-		ArchivoContador = new File(Speak.path() + "eSpeak\\docs\\Contador.txt");
+		ArchivoContador = new File(Speak.path() + "\\eSpeak\\docs\\Contador.txt");
 		try {
 			FileReader lecturaC = new FileReader(ArchivoContador);
 			BufferedReader bufferLecturaC = new BufferedReader(lecturaC);
@@ -1403,6 +1404,7 @@ public class FramePrincipal extends JFrame {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println("Lei el archivo contador "+NroArchivo);
 		return NroArchivo;
 	}
 

@@ -35,7 +35,7 @@ public class Speak {
 	
 	public static void eSpeakFile(String file){
 		try {
-			Runtime.getRuntime().exec(pathAbsoluto + "eSpeak\\command_line\\espeak -v" + voz + " -f "+file);
+			Runtime.getRuntime().exec(pathAbsoluto + "\\eSpeak\\command_line\\espeak -v" + voz + " -f "+file);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
