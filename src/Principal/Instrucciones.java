@@ -50,7 +50,7 @@ public class Instrucciones extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Instrucciones.class.getResource("/Graficos/Icono.png")));
 		this.setTitle("Instrucciones de uso");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds((anchoPantalla/2)-(ancho/2), (altoPantalla/2)-(alto/2), 450, 300);
+		setBounds((anchoPantalla/2)-(ancho/2)+(30), (altoPantalla/2)-(alto/2), 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
