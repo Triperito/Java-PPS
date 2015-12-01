@@ -75,5 +75,7 @@ public class Instrucciones extends JFrame {
 		sp.setFocusable(false);
 		sp.setAutoscrolls(true);
 		contentPane.add(sp, BorderLayout.CENTER);
+		
 	}
+	
 }

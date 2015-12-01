@@ -27,7 +27,6 @@ public class FrameSettings extends JFrame {
 	public int altoPantalla = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
 	public int anchoPantalla = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
 
-	
 	public int alto = (int) (altoPantalla*0.5);
 	public int ancho = (int) (anchoPantalla*0.5);
 	ImageIcon Play = new ImageIcon(FrameSettings.class.getResource("/Graficos/Play.png"));
@@ -119,17 +118,17 @@ public class FrameSettings extends JFrame {
 		contentPane.add(comboBox);
 		
 		//  * BOTON PLAY PRELIMINAR *  //
-		JButton btnPlay = new JButton("");
-		btnPlay.addActionListener(new ActionListener() {
+		JButton bttnPlay = new JButton("");
+		bttnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Speak.eSpeak("Hola, esta es la voz de " + comboBox.getSelectedItem());
 			}
 		});
-		btnPlay.setBorder(null);
-		btnPlay.setIcon(PlayMod);
-		btnPlay.setPressedIcon(PlayModClicked);
-		btnPlay.setBounds((int)(0.515*ancho), (int)(0.137*alto), (int)(0.080*ancho), (int)(0.130*alto));
-		contentPane.add(btnPlay);
+		bttnPlay.setBorder(null);
+		bttnPlay.setIcon(PlayMod);
+		bttnPlay.setPressedIcon(PlayModClicked);
+		bttnPlay.setBounds((int)(0.515*ancho), (int)(0.137*alto), (int)(0.080*ancho), (int)(0.130*alto));
+		contentPane.add(bttnPlay);
 		
 		//  * CHECK ACTIVAR SONIDO DE BOTONES *  //
 		JCheckBox chckbxActivarSonidoDe = new JCheckBox("Activar sonido de botones");
@@ -167,56 +166,56 @@ public class FrameSettings extends JFrame {
 		contentPane.add(chckbxActivarGuardadoDe);
 		
 		//  * BOTON INSTRUCCIONES DE USO *  //
-		JButton btnIntruccionesDeUso = new JButton("Intrucciones de uso");
-		btnIntruccionesDeUso.addActionListener(new ActionListener() {
+		JButton bttnIntruccionesDeUso = new JButton("Intrucciones");
+		bttnIntruccionesDeUso.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Instrucciones ventana = new Instrucciones();
 				ventana.setVisible(true);
 			}
 		});
-		btnIntruccionesDeUso.setFont(new Font("Calibri", Font.PLAIN, 20));
-		btnIntruccionesDeUso.setBounds((int)(0.016*ancho), (int)(0.432*alto), (int)(0.300*ancho), (int)(0.075*alto));
-		contentPane.add(btnIntruccionesDeUso);
+		bttnIntruccionesDeUso.setFont(new Font("Calibri", Font.PLAIN, 20));
+		bttnIntruccionesDeUso.setBounds((int)(0.010*ancho), (int)(0.432*alto), (int)(0.300*ancho), (int)(0.075*alto));
+		contentPane.add(bttnIntruccionesDeUso);
 		
 		//  * BOTON REPRODUCIR ARCHIVO *  //
-		JButton btnReproducirArchivo = new JButton("Reproducir archivo");
-		btnReproducirArchivo.addActionListener(new ActionListener() {
+		JButton bttnReproducirArchivo = new JButton("Reproducir archivo");
+		bttnReproducirArchivo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				FileChooser chooser = new FileChooser();
 				chooser.setVisible(true);
 			}
 		});
-		btnReproducirArchivo.setFont(new Font("Calibri", Font.PLAIN, 20));
-		btnReproducirArchivo.setBounds((int)(0.345*ancho), (int)(0.432*alto), (int)(0.300*ancho), (int)(0.075*alto));
-		contentPane.add(btnReproducirArchivo);
+		bttnReproducirArchivo.setFont(new Font("Calibri", Font.PLAIN, 20));
+		bttnReproducirArchivo.setBounds((int)(0.320*ancho), (int)(0.432*alto), (int)(0.300*ancho), (int)(0.075*alto));
+		contentPane.add(bttnReproducirArchivo);
 		
 		//  * BOTON MANUAL DE INSTALACION * //
-		JButton btnManual = new JButton("Manual de instalación");
-		btnManual.addActionListener(new ActionListener() {
+		JButton bttnManual = new JButton("Manual de instalación");
+		bttnManual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "\\Manual de Instalacion.pdf"); //TODO agregar nombre del manual
+					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "\\Manual de Instalacion.pdf");
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 			}
 		});
-		btnManual.setFont(new Font("Calibri", Font.PLAIN, 20));
-		btnManual.setBounds((int)(0.679*ancho), (int)(0.432*alto), (int)(0.300*ancho), (int)(0.075*alto));
-		contentPane.add(btnManual);
+		bttnManual.setFont(new Font("Calibri", Font.PLAIN, 20));
+		bttnManual.setBounds((int)(0.629*ancho), (int)(0.432*alto), (int)(0.352*ancho), (int)(0.075*alto));
+		contentPane.add(bttnManual);
 		
 		//  * BOTON FINALIZAR *  //
-		JButton btnFinalizar = new JButton("Finalizar");
-		btnFinalizar.setFont(new Font("Calibri", Font.PLAIN, 20));
-		btnFinalizar.addActionListener(new ActionListener() {
+		JButton bttnFinalizar = new JButton("Finalizar");
+		bttnFinalizar.setFont(new Font("Calibri", Font.PLAIN, 20));
+		bttnFinalizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				FramePrincipal frame = new FramePrincipal();
 				frame.setVisible(true);
 				dispose();
 			}
 		});
-		btnFinalizar.setBounds((ancho/2)-(int)((0.194*ancho)/2), (int)(0.535*alto), (int)(0.194*ancho), (int)(0.075*alto));
-		contentPane.add(btnFinalizar);
+		bttnFinalizar.setBounds((ancho/2)-(int)((0.194*ancho)/2), (int)(0.535*alto), (int)(0.194*ancho), (int)(0.075*alto));
+		contentPane.add(bttnFinalizar);
 		
 	}
 	
