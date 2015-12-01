@@ -1,24 +1,16 @@
 package Principal;
 
 import java.awt.BorderLayout;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-
 import java.awt.Color;
-
 import javax.swing.JTextPane;
-
 import java.awt.Font;
-import java.awt.Point;
 import java.awt.Toolkit;
-
-import javax.swing.ScrollPaneConstants;
-
 import java.awt.ComponentOrientation;
 
 @SuppressWarnings("serial")
