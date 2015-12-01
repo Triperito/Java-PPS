@@ -1,5 +1,6 @@
 package Principal;
 
+import java.awt.Desktop;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -16,6 +17,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
+import java.io.File;
 import java.io.IOException;
 import java.awt.Toolkit;
 
@@ -193,8 +195,10 @@ public class FrameSettings extends JFrame {
 		JButton bttnManual = new JButton("Manual de instalación");
 		bttnManual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				File f1 = new File(Speak.getPathAbsoluto() + "Manual de Instalacion.pdf");
+				Desktop d = Desktop.getDesktop();
 				try {
-					Runtime.getRuntime().exec(Speak.getPathAbsoluto() + "\\Manual de Instalacion.pdf");
+					d.open(f1);
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
