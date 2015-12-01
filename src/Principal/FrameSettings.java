@@ -35,15 +35,15 @@ public class FrameSettings extends JFrame {
 	ImageIcon PlayMod = new ImageIcon(Play.getImage().getScaledInstance((int)(0.080*ancho), (int)(0.130*alto), java.awt.Image.SCALE_DEFAULT));
 	ImageIcon PlayClicked = new ImageIcon(FrameSettings.class.getResource("/Graficos/PlayClickeado.png"));
 	ImageIcon PlayModClicked = new ImageIcon(PlayClicked.getImage().getScaledInstance((int)(0.080*ancho), (int)(0.130*alto), java.awt.Image.SCALE_DEFAULT));
-	ImageIcon SetupImg = new ImageIcon(FramePrincipal.class.getResource("/Graficos/SetupImg.jpg"));
-	ImageIcon SetupImgMod = new ImageIcon(SetupImg.getImage().getScaledInstance(ancho-(2*((int)(0.029*ancho))), (int)(0.250*alto), java.awt.Image.SCALE_DEFAULT));
+	
+	static FrameSettings frame;
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					FrameSettings frame = new FrameSettings();
-					frame.setVisible(true);
+					new Thread (new Splash()).start();
+					frame = new FrameSettings();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -56,7 +56,8 @@ public class FrameSettings extends JFrame {
 		setResizable(false);
 		this.setTitle("Configuracion");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds((anchoPantalla/2)-(ancho/2), (altoPantalla/2)-(alto/2), ancho, (int) (alto-alto*0.290));
+		setBounds(0,0,ancho, (int) (alto-alto*0.290));
+		this.setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
