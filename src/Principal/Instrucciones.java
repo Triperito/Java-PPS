@@ -21,7 +21,7 @@ public class Instrucciones extends JFrame {
 	public int anchoPantalla = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
 	public int alto = (int) (altoPantalla*0.4);
 	public int ancho = (int) (anchoPantalla*0.4);
-	private String[] cadenas = {
+	/*private String[] cadenas = {
 			"Ventana de Configuracion:","\r",
 			"-Si es la priemra vez que utiliza la aplicacion debera instalar",
 			"el eSpeak para poder escuchar las voces, esto lo realiza",
@@ -43,7 +43,7 @@ public class Instrucciones extends JFrame {
 			"borrar todo.",
 			"-Al presion el boton Punto se terminara una oracion, la misma",
 			"sera reproducida con la voz elegida."	
-	};
+	};*/
 	
 	public Instrucciones() {
 		setResizable(false);
@@ -57,7 +57,7 @@ public class Instrucciones extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblTitulo = new JLabel("Instruncciones de uso");
-		lblTitulo.setFont(new Font("Calibri", Font.PLAIN, 20));
+		lblTitulo.setFont(new Font("Calibri", Font.BOLD, 20));
 		lblTitulo.setBackground(Color.WHITE);
 		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblTitulo, BorderLayout.NORTH);
@@ -66,10 +66,10 @@ public class Instrucciones extends JFrame {
 		textPaneInstrucciones.setFocusable(false);
 		textPaneInstrucciones.setEditable(false);
 		textPaneInstrucciones.setAutoscrolls(true);
-		textPaneInstrucciones.setText(cadenas[0]+"\n");
-		for(int i=1; i<cadenas.length; i++) {
-			textPaneInstrucciones.setText(textPaneInstrucciones.getText() + cadenas[i]+"\n");
-		}
+		textPaneInstrucciones.setText("Ventana de Configuracion:\r\n");
+		//for(int i=1; i<cadenas.length; i++) {
+		//	textPaneInstrucciones.setText(textPaneInstrucciones.getText() + cadenas[i]+"\n");
+		//}
 		
 		JScrollPane sp = new JScrollPane(textPaneInstrucciones);
 		sp.setFocusable(false);
