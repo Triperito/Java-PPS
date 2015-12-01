@@ -1366,7 +1366,6 @@ public class FramePrincipal extends JFrame {
 					ArchivoTexto = new File(Speak.path() + "\\Textos\\Archivo" + NroArchivo + ".txt");
 				}
 		NroArchivo++;
-		System.out.println("Cree el archivo de texto con la ruta"+ArchivoTexto.getAbsolutePath());
 		ActualizarCantidadDeArchivos();
 		try {
 			FileWriter escritura = new FileWriter(ArchivoTexto);
@@ -1404,7 +1403,6 @@ public class FramePrincipal extends JFrame {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("Lei el archivo contador "+NroArchivo);
 		return NroArchivo;
 	}
 
