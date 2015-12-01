@@ -165,17 +165,17 @@ public class FrameSettings extends JFrame {
 		chckbxActivarGuardadoDe.setBounds((int)(0.016*ancho), (int)(0.340*alto), (int)(0.468*ancho), (int)(0.075*alto));
 		contentPane.add(chckbxActivarGuardadoDe);
 		
-		//  * BOTON INSTRUCCIONES DE USO *  //
-		JButton bttnIntruccionesDeUso = new JButton("Intrucciones");
-		bttnIntruccionesDeUso.addActionListener(new ActionListener() {
+		//  * BOTON INSTRUCCIONES *  //
+		JButton bttnIntrucciones = new JButton("Intrucciones");
+		bttnIntrucciones.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Instrucciones ventana = new Instrucciones();
 				ventana.setVisible(true);
 			}
 		});
-		bttnIntruccionesDeUso.setFont(new Font("Calibri", Font.PLAIN, 20));
-		bttnIntruccionesDeUso.setBounds((int)(0.010*ancho), (int)(0.432*alto), (int)(0.300*ancho), (int)(0.075*alto));
-		contentPane.add(bttnIntruccionesDeUso);
+		bttnIntrucciones.setFont(new Font("Calibri", Font.PLAIN, 20));
+		bttnIntrucciones.setBounds((int)(0.010*ancho), (int)(0.432*alto), (int)(0.300*ancho), (int)(0.075*alto));
+		contentPane.add(bttnIntrucciones);
 		
 		//  * BOTON REPRODUCIR ARCHIVO *  //
 		JButton bttnReproducirArchivo = new JButton("Reproducir archivo");

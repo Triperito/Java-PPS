@@ -26,7 +26,7 @@ public class Instrucciones extends JFrame {
 	public Instrucciones() {
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Instrucciones.class.getResource("/Graficos/Icono.png")));
-		this.setTitle("Instrucciones de uso");
+		this.setTitle("Instrucciones");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds((anchoPantalla/2)-(ancho/2), (altoPantalla/2)-(alto/2), ancho, alto);
 		contentPane = new JPanel();
