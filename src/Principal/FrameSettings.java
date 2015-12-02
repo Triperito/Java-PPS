@@ -28,9 +28,9 @@ public class FrameSettings extends JFrame {
 	
 	public int altoPantalla = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
 	public int anchoPantalla = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
-
 	public int alto = (int) (altoPantalla*0.5);
 	public int ancho = (int) (anchoPantalla*0.5);
+	
 	ImageIcon Play = new ImageIcon(FrameSettings.class.getResource("/Graficos/Play.png"));
 	ImageIcon PlayMod = new ImageIcon(Play.getImage().getScaledInstance((int)(0.080*ancho), (int)(0.130*alto), java.awt.Image.SCALE_DEFAULT));
 	ImageIcon PlayClicked = new ImageIcon(FrameSettings.class.getResource("/Graficos/PlayClickeado.png"));
@@ -196,10 +196,10 @@ public class FrameSettings extends JFrame {
 		JButton bttnManual = new JButton("Manual de instalación");
 		bttnManual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				File f1 = new File(Speak.getPathAbsoluto() + "Manual de Instalacion.pdf");
+				File manual = new File(Speak.getPathAbsoluto() + "Manual de Instalacion.pdf");
 				Desktop d = Desktop.getDesktop();
 				try {
-					d.open(f1);
+					d.open(manual);
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

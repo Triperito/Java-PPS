@@ -19,7 +19,8 @@ public class FileChooser extends JDialog {
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(FileChooser.class.getResource("/Graficos/Icono.png")));
 		this.setTitle("Eliga el archivo a reproducir...");
-		setBounds(100, 100, 656, 432);
+		setBounds(0, 0, 656, 432);
+		this.setLocationRelativeTo(null);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);

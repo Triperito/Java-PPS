@@ -1,7 +1,6 @@
 package Principal;
 
 import java.io.BufferedInputStream;
-
 import javazoom.jl.player.Player;
 
 public class Reproductor implements Runnable {
