@@ -2,6 +2,7 @@ package Principal;
 
 import java.awt.Color;
 import java.awt.Font;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -9,6 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
+
 import java.awt.CardLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -16,6 +18,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.*;
 import java.util.Timer;
+
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.UIManager;
@@ -283,7 +286,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaA");
 				txtA.setText(txt.getText());
 				if (SonidoActivado == true) {
-					play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -299,7 +302,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaF");
 				txtF.setText(txt.getText());
 				if (SonidoActivado == true) {
-					play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -315,7 +318,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaK");
 				txtK.setText(txt.getText());
 				if (SonidoActivado == true) {
-					play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -331,7 +334,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaO");
 				txtO.setText(txt.getText());
 				if (SonidoActivado == true) {
-					play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -347,7 +350,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaT");
 				txtT.setText(txt.getText());
 				if (SonidoActivado == true) {
-					play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -362,7 +365,7 @@ public class FramePrincipal extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				txt.setText(txt.getText() + " ");
 				if (SonidoActivado == true) {
-					play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -394,7 +397,7 @@ public class FramePrincipal extends JFrame {
 					txt.setText(txt.getText() + ".");
 					Speak.eSpeak(txt.getText());
 					if (SonidoActivado == true) {
-						play.SimplePlayer();
+						new Thread (new Reproductor()).start();
 					}
 				}
 			}
@@ -525,7 +528,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText() + "A");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -541,7 +544,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText() + "B");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -557,7 +560,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText() + "C");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -573,7 +576,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText() + "D");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -589,7 +592,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText() + "E");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -605,7 +608,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtA.getText());
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -694,7 +697,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText() + "F");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -710,7 +713,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText() + "G");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -726,7 +729,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText() + "H");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -742,7 +745,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText() + "I");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -758,7 +761,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText() + "J");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -774,7 +777,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtF.getText());
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -863,7 +866,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText() + "K");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -879,7 +882,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText() + "L");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -895,7 +898,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText() + "M");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -911,7 +914,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText() + "N");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -927,7 +930,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText() + "Ñ");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -943,7 +946,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtK.getText());
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -1032,7 +1035,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText() + "O");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -1048,7 +1051,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText() + "P");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -1064,7 +1067,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText() + "QU");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -1080,7 +1083,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText() + "R");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -1096,7 +1099,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText() + "S");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -1112,7 +1115,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtO.getText());
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -1201,7 +1204,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtT.getText() + "T");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -1217,7 +1220,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtT.getText() + "U");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -1233,7 +1236,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtT.getText() + "V");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -1249,7 +1252,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtT.getText() + "X");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
@@ -1265,7 +1268,7 @@ public class FramePrincipal extends JFrame {
 				card.show(contentPane, "VentanaPrincipal");
 				txt.setText(txtT.getText() + "Y");
 				if (FramePrincipal.SonidoActivado == true) {
-					FramePrincipal.play.SimplePlayer();
+					new Thread (new Reproductor()).start();
 				}
 			}
 		});
