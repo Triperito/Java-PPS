@@ -196,7 +196,7 @@ public class FrameSettings extends JFrame {
 		JButton bttnManual = new JButton("Manual de instalación");
 		bttnManual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				File manual = new File(Speak.getPathAbsoluto() + "Manual de Instalacion.pdf");
+				File manual = new File(Speak.getPathAbsoluto() + "/Manual de Instalacion.pdf");
 				Desktop d = Desktop.getDesktop();
 				try {
 					d.open(manual);
